@@ -1,0 +1,55 @@
+{
+  "name": "react-grid-date-picker",
+  "version": "1.0.5",
+  "description": "A when2meet style date picker React component",
+  "author": {
+    "name": "Bibek Ghimire",
+    "email": "ghim.bibek@gmail.com"
+  },
+  "main": "build/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.js",
+    "build": "parcel build index.js --out-dir build/",
+    "lint": "eslint src/**/*.{js,jsx} --quiet",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "test": "flow && yarn lint"
+  },
+  "peerDependencies": {
+    "react": ">=15.5.0",
+    "styled-components": ">=2.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.22.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "flow-bin": "^0.71.0",
+    "parcel-bundler": "^1.8.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.1.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "printWidth": 120,
+    "tabWidth": 2
+  }
+}
