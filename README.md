@@ -42,3 +42,4 @@ class App extends React.Component {
 `numDays` | `number` | The number of days from today to show | no | `7`
 `minTime` | `number` | The minimum hour to show (0-23) | no | `9`
 `maxTime` | `number` | The maximum hour to show (0-23) | no | `23`
+`onChange` | `(Array<Date>) => void` | A callback that's executed when the selected availability is changed | yes | N/A
