@@ -43,3 +43,9 @@ class App extends React.Component {
 `minTime` | `number` | The minimum hour to show (0-23) | no | `9`
 `maxTime` | `number` | The maximum hour to show (0-23) | no | `23`
 `onChange` | `(Array<Date>) => void` | A callback that's executed when the selected availability is changed | yes | N/A
+`dateFormat` | `string` | The [date format](http://momentjs.com/docs/#/displaying/) to be used for the column headers | no | `'M/D'`
+`margin` | `number` | The margin between grid cells | no | `3`
+`unselectedColor` | `string` | The color of an unselected cell | no | `'rgba(89, 154, 242, 1)'`
+`selectedColor` | `string` | The color of a selected cell | no | `'rgba(162, 198, 248, 1)'`
+`hoveredColor` | `string` | The color of a hovered cell | no | `'#dbedff'`
+`renderDateCell` | `boolean => React.Node` | A function that accepts whether the cell is selected or not and returns a React element. If you choose to use this custom render function, the color props above have no effect. | no | ...
