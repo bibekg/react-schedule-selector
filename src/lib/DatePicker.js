@@ -7,7 +7,7 @@ import { Text, Subtitle } from './typography'
 import colors from './colors'
 
 const formatTime = (hour: number): string => {
-  const h = hour === 12 || hour === 24 ? 12 : hour % 12
+  const h = hour === 0 || hour === 12 || hour === 24 ? 12 : hour % 12
   const abb = hour < 12 || hour === 24 ? 'am' : 'pm'
   return `${h}${abb}`
 }
@@ -22,31 +22,33 @@ const Wrapper = styled.div`
 const Grid = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   width: 100%;
 `
 
 const Column = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 3px;
+  justify-content: space-evenly;
+`
+
+const GridCell = styled.div`
+  margin: ${props => props.margin}px;
 `
 
 const DateCell = styled.div`
   width: 100%;
   height: 25px;
-  background-color: ${props => (props.selected ? colors.blue : colors.paleBlue)};
+  background-color: ${props => (props.selected ? props.selectedColor : props.unselectedColor)};
   ${'' /* Ensures that the page doesn't scroll while the user is drag-selecting cells */} touch-action: none;
 
   &:hover {
-    background-color: ${colors.lightBlue};
+    background-color: ${props => props.hoveredColor};
   }
-
-  margin: 3px;
 `
 
 const DateLabel = Subtitle.extend`
-  height: 25px;
+  height: 30px;
   @media (max-width: 699px) {
     font-size: 12px;
   }
@@ -77,7 +79,13 @@ type PropsType = {
   numDays: number,
   minTime: number,
   maxTime: number,
-  onChange: (Array<Date>) => void
+  onChange: (Array<Date>) => void,
+  renderDateCell?: boolean => React.Node,
+  dateFormat: string,
+  margin: number,
+  unselectedColor: string,
+  selectedColor: string,
+  hoveredColor: string
 }
 
 type SelectionType = 'add' | 'remove'
@@ -95,11 +103,17 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   dates: Array<Array<moment>>
   cellToMoment: Map<?HTMLElement, moment>
   documentMouseUpHandler: () => void
+  endSelection: () => void
 
   static defaultProps = {
     numDays: 7,
     minTime: 9,
-    maxTime: 23
+    maxTime: 23,
+    dateFormat: 'M/D',
+    margin: 3,
+    selectedColor: colors.blue,
+    unselectedColor: colors.paleBlue,
+    hoveredColor: colors.lightBlue
   }
 
   constructor(props: PropsType) {
@@ -126,6 +140,8 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
       selectionType: null,
       selectionStart: null
     }
+
+    this.endSelection = this.endSelection.bind(this)
   }
 
   componentDidMount() {
@@ -144,7 +160,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
 
   componentWillReceiveProps(nextProps: PropsType) {
     this.setState({
-      availabilityDraft: nextProps.availability
+      availabilityDraft: [...nextProps.availability]
     })
   }
 
@@ -269,29 +285,34 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
         </TimeLabelCell>
       )
     }
-    return <Column>{labels}</Column>
+    return <Column margin={this.props.margin}>{labels}</Column>
   }
 
   renderDateColumn = (dayOfTimes: Array<moment>) => (
-    <Column key={dayOfTimes[0].toISOString()}>
-      <DateLabel>{dayOfTimes[0].format('M/D')}</DateLabel>
-      {dayOfTimes.map(time => this.renderDateCell(time))}
+    <Column key={dayOfTimes[0].toISOString()} margin={this.props.margin}>
+      <GridCell margin={this.props.margin}>
+        <DateLabel>{dayOfTimes[0].format(this.props.dateFormat)}</DateLabel>
+      </GridCell>
+      {dayOfTimes.map(time => this.renderDateCellWrapper(time))}
     </Column>
   )
 
-  renderDateCell = (time: moment): React.Element<*> => {
+  renderDateCellWrapper = (time: moment): React.Element<*> => {
     const startHandler = () => {
       this.handleSelectionStartEvent(time)
     }
 
+    const selected = Boolean(this.state.availabilityDraft.find(a => moment(a).isSame(time)))
+
     return (
-      <DateCell
+      <GridCell
+        role="presentation"
+        margin={this.props.margin}
         key={time.toISOString()}
         innerRef={(dateCell: HTMLElement) => {
           this.cellToMoment.set(dateCell, time)
         }}
         className="date-cell"
-        selected={Boolean(this.state.availabilityDraft.find(a => moment(a).isSame(time)))}
         // Mouse handlers
         onMouseDown={startHandler}
         onMouseEnter={() => {
@@ -307,8 +328,25 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
         onTouchStart={startHandler}
         onTouchMove={this.handleTouchMoveEvent}
         onTouchEnd={this.handleTouchEndEvent}
-      />
+      >
+        {this.renderDateCell(selected)}
+      </GridCell>
     )
+  }
+
+  renderDateCell = (selected: boolean): React.Node => {
+    if (this.props.renderDateCell) {
+      return this.props.renderDateCell(selected)
+    } else {
+      return (
+        <DateCell
+          selected={selected}
+          selectedColor={this.props.selectedColor}
+          unselectedColor={this.props.unselectedColor}
+          hoveredColor={this.props.hoveredColor}
+        />
+      )
+    }
   }
 
   render(): React.Element<*> {

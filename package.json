@@ -14,14 +14,16 @@
     "moment",
     "grid"
   ],
-  "main": "dist/index.js",
+  "main": "dist/lib/index.js",
   "license": "MIT",
   "scripts": {
     "prepublish": "yarn build",
-    "build": "babel src -d dist",
+    "build": "babel src -d dist/lib",
     "lint": "eslint src/**/*.{js,jsx} --quiet",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "test": "flow && yarn lint"
+    "test": "flow && yarn lint",
+    "docs:dev": "parcel serve src/docs/index.html -d dev/docs",
+    "docs:build": "parcel build src/docs/index.html -d dist/docs"
   },
   "peerDependencies": {
     "react": ">=15.5 && <=16.0",

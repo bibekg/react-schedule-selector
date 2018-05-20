@@ -1,10 +1,11 @@
 var _templateObject = _taggedTemplateLiteralLoose(['\n  display: flex;\n  align-items: center;\n  width: 100%;\n  user-select: none;\n'], ['\n  display: flex;\n  align-items: center;\n  width: 100%;\n  user-select: none;\n']),
-    _templateObject2 = _taggedTemplateLiteralLoose(['\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n'], ['\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n']),
-    _templateObject3 = _taggedTemplateLiteralLoose(['\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  margin: 3px;\n'], ['\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  margin: 3px;\n']),
-    _templateObject4 = _taggedTemplateLiteralLoose(['\n  width: 100%;\n  height: 25px;\n  background-color: ', ';\n  ', ' touch-action: none;\n\n  &:hover {\n    background-color: ', ';\n  }\n\n  margin: 3px;\n'], ['\n  width: 100%;\n  height: 25px;\n  background-color: ', ';\n  ', ' touch-action: none;\n\n  &:hover {\n    background-color: ', ';\n  }\n\n  margin: 3px;\n']),
-    _templateObject5 = _taggedTemplateLiteralLoose(['\n  height: 25px;\n  @media (max-width: 699px) {\n    font-size: 12px;\n  }\n'], ['\n  height: 25px;\n  @media (max-width: 699px) {\n    font-size: 12px;\n  }\n']),
-    _templateObject6 = _taggedTemplateLiteralLoose(['\n  position: relative;\n  display: block;\n  width: 100%;\n  height: 25px;\n  margin: 3px 0;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n'], ['\n  position: relative;\n  display: block;\n  width: 100%;\n  height: 25px;\n  margin: 3px 0;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n']),
-    _templateObject7 = _taggedTemplateLiteralLoose(['\n  margin: 0;\n  @media (max-width: 699px) {\n    font-size: 10px;\n  }\n  text-align: right;\n'], ['\n  margin: 0;\n  @media (max-width: 699px) {\n    font-size: 10px;\n  }\n  text-align: right;\n']);
+    _templateObject2 = _taggedTemplateLiteralLoose(['\n  display: flex;\n  flex-direction: row;\n  align-items: stretch;\n  width: 100%;\n'], ['\n  display: flex;\n  flex-direction: row;\n  align-items: stretch;\n  width: 100%;\n']),
+    _templateObject3 = _taggedTemplateLiteralLoose(['\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n'], ['\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n']),
+    _templateObject4 = _taggedTemplateLiteralLoose(['\n  margin: ', 'px;\n'], ['\n  margin: ', 'px;\n']),
+    _templateObject5 = _taggedTemplateLiteralLoose(['\n  width: 100%;\n  height: 25px;\n  background-color: ', ';\n  ', ' touch-action: none;\n\n  &:hover {\n    background-color: ', ';\n  }\n'], ['\n  width: 100%;\n  height: 25px;\n  background-color: ', ';\n  ', ' touch-action: none;\n\n  &:hover {\n    background-color: ', ';\n  }\n']),
+    _templateObject6 = _taggedTemplateLiteralLoose(['\n  height: 30px;\n  @media (max-width: 699px) {\n    font-size: 12px;\n  }\n'], ['\n  height: 30px;\n  @media (max-width: 699px) {\n    font-size: 12px;\n  }\n']),
+    _templateObject7 = _taggedTemplateLiteralLoose(['\n  position: relative;\n  display: block;\n  width: 100%;\n  height: 25px;\n  margin: 3px 0;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n'], ['\n  position: relative;\n  display: block;\n  width: 100%;\n  height: 25px;\n  margin: 3px 0;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n']),
+    _templateObject8 = _taggedTemplateLiteralLoose(['\n  margin: 0;\n  @media (max-width: 699px) {\n    font-size: 10px;\n  }\n  text-align: right;\n'], ['\n  margin: 0;\n  @media (max-width: 699px) {\n    font-size: 10px;\n  }\n  text-align: right;\n']);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -21,7 +22,7 @@ import { Text, Subtitle } from './typography';
 import colors from './colors';
 
 var formatTime = function formatTime(hour) {
-  var h = hour === 12 || hour === 24 ? 12 : hour % 12;
+  var h = hour === 0 || hour === 12 || hour === 24 ? 12 : hour % 12;
   var abb = hour < 12 || hour === 24 ? 'am' : 'pm';
   return '' + h + abb;
 };
@@ -32,15 +33,19 @@ var Grid = styled.div(_templateObject2);
 
 var Column = styled.div(_templateObject3);
 
-var DateCell = styled.div(_templateObject4, function (props) {
+var GridCell = styled.div(_templateObject4, function (props) {
+  return props.margin;
+});
+
+var DateCell = styled.div(_templateObject5, function (props) {
   return props.selected ? colors.blue : colors.paleBlue;
 }, '' /* Ensures that the page doesn't scroll while the user is drag-selecting cells */, colors.lightBlue);
 
-var DateLabel = Subtitle.extend(_templateObject5);
+var DateLabel = Subtitle.extend(_templateObject6);
 
-var TimeLabelCell = styled.div(_templateObject6);
+var TimeLabelCell = styled.div(_templateObject7);
 
-var TimeText = Text.extend(_templateObject7);
+var TimeText = Text.extend(_templateObject8);
 
 // This component relies heavily on the fantastic APIs exposed by the moment.js library: http://momentjs.com
 var AvailabilitySelector = function (_React$Component) {
@@ -171,7 +176,7 @@ var AvailabilitySelector = function (_React$Component) {
       }
       return React.createElement(
         Column,
-        null,
+        { margin: _this.props.margin },
         labels
       );
     };
@@ -179,48 +184,59 @@ var AvailabilitySelector = function (_React$Component) {
     _this.renderDateColumn = function (dayOfTimes) {
       return React.createElement(
         Column,
-        { key: dayOfTimes[0].toISOString() },
+        { key: dayOfTimes[0].toISOString(), margin: _this.props.margin },
         React.createElement(
-          DateLabel,
-          null,
-          dayOfTimes[0].format('M/D')
+          GridCell,
+          { margin: _this.props.margin },
+          React.createElement(
+            DateLabel,
+            null,
+            dayOfTimes[0].format(_this.props.dateFormat)
+          )
         ),
         dayOfTimes.map(function (time) {
-          return _this.renderDateCell(time);
+          return _this.renderDateCellWrapper(time);
         })
       );
     };
 
-    _this.renderDateCell = function (time) {
+    _this.renderDateCellWrapper = function (time) {
       var startHandler = function startHandler() {
         _this.handleSelectionStartEvent(time);
       };
 
-      return React.createElement(DateCell, {
-        key: time.toISOString(),
-        innerRef: function innerRef(dateCell) {
-          _this.cellToMoment.set(dateCell, time);
+      var selected = Boolean(_this.state.availabilityDraft.find(function (a) {
+        return moment(a).isSame(time);
+      }));
+
+      return React.createElement(
+        GridCell,
+        {
+          role: 'presentation',
+          margin: _this.props.margin,
+          key: time.toISOString(),
+          innerRef: function innerRef(dateCell) {
+            _this.cellToMoment.set(dateCell, time);
+          },
+          className: 'date-cell'
+          // Mouse handlers
+          , onMouseDown: startHandler,
+          onMouseEnter: function onMouseEnter() {
+            _this.handleMouseEnterEvent(time);
+          },
+          onMouseUp: function onMouseUp() {
+            _this.handleMouseUpEvent(time);
+          }
+          // Touch handlers
+          // Since touch events fire on the event where the touch-drag started, there's no point in passing
+          // in the time parameter, instead these handlers will do their job using the default SyntheticEvent
+          // parameters
+          , onTouchStart: startHandler,
+          onTouchMove: _this.handleTouchMoveEvent,
+          onTouchEnd: _this.handleTouchEndEvent
         },
-        className: 'date-cell',
-        selected: Boolean(_this.state.availabilityDraft.find(function (a) {
-          return moment(a).isSame(time);
-        }))
-        // Mouse handlers
-        , onMouseDown: startHandler,
-        onMouseEnter: function onMouseEnter() {
-          _this.handleMouseEnterEvent(time);
-        },
-        onMouseUp: function onMouseUp() {
-          _this.handleMouseUpEvent(time);
-        }
-        // Touch handlers
-        // Since touch events fire on the event where the touch-drag started, there's no point in passing
-        // in the time parameter, instead these handlers will do their job using the default SyntheticEvent
-        // parameters
-        , onTouchStart: startHandler,
-        onTouchMove: _this.handleTouchMoveEvent,
-        onTouchEnd: _this.handleTouchEndEvent
-      });
+        _this.props.renderDateCell(selected)
+      );
     };
 
     var now = moment().startOf('day');
@@ -292,6 +308,11 @@ var AvailabilitySelector = function (_React$Component) {
 AvailabilitySelector.defaultProps = {
   numDays: 7,
   minTime: 9,
-  maxTime: 23
+  maxTime: 23,
+  renderDateCell: function renderDateCell(selected) {
+    return React.createElement(DateCell, { selected: selected });
+  },
+  dateFormat: 'M/D',
+  margin: 3
 };
 export default AvailabilitySelector;
