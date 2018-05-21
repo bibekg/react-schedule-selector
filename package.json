@@ -14,14 +14,17 @@
     "moment",
     "grid"
   ],
-  "main": "dist/index.js",
+  "main": "dist/lib/index.js",
   "license": "MIT",
   "scripts": {
     "prepublish": "yarn build",
-    "build": "babel src -d dist",
+    "build": "yarn lib:build && yarn docs:build",
     "lint": "eslint src/**/*.{js,jsx} --quiet",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "test": "flow && yarn lint"
+    "test": "flow && yarn lint",
+    "lib:build": "babel src -d dist/lib",
+    "docs:dev": "parcel serve src/docs/index.html -d dev/docs",
+    "docs:build": "parcel build src/docs/index.html -d dist/docs"
   },
   "peerDependencies": {
     "react": ">=15.5 && <=16.0",
@@ -51,7 +54,8 @@
     "eslint-plugin-react": "^7.7.0",
     "flow-bin": "^0.71.0",
     "parcel-bundler": "^1.8.0",
-    "react": "15.5",
+    "react": "^16.0.0",
+    "react-dom": "^16.3.2",
     "styled-components": "^3.2.6",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.1.2"
