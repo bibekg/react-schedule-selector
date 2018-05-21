@@ -75,25 +75,26 @@ const TimeText = Text.extend`
 `
 
 type PropsType = {
-  availability: Array<Date>,
+  selection: Array<Date>,
+  onChange: (Array<Date>) => void,
+  startDate: Date,
   numDays: number,
   minTime: number,
   maxTime: number,
-  onChange: (Array<Date>) => void,
-  renderDateCell?: boolean => React.Node,
   dateFormat: string,
   margin: number,
   unselectedColor: string,
   selectedColor: string,
-  hoveredColor: string
+  hoveredColor: string,
+  renderDateCell?: boolean => React.Node
 }
 
 type SelectionType = 'add' | 'remove'
 
 type StateType = {
   // In the case that a user is drag-selecting, we don't want to call this.props.onChange() until they have completed
-  // the drag-select. availabilityDraft serves as a temporary copy during drag-selects.
-  availabilityDraft: Array<Date>,
+  // the drag-select. selectionDraft serves as a temporary copy during drag-selects.
+  selectionDraft: Array<Date>,
   selectionType: ?SelectionType,
   selectionStart: ?moment
 }
@@ -109,6 +110,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     numDays: 7,
     minTime: 9,
     maxTime: 23,
+    startDate: moment(),
     dateFormat: 'M/D',
     margin: 3,
     selectedColor: colors.blue,
@@ -120,14 +122,14 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     super(props)
 
     // Generate list of dates to render cells for
-    const now = moment().startOf('day')
+    const startTime = moment(props.startDate).startOf('day')
     this.dates = []
     this.cellToMoment = new Map()
     for (let i = 0; i < props.numDays; i += 1) {
       const currentDay = []
       for (let j = props.minTime; j <= props.maxTime; j += 1) {
         currentDay.push(
-          moment(now)
+          moment(startTime)
             .add(i, 'days')
             .add(j, 'hours')
         )
@@ -136,7 +138,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     }
 
     this.state = {
-      availabilityDraft: [...this.props.availability], // copy it over
+      selectionDraft: [...this.props.selection], // copy it over
       selectionType: null,
       selectionStart: null
     }
@@ -160,7 +162,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
 
   componentWillReceiveProps(nextProps: PropsType) {
     this.setState({
-      availabilityDraft: [...nextProps.availability]
+      selectionDraft: [...nextProps.selection]
     })
   }
 
@@ -177,7 +179,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   }
 
   endSelection = () => {
-    this.props.onChange(this.state.availabilityDraft)
+    this.props.onChange(this.state.selectionDraft)
     this.setState({
       selectionType: null,
       selectionStart: null
@@ -186,10 +188,10 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
 
   // Given an ending moment, determines all the
   updateAvailabilityDraft = (selectionEnd: ?moment, callback?: () => void) => {
-    const { availability } = this.props
+    const { selection } = this.props
     const { selectionType, selectionStart } = this.state
 
-    // User isn't selecting right now, doesn't make sense to update availability draft
+    // User isn't selecting right now, doesn't make sense to update selection draft
     if (selectionType === null || selectionStart === null) return
 
     let selected: Array<moment> = []
@@ -224,14 +226,14 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     if (selectionType === 'add') {
       this.setState(
         {
-          availabilityDraft: Array.from(new Set(availability.concat(selected.map(t => t.toDate()))))
+          selectionDraft: Array.from(new Set(selection.concat(selected.map(t => t.toDate()))))
         },
         callback
       )
     } else if (selectionType === 'remove') {
       this.setState(
         {
-          availabilityDraft: availability.filter(a => !selected.find(b => moment(a).isSame(b)))
+          selectionDraft: selection.filter(a => !selected.find(b => moment(a).isSame(b)))
         },
         callback
       )
@@ -243,7 +245,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     if (startTime) {
       // Check if the startTime cell is selected/unselected to determine if this drag-select should
       // add values or remove values
-      const timeSelected = this.props.availability.find(a => moment(a).isSame(startTime))
+      const timeSelected = this.props.selection.find(a => moment(a).isSame(startTime))
       this.setState({
         selectionType: timeSelected ? 'remove' : 'add',
         selectionStart: startTime
@@ -252,7 +254,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   }
 
   handleMouseEnterEvent = (time: moment) => {
-    // Need to update availability draft on mouseup as well in order to catch the cases
+    // Need to update selection draft on mouseup as well in order to catch the cases
     // where the user just clicks on a single cell (because no mouseenter events fire
     // in this scenario)
     this.updateAvailabilityDraft(time)
@@ -302,7 +304,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
       this.handleSelectionStartEvent(time)
     }
 
-    const selected = Boolean(this.state.availabilityDraft.find(a => moment(a).isSame(time)))
+    const selected = Boolean(this.state.selectionDraft.find(a => moment(a).isSame(time)))
 
     return (
       <GridCell
@@ -312,7 +314,6 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
         innerRef={(dateCell: HTMLElement) => {
           this.cellToMoment.set(dateCell, time)
         }}
-        className="date-cell"
         // Mouse handlers
         onMouseDown={startHandler}
         onMouseEnter={() => {
@@ -351,7 +352,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
 
   render(): React.Element<*> {
     return (
-      <Wrapper className="availability-selector">
+      <Wrapper>
         {
           <Grid>
             {this.renderTimeLabels()}
