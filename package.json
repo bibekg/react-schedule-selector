@@ -18,10 +18,11 @@
   "license": "MIT",
   "scripts": {
     "prepublish": "yarn build",
-    "build": "babel src -d dist/lib",
+    "build": "yarn lib:build && yarn docs:build",
     "lint": "eslint src/**/*.{js,jsx} --quiet",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "test": "flow && yarn lint",
+    "lib:build": "babel src -d dist/lib",
     "docs:dev": "parcel serve src/docs/index.html -d dev/docs",
     "docs:build": "parcel build src/docs/index.html -d dist/docs"
   },

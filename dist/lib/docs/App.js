@@ -1,6 +1,6 @@
 var _templateObject = _taggedTemplateLiteralLoose(['\n  body {\n    font-family: sans-serif;\n  }\n'], ['\n  body {\n    font-family: sans-serif;\n  }\n']),
     _templateObject2 = _taggedTemplateLiteralLoose(['\n  border-radius: 25px;\n  box-shadow: 0px 0px 2px #222222;\n  padding: 20px;\n'], ['\n  border-radius: 25px;\n  box-shadow: 0px 0px 2px #222222;\n  padding: 20px;\n']),
-    _templateObject3 = _taggedTemplateLiteralLoose(['\n  width: 150px;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  border: 1px solid rgba(0,0,0,0.3);\n  &:hover {\n    background-color: rgba(236, 146, 64, 0.3);\n  }\n'], ['\n  width: 150px;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  border: 1px solid rgba(0,0,0,0.3);\n  &:hover {\n    background-color: rgba(236, 146, 64, 0.3);\n  }\n']);
+    _templateObject3 = _taggedTemplateLiteralLoose(['\n  width: 150px;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  &:hover {\n    background-color: rgba(236, 146, 64, 0.3);\n  }\n'], ['\n  width: 150px;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  border: 1px solid rgba(0, 0, 0, 0.3);\n  &:hover {\n    background-color: rgba(236, 146, 64, 0.3);\n  }\n']);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -40,7 +40,7 @@ var App = function (_React$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = { schedule: [] }, _this.handleDateChange = function (newSchedule) {
       _this.setState({ schedule: newSchedule });
-    }, _this.renderCustomCell = function (selected) {
+    }, _this.renderCustomCell = function (time, selected) {
       return selected ? React.createElement(
         EmojiCell,
         null,

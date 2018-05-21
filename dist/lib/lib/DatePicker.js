@@ -321,13 +321,13 @@ var _initialiseProps = function _initialiseProps() {
         onTouchMove: _this2.handleTouchMoveEvent,
         onTouchEnd: _this2.handleTouchEndEvent
       },
-      _this2.renderDateCell(selected)
+      _this2.renderDateCell(time, selected)
     );
   };
 
-  this.renderDateCell = function (selected) {
+  this.renderDateCell = function (time, selected) {
     if (_this2.props.renderDateCell) {
-      return _this2.props.renderDateCell(selected);
+      return _this2.props.renderDateCell(time.toDate(), selected);
     } else {
       return React.createElement(DateCell, {
         selected: selected,
