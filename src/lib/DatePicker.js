@@ -86,7 +86,7 @@ type PropsType = {
   unselectedColor: string,
   selectedColor: string,
   hoveredColor: string,
-  renderDateCell?: boolean => React.Node
+  renderDateCell?: (Date, boolean) => React.Node
 }
 
 type SelectionType = 'add' | 'remove'
@@ -330,14 +330,14 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
         onTouchMove={this.handleTouchMoveEvent}
         onTouchEnd={this.handleTouchEndEvent}
       >
-        {this.renderDateCell(selected)}
+        {this.renderDateCell(time, selected)}
       </GridCell>
     )
   }
 
-  renderDateCell = (selected: boolean): React.Node => {
+  renderDateCell = (time: moment, selected: boolean): React.Node => {
     if (this.props.renderDateCell) {
-      return this.props.renderDateCell(selected)
+      return this.props.renderDateCell(time.toDate(), selected)
     } else {
       return (
         <DateCell

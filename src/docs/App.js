@@ -45,7 +45,7 @@ class App extends React.Component<{}, StateType> {
   }
 
   // eslint-disable-next-line
-  renderCustomCell = (selected: boolean) => (selected ? <EmojiCell>✅</EmojiCell> : <EmojiCell>❌</EmojiCell>)
+  renderCustomCell = (time: Date, selected: boolean) => (selected ? <EmojiCell>✅</EmojiCell> : <EmojiCell>❌</EmojiCell>)
 
   render(): React.Element<*> {
     return (
