@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <GridDatePicker
-        availability={this.state.schedule}
+        selection={this.state.schedule}
         numDays={5}
         minTime={8}
         maxTime={22}
