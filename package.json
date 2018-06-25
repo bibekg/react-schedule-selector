@@ -26,12 +26,15 @@
     "docs:dev": "parcel serve src/docs/index.html -d dev/docs",
     "docs:build": "parcel build src/docs/index.html -d dist/docs"
   },
+  "engines": {
+    "node": ">8.0"
+  },
   "peerDependencies": {
     "react": ">=15.5 && <=16.0",
     "styled-components": ">=2.0 || >=3.0"
   },
   "dependencies": {
-    "moment": "^2.22.1"
+    "date-fns": "^1.29.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
