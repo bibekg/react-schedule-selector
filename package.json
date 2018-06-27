@@ -1,6 +1,6 @@
 {
   "name": "react-grid-date-picker",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A mobile-friendly when2meet-style grid-based date picker",
   "author": "Bibek Ghimire",
   "repository": {
@@ -42,6 +42,7 @@
     "babel-eslint": "^8.2.3",
     "babel-jest": "^23.2.0",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.1",
