@@ -1,6 +1,6 @@
 # Grid Date Picker
 
-A mobile-friendly when2meet-style grid-based date picker built with [styled components](https://github.com/styled-components/styled-components) and [moment](momentjs.com).
+A mobile-friendly when2meet-style grid-based date picker built with [styled components](https://github.com/styled-components/styled-components) and [date-fns](https://date-fns.org/).
 
 ![image](https://image.ibb.co/jDKJBT/react_grid_date_picker.png)
 
@@ -22,7 +22,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <GridDatePicker
+      <DatePicker
         selection={this.state.schedule}
         numDays={5}
         minTime={8}
@@ -52,7 +52,7 @@ To customize the UI, you can either:
 `numDays` | `number` | The number of days from today to show | no | `7`
 `minTime` | `number` | The minimum hour to show (0-23) | no | `9`
 `maxTime` | `number` | The maximum hour to show (0-23) | no | `23`
-`dateFormat` | `string` | The [date format](http://momentjs.com/docs/#/displaying/) to be used for the column headers | no | `'M/D'`
+`dateFormat` | `string` | The [date format](https://date-fns.org/v1.29.0/docs/format) to be used for the column headers | no | `'M/D'`
 `margin` | `number` | The margin between grid cells | no | `3`
 `unselectedColor` | `string` | The color of an unselected cell | no | `'rgba(89, 154, 242, 1)'`
 `selectedColor` | `string` | The color of a selected cell | no | `'rgba(162, 198, 248, 1)'`
