@@ -18,6 +18,7 @@
   "license": "MIT",
   "scripts": {
     "prepublish": "yarn build",
+    "postpublish": "yarn docs:deploy",
     "build": "yarn lib:build && yarn docs:build",
     "lint": "eslint src/**/*.{js,jsx} --quiet",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
@@ -25,7 +26,8 @@
     "test": "jest",
     "lib:build": "babel src -d dist/lib",
     "docs:dev": "parcel serve src/docs/index.html -d dev/docs",
-    "docs:build": "parcel build src/docs/index.html -d dist/docs"
+    "docs:build": "parcel build src/docs/index.html -d dist/docs",
+    "docs:deploy": "yarn docs:build && surge dist/docs --domain react-grid-date-picker.surge.sh"
   },
   "engines": {
     "node": ">8.0"
@@ -66,7 +68,8 @@
     "react": "^16.0.0",
     "react-dom": "^16.3.2",
     "react-test-renderer": "^16.4.1",
-    "styled-components": "^3.2.6"
+    "styled-components": "^3.2.6",
+    "surge": "^0.20.1"
   },
   "prettier": {
     "singleQuote": true,
