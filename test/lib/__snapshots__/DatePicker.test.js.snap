@@ -158,244 +158,6 @@ exports[`Component renders correctly 1`] = `
         <h1
           className="sc-htoDjs ejORLp sc-bdVaJa ivqupp"
         >
-          12/31
-        </h1>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw jZWPLq"
-          selected={true}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
-        />
-      </div>
-    </div>
-    <div
-      className="sc-EHOje jKkuXM"
-    >
-      <div
-        className="sc-bZQynM gdFTey"
-      >
-        <h1
-          className="sc-htoDjs ejORLp sc-bdVaJa ivqupp"
-        >
           1/1
         </h1>
       </div>
@@ -455,8 +217,8 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
+          className="sc-gzVnrw jZWPLq"
+          selected={true}
         />
       </div>
       <div
@@ -470,8 +232,8 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="sc-gzVnrw jZWPLq"
-          selected={true}
+          className="sc-gzVnrw wOteY"
+          selected={false}
         />
       </div>
       <div
@@ -708,8 +470,8 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="sc-gzVnrw wOteY"
-          selected={false}
+          className="sc-gzVnrw jZWPLq"
+          selected={true}
         />
       </div>
       <div
@@ -1111,6 +873,244 @@ exports[`Component renders correctly 1`] = `
           className="sc-htoDjs ejORLp sc-bdVaJa ivqupp"
         >
           1/4
+        </h1>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="sc-gzVnrw wOteY"
+          selected={false}
+        />
+      </div>
+    </div>
+    <div
+      className="sc-EHOje jKkuXM"
+    >
+      <div
+        className="sc-bZQynM gdFTey"
+      >
+        <h1
+          className="sc-htoDjs ejORLp sc-bdVaJa ivqupp"
+        >
+          1/5
         </h1>
       </div>
       <div
@@ -1501,259 +1501,6 @@ exports[`Date cell render prop is used if provided 1`] = `
         <h1
           className="sc-htoDjs ejORLp sc-bdVaJa ivqupp"
         >
-          12/31
-        </h1>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="selected test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-      <div
-        className="sc-bZQynM gdFTey"
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        role="presentation"
-      >
-        <div
-          className="false test-date-cell-renderer"
-        >
-          Sun Dec 31 2017
-        </div>
-      </div>
-    </div>
-    <div
-      className="sc-EHOje jKkuXM"
-    >
-      <div
-        className="sc-bZQynM gdFTey"
-      >
-        <h1
-          className="sc-htoDjs ejORLp sc-bdVaJa ivqupp"
-        >
           1/1
         </h1>
       </div>
@@ -1816,7 +1563,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
+          className="selected test-date-cell-renderer"
         >
           Mon Jan 01 2018
         </div>
@@ -1832,7 +1579,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="selected test-date-cell-renderer"
+          className="false test-date-cell-renderer"
         >
           Mon Jan 01 2018
         </div>
@@ -2085,7 +1832,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
+          className="selected test-date-cell-renderer"
         >
           Tue Jan 02 2018
         </div>
@@ -2754,6 +2501,259 @@ exports[`Date cell render prop is used if provided 1`] = `
           className="false test-date-cell-renderer"
         >
           Thu Jan 04 2018
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-EHOje jKkuXM"
+    >
+      <div
+        className="sc-bZQynM gdFTey"
+      >
+        <h1
+          className="sc-htoDjs ejORLp sc-bdVaJa ivqupp"
+        >
+          1/5
+        </h1>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
+      </div>
+      <div
+        className="sc-bZQynM gdFTey"
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="presentation"
+      >
+        <div
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import moment from 'moment'
 import DatePicker from '../../src/lib/DatePicker'
 
-const startDate = new Date('2018-01-01T00:00:00.000Z')
+const startDate = new Date('2018-01-01T00:00:00.000')
 
 const getTestSchedule = () => [
   moment(startDate)
