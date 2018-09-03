@@ -1,7 +1,10 @@
+/* eslint-disable flowtype/* */
+
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { shallow } from 'enzyme'
 import moment from 'moment'
+
 import DatePicker from '../../src/lib/DatePicker'
 
 const startDate = new Date('2018-01-01T00:00:00.000')
@@ -18,6 +21,7 @@ const getTestSchedule = () => [
 
 beforeAll(() => {
   document.elementFromPoint = jest.fn()
+  document.removeEventListener = jest.fn()
 })
 
 test('Component renders correctly', () => {
@@ -47,7 +51,7 @@ test('Date cell render prop is used if provided', () => {
   expect(tree).toMatchSnapshot()
 })
 
-test('getTimeFromTouchEvent', () => {
+test('getTimeFromTouchEvent returns the time for that cell', () => {
   const component = shallow(<DatePicker />)
   const mainSpy = jest.spyOn(component.instance(), 'getTimeFromTouchEvent')
   const mockCellTime = new Date()
@@ -66,7 +70,7 @@ test('getTimeFromTouchEvent', () => {
   cellToDateSpy.mockRestore()
 })
 
-test('endSelection', () => {
+test('endSelection calls the onChange prop and resets selection state', () => {
   const changeSpy = jest.fn()
   const component = shallow(<DatePicker onChange={changeSpy} />)
   const setStateSpy = jest.spyOn(component.instance(), 'setState')
@@ -133,5 +137,97 @@ test('touch handlers get called', () => {
 
   Object.keys(spies).forEach(spyName => {
     spies[spyName].mockRestore()
+  })
+})
+
+test('handleTouchMoveEvent updates the availability draft', () => {
+  const mockCellTime = new Date()
+  const getTimeSpy = jest.spyOn(DatePicker.prototype, 'getTimeFromTouchEvent').mockReturnValue(mockCellTime)
+  const updateDraftSpy = jest.spyOn(DatePicker.prototype, 'updateAvailabilityDraft')
+
+  const component = shallow(<DatePicker />)
+  component.instance().handleTouchMoveEvent({})
+  expect(updateDraftSpy).toHaveBeenCalledWith(mockCellTime)
+
+  getTimeSpy.mockRestore()
+  updateDraftSpy.mockRestore()
+})
+
+test.each([['add', 1], ['remove', 1], ['add', -1], ['remove', -1]])(
+  'updateAvailabilityDraft handles addition and removals, for forward and reversed drags',
+  (type, amount, done) => {
+    const start = moment(startDate)
+      .add(5, 'hours')
+      .toDate()
+    const end = moment(start)
+      .add(amount, 'hours')
+      .toDate()
+    const outOfRangeOne = moment(start)
+      .add(amount + 5, 'hours')
+      .toDate()
+
+    const setStateSpy = jest.spyOn(DatePicker.prototype, 'setState')
+    const component = shallow(
+      <DatePicker
+        // Initialize the initial selection based on whether this test is adding or removing
+        selection={type === 'remove' ? [start, end, outOfRangeOne] : [outOfRangeOne]}
+        startDate={start}
+        numDays={5}
+        minTime={0}
+        maxTime={23}
+      />
+    )
+    component.setState(
+      {
+        selectionType: type,
+        selectionStart: start
+      },
+      () => {
+        const expected = type === 'remove' ? [outOfRangeOne] : [start, end, outOfRangeOne]
+        component.instance().updateAvailabilityDraft(end, () => {
+          expect(setStateSpy).toHaveBeenLastCalledWith({ selectionDraft: expect.arrayContaining(expected) })
+          setStateSpy.mockRestore()
+          done()
+        })
+      }
+    )
+  }
+)
+
+test('updateAvailabilityDraft handles a single cell click correctly', done => {
+  const setStateSpy = jest.spyOn(DatePicker.prototype, 'setState')
+  const component = shallow(<DatePicker />)
+  const start = startDate
+  component.setState(
+    {
+      selectionType: 'add',
+      selectionStart: start
+    },
+    () => {
+      component.instance().updateAvailabilityDraft(null, () => {
+        expect(setStateSpy).toHaveBeenCalledWith({ selectionDraft: expect.arrayContaining([start]) })
+        setStateSpy.mockRestore()
+        done()
+      })
+    }
+  )
+})
+
+test('componentWillUnmount removes the mouseup event listener', () => {
+  const component = shallow(<DatePicker />)
+  const endSelectionMethod = component.instance().endSelection
+  component.unmount()
+  expect(document.removeEventListener).toHaveBeenCalledWith('mouseup', endSelectionMethod)
+})
+
+test('componentWillReceiveProps makes the selection prop override the existing selection draft', () => {
+  const setStateSpy = jest.spyOn(DatePicker.prototype, 'setState')
+  const component = shallow(<DatePicker />)
+  const mockNextProps = {
+    selection: ['foo', 'bar']
+  }
+  component.instance().componentWillReceiveProps(mockNextProps)
+  expect(setStateSpy).toHaveBeenCalledWith({
+    selectionDraft: expect.arrayContaining(mockNextProps.selection)
   })
 })

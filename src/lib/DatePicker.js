@@ -185,7 +185,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   // Performs a lookup into this.cellToDate to retrieve the Date that corresponds to
   // the cell where this touch event is right now. Note that this method will only work
   // if the event is a `touchmove` event since it's the only one that has a `touches` list.
-  getTimeFromTouchEvent = (event: SyntheticTouchEvent<*>): ?Date => {
+  getTimeFromTouchEvent(event: SyntheticTouchEvent<*>): ?Date {
     const { touches } = event
     if (!touches || touches.length === 0) return null
     const { clientX, clientY } = touches[0]
@@ -203,7 +203,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   }
 
   // Given an ending Date, determines all the dates that should be selected in this draft
-  updateAvailabilityDraft = (selectionEnd: ?Date, callback?: () => void) => {
+  updateAvailabilityDraft(selectionEnd: ?Date, callback?: () => void) {
     const { selection } = this.props
     const { selectionType, selectionStart } = this.state
 
@@ -216,7 +216,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
       // where the user just clicks on a single cell, since in that case,
       // In such a case, set the entire selection as just that
       if (selectionStart) selected = [selectionStart]
-    } else {
+    } else if (selectionStart) {
       const reverseSelection = isBefore(selectionEnd, selectionStart)
       // Generate a list of Dates between the start of the selection and the end of the selection
       // The Dates to choose from for this list are sourced from this.dates
@@ -257,15 +257,13 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
 
   // Isomorphic (mouse and touch) handler since starting a selection works the same way for both classes of user input
   handleSelectionStartEvent(startTime: Date) {
-    if (startTime) {
-      // Check if the startTime cell is selected/unselected to determine if this drag-select should
-      // add values or remove values
-      const timeSelected = this.props.selection.find(a => isSameMinute(a, startTime))
-      this.setState({
-        selectionType: timeSelected ? 'remove' : 'add',
-        selectionStart: startTime
-      })
-    }
+    // Check if the startTime cell is selected/unselected to determine if this drag-select should
+    // add values or remove values
+    const timeSelected = this.props.selection.find(a => isSameMinute(a, startTime))
+    this.setState({
+      selectionType: timeSelected ? 'remove' : 'add',
+      selectionStart: startTime
+    })
   }
 
   handleMouseEnterEvent = (time: Date) => {
@@ -275,11 +273,9 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     this.updateAvailabilityDraft(time)
   }
 
-  handleMouseUpEvent = (time?: Date) => {
-    if (time) {
-      this.updateAvailabilityDraft(time)
-      // Don't call this.endSelection() here because the document mouseup handler will do it
-    }
+  handleMouseUpEvent = (time: Date) => {
+    this.updateAvailabilityDraft(time)
+    // Don't call this.endSelection() here because the document mouseup handler will do it
   }
 
   handleTouchMoveEvent(event: SyntheticTouchEvent<*>) {
