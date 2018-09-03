@@ -45,7 +45,7 @@ const Column = styled.div`
   justify-content: space-evenly;
 `
 
-const GridCell = styled.div`
+export const GridCell = styled.div`
   margin: ${props => props.margin}px;
 `
 
@@ -60,7 +60,7 @@ const DateCell = styled.div`
   }
 `
 
-const DateLabel = Subtitle.extend`
+const DateLabel = styled(Subtitle)`
   height: 30px;
   @media (max-width: 699px) {
     font-size: 12px;
@@ -79,7 +79,7 @@ const TimeLabelCell = styled.div`
   align-items: center;
 `
 
-const TimeText = Text.extend`
+const TimeText = styled(Text)`
   margin: 0;
   @media (max-width: 699px) {
     font-size: 10px;
@@ -117,6 +117,9 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   cellToDate: Map<HTMLElement, Date>
   documentMouseUpHandler: () => void
   endSelection: () => void
+  handleTouchMoveEvent: (SyntheticTouchEvent<*>) => void
+  handleTouchEndEvent: () => void
+  handleSelectionStartEvent: Date => void
 
   static defaultProps = {
     numDays: 7,
@@ -127,7 +130,9 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     margin: 3,
     selectedColor: colors.blue,
     unselectedColor: colors.paleBlue,
-    hoveredColor: colors.lightBlue
+    hoveredColor: colors.lightBlue,
+    selection: [],
+    onChange: () => {}
   }
 
   constructor(props: PropsType) {
@@ -152,6 +157,9 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     }
 
     this.endSelection = this.endSelection.bind(this)
+    this.handleTouchMoveEvent = this.handleTouchMoveEvent.bind(this)
+    this.handleTouchEndEvent = this.handleTouchEndEvent.bind(this)
+    this.handleSelectionStartEvent = this.handleSelectionStartEvent.bind(this)
   }
 
   componentDidMount() {
@@ -177,7 +185,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   // Performs a lookup into this.cellToDate to retrieve the Date that corresponds to
   // the cell where this touch event is right now. Note that this method will only work
   // if the event is a `touchmove` event since it's the only one that has a `touches` list.
-  getTimeFromTouchEvent = (event: SyntheticTouchEvent<*>): ?Date => {
+  getTimeFromTouchEvent(event: SyntheticTouchEvent<*>): ?Date {
     const { touches } = event
     if (!touches || touches.length === 0) return null
     const { clientX, clientY } = touches[0]
@@ -195,7 +203,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   }
 
   // Given an ending Date, determines all the dates that should be selected in this draft
-  updateAvailabilityDraft = (selectionEnd: ?Date, callback?: () => void) => {
+  updateAvailabilityDraft(selectionEnd: ?Date, callback?: () => void) {
     const { selection } = this.props
     const { selectionType, selectionStart } = this.state
 
@@ -208,7 +216,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
       // where the user just clicks on a single cell, since in that case,
       // In such a case, set the entire selection as just that
       if (selectionStart) selected = [selectionStart]
-    } else {
+    } else if (selectionStart) {
       const reverseSelection = isBefore(selectionEnd, selectionStart)
       // Generate a list of Dates between the start of the selection and the end of the selection
       // The Dates to choose from for this list are sourced from this.dates
@@ -248,16 +256,14 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   }
 
   // Isomorphic (mouse and touch) handler since starting a selection works the same way for both classes of user input
-  handleSelectionStartEvent = (startTime: Date) => {
-    if (startTime) {
-      // Check if the startTime cell is selected/unselected to determine if this drag-select should
-      // add values or remove values
-      const timeSelected = this.props.selection.find(a => isSameMinute(a, startTime))
-      this.setState({
-        selectionType: timeSelected ? 'remove' : 'add',
-        selectionStart: startTime
-      })
-    }
+  handleSelectionStartEvent(startTime: Date) {
+    // Check if the startTime cell is selected/unselected to determine if this drag-select should
+    // add values or remove values
+    const timeSelected = this.props.selection.find(a => isSameMinute(a, startTime))
+    this.setState({
+      selectionType: timeSelected ? 'remove' : 'add',
+      selectionStart: startTime
+    })
   }
 
   handleMouseEnterEvent = (time: Date) => {
@@ -267,21 +273,19 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     this.updateAvailabilityDraft(time)
   }
 
-  handleMouseUpEvent = (time?: Date) => {
-    if (time) {
-      this.updateAvailabilityDraft(time)
-      // Don't call this.endSelection() here because the document mouseup handler will do it
-    }
+  handleMouseUpEvent = (time: Date) => {
+    this.updateAvailabilityDraft(time)
+    // Don't call this.endSelection() here because the document mouseup handler will do it
   }
 
-  handleTouchMoveEvent = (event: SyntheticTouchEvent<*>) => {
+  handleTouchMoveEvent(event: SyntheticTouchEvent<*>) {
     const cellTime = this.getTimeFromTouchEvent(event)
     if (cellTime) {
       this.updateAvailabilityDraft(cellTime)
     }
   }
 
-  handleTouchEndEvent = () => {
+  handleTouchEndEvent() {
     this.endSelection()
   }
 
@@ -315,6 +319,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
 
     return (
       <GridCell
+        className="rgdp__grid-cell"
         role="presentation"
         margin={this.props.margin}
         key={time.toISOString()}
