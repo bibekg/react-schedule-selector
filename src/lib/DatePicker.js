@@ -45,7 +45,7 @@ const Column = styled.div`
   justify-content: space-evenly;
 `
 
-const GridCell = styled.div`
+export const GridCell = styled.div`
   margin: ${props => props.margin}px;
 `
 
@@ -127,7 +127,8 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     margin: 3,
     selectedColor: colors.blue,
     unselectedColor: colors.paleBlue,
-    hoveredColor: colors.lightBlue
+    hoveredColor: colors.lightBlue,
+    selection: []
   }
 
   constructor(props: PropsType) {
@@ -315,6 +316,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
 
     return (
       <GridCell
+        className="rgdp__grid-cell"
         role="presentation"
         margin={this.props.margin}
         key={time.toISOString()}
