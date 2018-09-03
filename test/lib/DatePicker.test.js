@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { shallow } from 'enzyme'
 import moment from 'moment'
-import DatePicker, { GridCell } from '../../src/lib/DatePicker'
+import DatePicker from '../../src/lib/DatePicker'
 
 const startDate = new Date('2018-01-01T00:00:00.000')
 
@@ -16,11 +16,9 @@ const getTestSchedule = () => [
     .add(13, 'h')
 ]
 
-// beforeAll(() => {
-//   Object.defineProperty(global, 'document', {
-//     elementFromPoint: jest.fn()
-//   })
-// })
+beforeAll(() => {
+  document.elementFromPoint = jest.fn()
+})
 
 test('Component renders correctly', () => {
   const component = renderer.create(
@@ -53,17 +51,15 @@ test('getTimeFromTouchEvent', () => {
   const component = shallow(<DatePicker />)
   const mainSpy = jest.spyOn(component.instance(), 'getTimeFromTouchEvent')
   const mockCellTime = new Date()
-  const mockTargetElement = {}
   const mockEvent = {
     touches: [{ clientX: 1, clientY: 2 }]
   }
-  document.elementFromPoint = jest.fn().mockReturnValue(mockTargetElement)
   const cellToDateSpy = jest.spyOn(component.instance().cellToDate, 'get').mockReturnValue(mockCellTime)
 
   component.instance().getTimeFromTouchEvent(mockEvent)
 
   expect(document.elementFromPoint).toHaveBeenCalledWith(mockEvent.touches[0].clientX, mockEvent.touches[0].clientY)
-  expect(cellToDateSpy).toHaveBeenCalledWith(mockTargetElement)
+  expect(cellToDateSpy).toHaveBeenCalled()
   expect(mainSpy).toHaveReturnedWith(mockCellTime)
 
   mainSpy.mockRestore()
@@ -86,14 +82,14 @@ test('endSelection', () => {
   setStateSpy.mockRestore()
 })
 
-test('handlers get called', () => {
+test('mouse handlers get called', () => {
   const component = shallow(<DatePicker />)
   const anInstance = component.find('.rgdp__grid-cell').first()
 
   const spies = {
+    handleSelectionStart: jest.spyOn(component.instance(), 'handleSelectionStartEvent'),
     handleMouseEnter: jest.spyOn(component.instance(), 'handleMouseEnterEvent'),
-    handleMouseUp: jest.spyOn(component.instance(), 'handleMouseUpEvent'),
-    handleSelectionStart: jest.spyOn(component.instance(), 'handleSelectionStartEvent')
+    handleMouseUp: jest.spyOn(component.instance(), 'handleMouseUpEvent')
   }
 
   anInstance.prop('onMouseDown')()
@@ -105,4 +101,37 @@ test('handlers get called', () => {
 
   anInstance.prop('onMouseUp')()
   expect(spies.handleMouseUp).toHaveBeenCalled()
+
+  Object.keys(spies).forEach(spyName => {
+    spies[spyName].mockRestore()
+  })
+})
+
+test('touch handlers get called', () => {
+  const spies = {
+    onTouchStart: jest.spyOn(DatePicker.prototype, 'handleSelectionStartEvent'),
+    onTouchMove: jest.spyOn(DatePicker.prototype, 'handleTouchMoveEvent'),
+    onTouchEnd: jest.spyOn(DatePicker.prototype, 'handleTouchEndEvent')
+  }
+
+  const component = shallow(<DatePicker />)
+  const anInstance = component.find('.rgdp__grid-cell').first()
+
+  const mockEvent = {
+    touches: [{ clientX: 1, clientY: 2 }, { clientX: 100, clientY: 200 }]
+  }
+
+  anInstance.prop('onTouchStart')()
+  expect(spies.onTouchStart).toHaveBeenCalled()
+  spies.onTouchStart.mockReset()
+
+  anInstance.prop('onTouchMove')(mockEvent)
+  expect(spies.onTouchMove).toHaveBeenCalled()
+
+  anInstance.prop('onTouchEnd')()
+  expect(spies.onTouchEnd).toHaveBeenCalled()
+
+  Object.keys(spies).forEach(spyName => {
+    spies[spyName].mockRestore()
+  })
 })

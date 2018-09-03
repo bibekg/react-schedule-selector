@@ -60,7 +60,7 @@ const DateCell = styled.div`
   }
 `
 
-const DateLabel = Subtitle.extend`
+const DateLabel = styled(Subtitle)`
   height: 30px;
   @media (max-width: 699px) {
     font-size: 12px;
@@ -79,7 +79,7 @@ const TimeLabelCell = styled.div`
   align-items: center;
 `
 
-const TimeText = Text.extend`
+const TimeText = styled(Text)`
   margin: 0;
   @media (max-width: 699px) {
     font-size: 10px;
@@ -117,6 +117,9 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   cellToDate: Map<HTMLElement, Date>
   documentMouseUpHandler: () => void
   endSelection: () => void
+  handleTouchMoveEvent: (SyntheticTouchEvent<*>) => void
+  handleTouchEndEvent: () => void
+  handleSelectionStartEvent: Date => void
 
   static defaultProps = {
     numDays: 7,
@@ -128,7 +131,8 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     selectedColor: colors.blue,
     unselectedColor: colors.paleBlue,
     hoveredColor: colors.lightBlue,
-    selection: []
+    selection: [],
+    onChange: () => {}
   }
 
   constructor(props: PropsType) {
@@ -153,6 +157,9 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     }
 
     this.endSelection = this.endSelection.bind(this)
+    this.handleTouchMoveEvent = this.handleTouchMoveEvent.bind(this)
+    this.handleTouchEndEvent = this.handleTouchEndEvent.bind(this)
+    this.handleSelectionStartEvent = this.handleSelectionStartEvent.bind(this)
   }
 
   componentDidMount() {
@@ -249,7 +256,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   }
 
   // Isomorphic (mouse and touch) handler since starting a selection works the same way for both classes of user input
-  handleSelectionStartEvent = (startTime: Date) => {
+  handleSelectionStartEvent(startTime: Date) {
     if (startTime) {
       // Check if the startTime cell is selected/unselected to determine if this drag-select should
       // add values or remove values
@@ -275,14 +282,14 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     }
   }
 
-  handleTouchMoveEvent = (event: SyntheticTouchEvent<*>) => {
+  handleTouchMoveEvent(event: SyntheticTouchEvent<*>) {
     const cellTime = this.getTimeFromTouchEvent(event)
     if (cellTime) {
       this.updateAvailabilityDraft(cellTime)
     }
   }
 
-  handleTouchEndEvent = () => {
+  handleTouchEndEvent() {
     this.endSelection()
   }
 

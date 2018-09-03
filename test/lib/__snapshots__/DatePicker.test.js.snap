@@ -11,139 +11,139 @@ exports[`Component renders correctly 1`] = `
       className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
     >
       <h1
-        className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+        className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
       />
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           9am
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           10am
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           11am
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           12pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           1pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           2pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           3pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           4pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           5pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           6pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           7pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           8pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           9pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           10pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           11pm
         </p>
@@ -156,7 +156,7 @@ exports[`Component renders correctly 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/1
         </h1>
@@ -394,7 +394,7 @@ exports[`Component renders correctly 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/2
         </h1>
@@ -632,7 +632,7 @@ exports[`Component renders correctly 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/3
         </h1>
@@ -870,7 +870,7 @@ exports[`Component renders correctly 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/4
         </h1>
@@ -1108,7 +1108,7 @@ exports[`Component renders correctly 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/5
         </h1>
@@ -1354,139 +1354,139 @@ exports[`Date cell render prop is used if provided 1`] = `
       className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
     >
       <h1
-        className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+        className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
       />
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           9am
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           10am
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           11am
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           12pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           1pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           2pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           3pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           4pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           5pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           6pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           7pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           8pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           9pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           10pm
         </p>
       </div>
       <div
-        className="DatePicker__TimeLabelCell-sc-105wvqb-5 hWZGjN"
+        className="DatePicker__TimeLabelCell-sc-105wvqb-6 eAhKOZ"
       >
         <p
-          className="sc-9kwuzk-2-typography__Text-cPXYyj jbwvUQ"
+          className="DatePicker__TimeText-sc-105wvqb-7 jtTaGm typography__Text-sc-9kwuzk-2 kYxlfH"
         >
           11pm
         </p>
@@ -1499,7 +1499,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/1
         </h1>
@@ -1752,7 +1752,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/2
         </h1>
@@ -2005,7 +2005,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/3
         </h1>
@@ -2258,7 +2258,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/4
         </h1>
@@ -2511,7 +2511,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
       >
         <h1
-          className="sc-9kwuzk-1-typography__Subtitle-gSHbMc hiXuDx typography__Title-sc-9kwuzk-0 cTLdTq"
+          className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-1 eSCzqa typography__Title-sc-9kwuzk-0 cTLdTq"
         >
           1/5
         </h1>
