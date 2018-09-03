@@ -1,5 +1,7 @@
 # Grid Date Picker
 
+[![Coverage Status](https://coveralls.io/repos/github/bibekg/react-grid-date-picker/badge.svg?branch=configure-travis)](https://coveralls.io/github/bibekg/react-grid-date-picker?branch=configure-travis)
+
 A mobile-friendly when2meet-style grid-based date picker built with [styled components](https://github.com/styled-components/styled-components) and [date-fns](https://date-fns.org/).
 
 ![image](https://image.ibb.co/jDKJBT/react_grid_date_picker.png)
