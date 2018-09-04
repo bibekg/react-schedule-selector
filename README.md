@@ -50,76 +50,115 @@ To customize the UI, you can either:
 ### `Props`
 
 #### `selection`
+
 **type**: `Array<Date>`
+
 **description**: List of dates that should be filled in on the grid (reflect the start time of each cell).
+
 **required**: yes
 
 #### `onChange`
+
 **type**: `(Array<Date>) => void`
-**description**: Called when selected availability is changed. The new list of selected dates is passed in as the first parameter.
-**required**: yes
 
-#### `onChange`
-**type**:
-**description**:
-**required**:
-**default value**:
+**description**: Called when selected availability is changed. The new list of selected dates is passed in as the first parameter.
+
+**required**: yes
 
 #### `startDate`
+
 **type**: `Date`
+
 **description**: The date on which the grid should start (time portion is ignored, specify start time via `minTime`) 
+
 **required**: no
+
 **default value**: today
 
 #### `numDays`
+
 **type**: `number`
+
 **description**: The number of days to show, startin from today
+
 **required**: no
+
 **default value**: `7`
 
 #### `minTime`
+
 **type**: `number`
+
 **description**: The minimum hour to show (0-23)
+
 **required**: no
+
 **default value**: `9`
 
 #### `maxTime`
+
 **type**: `number`
+
 **description**: The maximum hour to show (0-23)
+
 **required**: no
+
 **default value**: `23`
 
 #### `dateFormat`
+
 **type**: `string`
+
 **description**: The [date format](https://date-fns.org/v1.29.0/docs/format) to be used for the column headers
+
 **required**: no
+
 **default value**: `'M/D'`
 
 #### `margin`
+
 **type**: `number`
+
 **description**: The margin between grid cells (in pixels)
+
 **required**: no
+
 **default value**: `3`
 
 #### `unselectedColor`
+
 **type**: `string`
+
 **description**: The color of an unselected cell
+
 **required**: no
+
 **default value**: `'rgba(89, 154, 242, 1)'`
 
 #### `selectedColor`
+
 **type**: `string`
+
 **description**: The color of an unselected cell
+
 **required**: no
+
 **default value**: `'rgba(162, 198, 248, 1)'`
 
 #### `hoveredColor`
+
 **type**: `string`
+
 **description**: The color of a hovered cell
+
 **required**: no
+
 **default value**: `'#dbedff'`
 
 #### `renderDateCell`
+
 **type**: `(time: Date, selected: boolean, refSetter: function) => React.Node`
+
 **description**: A render prop function that accepts the time this cell is representing and whether the cell is selected or not and returns a React element. It is your responsibility to apply the `refSetter` as a ref to the component you render -- neglecting to do so will cause the component to not work properly for touch devices. If you choose to use this custom render function, the color props above have no effect.
+
 **required**: no
