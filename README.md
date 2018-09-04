@@ -49,17 +49,77 @@ To customize the UI, you can either:
 
 ### `Props`
 
-| props             | type                                            | description                                                                                                                                                                                                                         | required | default value              |
-| ----------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | -------------------------- |
-| `selection`       | `Array<Date>`                                   | List of dates that should be filled in on the grid (reflect the start time of each cell)                                                                                                                                            | yes      | N/A                        |
-| `onChange`        | `(newSelection: Array<Date>) => void`           | A callback that's executed when the selected availability is changed. The new list of selected dates is passed in as the single parameter                                                                                           | yes      | N/A                        |
-| `startDate`       | `Date`                                          | The date on which the grid should start (time portion is ignored, specify start time via `minTime`)                                                                                                                                 | no       | today                      |
-| `numDays`         | `number`                                        | The number of days from today to show                                                                                                                                                                                               | no       | `7`                        |
-| `minTime`         | `number`                                        | The minimum hour to show (0-23)                                                                                                                                                                                                     | no       | `9`                        |
-| `maxTime`         | `number`                                        | The maximum hour to show (0-23)                                                                                                                                                                                                     | no       | `23`                       |
-| `dateFormat`      | `string`                                        | The [date format](https://date-fns.org/v1.29.0/docs/format) to be used for the column headers                                                                                                                                       | no       | `'M/D'`                    |
-| `margin`          | `number`                                        | The margin between grid cells                                                                                                                                                                                                       | no       | `3`                        |
-| `unselectedColor` | `string`                                        | The color of an unselected cell                                                                                                                                                                                                     | no       | `'rgba(89, 154, 242, 1)'`  |
-| `selectedColor`   | `string`                                        | The color of a selected cell                                                                                                                                                                                                        | no       | `'rgba(162, 198, 248, 1)'` |
-| `hoveredColor`    | `string`                                        | The color of a hovered cell                                                                                                                                                                                                         | no       | `'#dbedff'`                |
-| `renderDateCell`  | `(time: Date, selected: boolean) => React.Node` | A render prop function that accepts the time this cell is representing and whether the cell is selected or not and returns a React element. If you choose to use this custom render function, the color props above have no effect. | no       | ...                        |
+#### `selection`
+**type**: `Array<Date>`
+**description**: List of dates that should be filled in on the grid (reflect the start time of each cell).
+**required**: yes
+
+#### `onChange`
+**type**: `(Array<Date>) => void`
+**description**: Called when selected availability is changed. The new list of selected dates is passed in as the first parameter.
+**required**: yes
+
+#### `onChange`
+**type**:
+**description**:
+**required**:
+**default value**:
+
+#### `startDate`
+**type**: `Date`
+**description**: The date on which the grid should start (time portion is ignored, specify start time via `minTime`) 
+**required**: no
+**default value**: today
+
+#### `numDays`
+**type**: `number`
+**description**: The number of days to show, startin from today
+**required**: no
+**default value**: `7`
+
+#### `minTime`
+**type**: `number`
+**description**: The minimum hour to show (0-23)
+**required**: no
+**default value**: `9`
+
+#### `maxTime`
+**type**: `number`
+**description**: The maximum hour to show (0-23)
+**required**: no
+**default value**: `23`
+
+#### `dateFormat`
+**type**: `string`
+**description**: The [date format](https://date-fns.org/v1.29.0/docs/format) to be used for the column headers
+**required**: no
+**default value**: `'M/D'`
+
+#### `margin`
+**type**: `number`
+**description**: The margin between grid cells (in pixels)
+**required**: no
+**default value**: `3`
+
+#### `unselectedColor`
+**type**: `string`
+**description**: The color of an unselected cell
+**required**: no
+**default value**: `'rgba(89, 154, 242, 1)'`
+
+#### `selectedColor`
+**type**: `string`
+**description**: The color of an unselected cell
+**required**: no
+**default value**: `'rgba(162, 198, 248, 1)'`
+
+#### `hoveredColor`
+**type**: `string`
+**description**: The color of a hovered cell
+**required**: no
+**default value**: `'#dbedff'`
+
+#### `renderDateCell`
+**type**: `(time: Date, selected: boolean, refSetter: function) => React.Node`
+**description**: A render prop function that accepts the time this cell is representing and whether the cell is selected or not and returns a React element. It is your responsibility to apply the `refSetter` as a ref to the component you render -- neglecting to do so will cause the component to not work properly for touch devices. If you choose to use this custom render function, the color props above have no effect.
+**required**: no
