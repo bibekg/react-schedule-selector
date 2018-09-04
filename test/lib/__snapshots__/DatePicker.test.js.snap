@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component renders correctly 1`] = `
+exports[`snapshot tests renders correctly with custom render prop 1`] = `
 <div
   className="DatePicker__Wrapper-sc-105wvqb-0 izPHbF"
 >
@@ -8,7 +8,7 @@ exports[`Component renders correctly 1`] = `
     className="DatePicker__Grid-sc-105wvqb-1 hnBGgZ"
   >
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <h2
         className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -150,10 +150,10 @@ exports[`Component renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -162,7 +162,7 @@ exports[`Component renders correctly 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -172,12 +172,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -187,12 +188,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -202,12 +204,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -217,12 +220,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 kblHJA"
-          selected={true}
-        />
+          className="selected test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -232,12 +236,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -247,12 +252,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -262,12 +268,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -277,12 +284,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -292,12 +300,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -307,12 +316,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -322,12 +332,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -337,12 +348,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -352,12 +364,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -367,12 +380,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -382,16 +396,17 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Mon Jan 01 2018
+        </div>
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -400,7 +415,7 @@ exports[`Component renders correctly 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -410,12 +425,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -425,12 +441,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -440,12 +457,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -455,12 +473,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -470,12 +489,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 kblHJA"
-          selected={true}
-        />
+          className="selected test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -485,12 +505,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -500,12 +521,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -515,12 +537,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -530,12 +553,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -545,12 +569,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -560,12 +585,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -575,12 +601,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -590,12 +617,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -605,12 +633,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -620,16 +649,17 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Tue Jan 02 2018
+        </div>
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -638,7 +668,7 @@ exports[`Component renders correctly 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -648,12 +678,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -663,12 +694,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -678,12 +710,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -693,12 +726,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -708,12 +742,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -723,12 +758,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -738,12 +774,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -753,12 +790,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -768,12 +806,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -783,12 +822,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -798,12 +838,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -813,12 +854,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -828,12 +870,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -843,12 +886,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -858,16 +902,17 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Wed Jan 03 2018
+        </div>
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -876,7 +921,7 @@ exports[`Component renders correctly 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -886,12 +931,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -901,12 +947,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -916,12 +963,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -931,12 +979,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -946,12 +995,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -961,12 +1011,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -976,12 +1027,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -991,12 +1043,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1006,12 +1059,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1021,12 +1075,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1036,12 +1091,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1051,12 +1107,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1066,12 +1123,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1081,12 +1139,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1096,16 +1155,17 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Thu Jan 04 2018
+        </div>
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -1114,7 +1174,7 @@ exports[`Component renders correctly 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1124,12 +1184,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1139,12 +1200,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1154,12 +1216,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1169,12 +1232,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1184,12 +1248,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1199,12 +1264,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1214,12 +1280,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1229,12 +1296,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1244,12 +1312,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1259,12 +1328,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1274,12 +1344,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1289,12 +1360,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1304,12 +1376,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1319,12 +1392,13 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1334,16 +1408,17 @@ exports[`Component renders correctly 1`] = `
         role="presentation"
       >
         <div
-          className="DatePicker__DateCell-sc-105wvqb-4 jhANxd"
-          selected={false}
-        />
+          className="false test-date-cell-renderer"
+        >
+          Fri Jan 05 2018
+        </div>
       </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Date cell render prop is used if provided 1`] = `
+exports[`snapshot tests renders correctly with default render logic 1`] = `
 <div
   className="DatePicker__Wrapper-sc-105wvqb-0 izPHbF"
 >
@@ -1351,7 +1426,7 @@ exports[`Date cell render prop is used if provided 1`] = `
     className="DatePicker__Grid-sc-105wvqb-1 hnBGgZ"
   >
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <h2
         className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -1493,10 +1568,10 @@ exports[`Date cell render prop is used if provided 1`] = `
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -1505,7 +1580,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1515,13 +1590,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1531,13 +1605,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1547,13 +1620,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1563,13 +1635,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="selected test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 duZwlG"
+          selected={true}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1579,13 +1650,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1595,13 +1665,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1611,13 +1680,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1627,13 +1695,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1643,13 +1710,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1659,13 +1725,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1675,13 +1740,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1691,13 +1755,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1707,13 +1770,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1723,13 +1785,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1739,17 +1800,16 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Mon Jan 01 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -1758,7 +1818,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1768,13 +1828,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1784,13 +1843,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1800,13 +1858,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1816,13 +1873,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1832,13 +1888,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="selected test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 duZwlG"
+          selected={true}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1848,13 +1903,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1864,13 +1918,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1880,13 +1933,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1896,13 +1948,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1912,13 +1963,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1928,13 +1978,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1944,13 +1993,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1960,13 +2008,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1976,13 +2023,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1992,17 +2038,16 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Tue Jan 02 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -2011,7 +2056,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2021,13 +2066,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2037,13 +2081,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2053,13 +2096,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2069,13 +2111,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2085,13 +2126,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2101,13 +2141,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2117,13 +2156,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2133,13 +2171,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2149,13 +2186,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2165,13 +2201,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2181,13 +2216,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2197,13 +2231,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2213,13 +2246,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2229,13 +2261,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2245,17 +2276,16 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Wed Jan 03 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -2264,7 +2294,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2274,13 +2304,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2290,13 +2319,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2306,13 +2334,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2322,13 +2349,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2338,13 +2364,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2354,13 +2379,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2370,13 +2394,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2386,13 +2409,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2402,13 +2424,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2418,13 +2439,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2434,13 +2454,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2450,13 +2469,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2466,13 +2484,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2482,13 +2499,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2498,17 +2514,16 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Thu Jan 04 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
     </div>
     <div
-      className="DatePicker__Column-sc-105wvqb-2 bgDhyz"
+      className="DatePicker__Column-sc-105wvqb-2 gkRuoV"
     >
       <div
-        className="DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="DatePicker__GridCell-sc-105wvqb-3 GJuIT"
       >
         <h2
           className="DatePicker__DateLabel-sc-105wvqb-5 iRtbQc typography__Subtitle-sc-9kwuzk-0 cFqapc"
@@ -2517,7 +2532,7 @@ exports[`Date cell render prop is used if provided 1`] = `
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2527,13 +2542,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2543,13 +2557,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2559,13 +2572,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2575,13 +2587,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2591,13 +2602,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2607,13 +2617,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2623,13 +2632,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2639,13 +2647,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2655,13 +2662,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2671,13 +2677,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2687,13 +2692,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2703,13 +2707,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2719,13 +2722,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2735,13 +2737,12 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
       <div
-        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 hikauf"
+        className="rgdp__grid-cell DatePicker__GridCell-sc-105wvqb-3 GJuIT"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2751,10 +2752,9 @@ exports[`Date cell render prop is used if provided 1`] = `
         role="presentation"
       >
         <div
-          className="false test-date-cell-renderer"
-        >
-          Fri Jan 05 2018
-        </div>
+          className="DatePicker__DateCell-sc-105wvqb-4 lHpaG"
+          selected={false}
+        />
       </div>
     </div>
   </div>

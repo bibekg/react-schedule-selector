@@ -23,7 +23,6 @@ const EmojiCell = styled.span.attrs({
   role: 'img',
   'aria-label': 'checked'
 })`
-  width: 150px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -45,7 +44,7 @@ class App extends React.Component<{}, StateType> {
   }
 
   // eslint-disable-next-line
-  renderCustomCell = (time: Date, selected: boolean) => (selected ? <EmojiCell>✅</EmojiCell> : <EmojiCell>❌</EmojiCell>)
+  renderCustomCell = (time: Date, selected: boolean, innerRef: (HTMLElement => void)) => (selected ? <EmojiCell innerRef={innerRef}>✅</EmojiCell> : <EmojiCell innerRef={innerRef}>❌</EmojiCell>)
 
   render(): React.Element<*> {
     return (

@@ -43,17 +43,18 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  flex-grow: 1;
 `
 
 export const GridCell = styled.div`
   margin: ${props => props.margin}px;
+  touch-action: none;
 `
 
 const DateCell = styled.div`
   width: 100%;
   height: 25px;
   background-color: ${props => (props.selected ? props.selectedColor : props.unselectedColor)};
-  ${'' /* Ensures that the page doesn't scroll while the user is drag-selecting cells */} touch-action: none;
 
   &:hover {
     background-color: ${props => props.hoveredColor};
@@ -99,7 +100,7 @@ type PropsType = {
   unselectedColor: string,
   selectedColor: string,
   hoveredColor: string,
-  renderDateCell?: (Date, boolean) => React.Node
+  renderDateCell?: (Date, boolean, (HTMLElement) => void) => React.Node
 }
 
 type SelectionType = 'add' | 'remove'
@@ -109,7 +110,12 @@ type StateType = {
   // the drag-select. selectionDraft serves as a temporary copy during drag-selects.
   selectionDraft: Array<Date>,
   selectionType: ?SelectionType,
-  selectionStart: ?Date
+  selectionStart: ?Date,
+  isTouchDragging: boolean
+}
+
+export const preventScroll = (e: TouchEvent) => {
+  e.preventDefault()
 }
 
 export default class AvailabilitySelector extends React.Component<PropsType, StateType> {
@@ -119,7 +125,10 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   endSelection: () => void
   handleTouchMoveEvent: (SyntheticTouchEvent<*>) => void
   handleTouchEndEvent: () => void
+  handleMouseUpEvent: Date => void
+  handleMouseEnterEvent: Date => void
   handleSelectionStartEvent: Date => void
+  gridRef: ?HTMLElement
 
   static defaultProps = {
     numDays: 7,
@@ -153,10 +162,13 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     this.state = {
       selectionDraft: [...this.props.selection], // copy it over
       selectionType: null,
-      selectionStart: null
+      selectionStart: null,
+      isTouchDragging: false
     }
 
     this.endSelection = this.endSelection.bind(this)
+    this.handleMouseUpEvent = this.handleMouseUpEvent.bind(this)
+    this.handleMouseEnterEvent = this.handleMouseEnterEvent.bind(this)
     this.handleTouchMoveEvent = this.handleTouchMoveEvent.bind(this)
     this.handleTouchEndEvent = this.handleTouchEndEvent.bind(this)
     this.handleSelectionStartEvent = this.handleSelectionStartEvent.bind(this)
@@ -170,10 +182,22 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     // This isn't necessary for touch events since the `touchend` event fires on
     // the element where the touch/drag started so it's always caught.
     document.addEventListener('mouseup', this.endSelection)
+
+    // Prevent page scrolling when user is dragging on the date cells
+    this.cellToDate.forEach((value, dateCell) => {
+      if (dateCell && dateCell.addEventListener) {
+        dateCell.addEventListener('touchmove', preventScroll, { passive: false })
+      }
+    })
   }
 
   componentWillUnmount() {
     document.removeEventListener('mouseup', this.endSelection)
+    this.cellToDate.forEach((value, dateCell) => {
+      if (dateCell && dateCell.removeEventListener) {
+        dateCell.removeEventListener('touchmove', preventScroll)
+      }
+    })
   }
 
   componentWillReceiveProps(nextProps: PropsType) {
@@ -194,7 +218,7 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     return cellTime
   }
 
-  endSelection = () => {
+  endSelection() {
     this.props.onChange(this.state.selectionDraft)
     this.setState({
       selectionType: null,
@@ -266,19 +290,20 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     })
   }
 
-  handleMouseEnterEvent = (time: Date) => {
+  handleMouseEnterEvent(time: Date) {
     // Need to update selection draft on mouseup as well in order to catch the cases
     // where the user just clicks on a single cell (because no mouseenter events fire
     // in this scenario)
     this.updateAvailabilityDraft(time)
   }
 
-  handleMouseUpEvent = (time: Date) => {
+  handleMouseUpEvent(time: Date) {
     this.updateAvailabilityDraft(time)
     // Don't call this.endSelection() here because the document mouseup handler will do it
   }
 
   handleTouchMoveEvent(event: SyntheticTouchEvent<*>) {
+    this.setState({ isTouchDragging: true })
     const cellTime = this.getTimeFromTouchEvent(event)
     if (cellTime) {
       this.updateAvailabilityDraft(cellTime)
@@ -286,7 +311,17 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   }
 
   handleTouchEndEvent() {
-    this.endSelection()
+    if (!this.state.isTouchDragging) {
+      // Going down this branch means the user tapped but didn't drag -- which
+      // means the availability draft hasn't yet been updated (since
+      // handleTouchMoveEvent was never called) so we need to do it now
+      this.updateAvailabilityDraft(null, () => {
+        this.endSelection()
+      })
+    } else {
+      this.endSelection()
+    }
+    this.setState({ isTouchDragging: false })
   }
 
   renderTimeLabels = (): React.Element<*> => {
@@ -323,9 +358,6 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
         role="presentation"
         margin={this.props.margin}
         key={time.toISOString()}
-        innerRef={(dateCell: HTMLElement) => {
-          this.cellToDate.set(dateCell, time)
-        }}
         // Mouse handlers
         onMouseDown={startHandler}
         onMouseEnter={() => {
@@ -348,12 +380,16 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   }
 
   renderDateCell = (time: Date, selected: boolean): React.Node => {
+    const refSetter = (dateCell: HTMLElement) => {
+      this.cellToDate.set(dateCell, time)
+    }
     if (this.props.renderDateCell) {
-      return this.props.renderDateCell(time, selected)
+      return this.props.renderDateCell(time, selected, refSetter)
     } else {
       return (
         <DateCell
           selected={selected}
+          innerRef={refSetter}
           selectedColor={this.props.selectedColor}
           unselectedColor={this.props.unselectedColor}
           hoveredColor={this.props.hoveredColor}
@@ -366,7 +402,11 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     return (
       <Wrapper>
         {
-          <Grid>
+          <Grid
+            innerRef={el => {
+              this.gridRef = el
+            }}
+          >
             {this.renderTimeLabels()}
             {this.dates.map(this.renderDateColumn)}
           </Grid>
