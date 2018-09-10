@@ -238,13 +238,11 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
       newSelection = this.selectionSchemeHandlers[this.props.selectionScheme](selectionStart, selectionEnd, this.dates)
     }
 
-    let nextDraft = []
+    let nextDraft = [...this.props.selection]
     if (selectionType === 'add') {
-      nextDraft = Array.from(new Set([...this.props.selection, ...newSelection]))
+      nextDraft = Array.from(new Set([...nextDraft, ...newSelection]))
     } else if (selectionType === 'remove') {
-      nextDraft = this.props.selection.filter(a => !newSelection.find(b => isSameMinute(a, b)))
-    } else {
-      throw new Error('Invalid selection type')
+      nextDraft = nextDraft.filter(a => !newSelection.find(b => isSameMinute(a, b)))
     }
 
     this.setState({ selectionDraft: nextDraft }, callback)
