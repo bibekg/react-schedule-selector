@@ -17,6 +17,7 @@ const ScheduleSelectorCard = styled.div`
   border-radius: 25px;
   box-shadow: 0px 0px 2px #222222;
   padding: 20px;
+  max-width: 500px;
 `
 
 const EmojiCell = styled.span.attrs({
@@ -49,19 +50,34 @@ class App extends React.Component<{}, StateType> {
   render(): React.Element<*> {
     return (
       <div>
-        <h1>Schedule Selector with Custom Renderer</h1>
-        <ScheduleSelectorCard>
-          <ScheduleSelector
-            minTime={12}
-            maxTime={20}
-            numDays={5}
-            startDate={new Date('Fri May 18 2018 17:57:06 GMT-0700 (PDT)')}
-            selection={this.state.schedule}
-            onChange={this.handleDateChange}
-            renderDateCell={this.renderCustomCell}
-            dateFormat="ddd"
-          />
-        </ScheduleSelectorCard>
+        <div>
+          <h1>Default Schedule Selector</h1>
+          <ScheduleSelectorCard>
+            <ScheduleSelector
+              minTime={12}
+              maxTime={20}
+              numDays={5}
+              startDate={new Date('Fri May 18 2018 17:57:06 GMT-0700 (PDT)')}
+              selection={this.state.schedule}
+              onChange={this.handleDateChange}
+            />
+          </ScheduleSelectorCard>
+        </div>
+
+        <div>
+          <h1>Schedule Selector with Custom Renderer</h1>
+          <ScheduleSelectorCard>
+            <ScheduleSelector
+              minTime={12}
+              maxTime={20}
+              numDays={5}
+              startDate={new Date('Fri May 18 2018 17:57:06 GMT-0700 (PDT)')}
+              selection={this.state.schedule}
+              onChange={this.handleDateChange}
+              renderDateCell={this.renderCustomCell}
+            />
+          </ScheduleSelectorCard>
+        </div>
       </div>
     )
   }
