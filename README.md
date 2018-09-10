@@ -38,7 +38,7 @@ class App extends React.Component {
 }
 ```
 
-## `<Schedule />`
+## `<ScheduleSelector />`
 
 `ScheduleSelector` is a controlled component that can be used easily with the default settings. Just provide a controlled value for `selection` and include an `onChange` handler and you're good to go. Further customization can be done using the props outlined below.
 
