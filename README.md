@@ -1,6 +1,6 @@
 # React Schedule Selector
 
-[![npm version](https://badge.fury.io/js/react-grid-date-picker.svg)](https://badge.fury.io/js/react-grid-date-picker) [![Build Status](https://travis-ci.com/bibekg/react-grid-date-picker.svg?branch=master)](https://travis-ci.com/bibekg/react-grid-date-picker) [![Coverage Status](https://coveralls.io/repos/github/bibekg/react-grid-date-picker/badge.svg?branch=master)](https://coveralls.io/github/bibekg/react-grid-date-picker?branch=master)
+[![npm version](https://badge.fury.io/js/react-schedule-selector.svg)](https://badge.fury.io/js/react-schedule-selector) [![Build Status](https://travis-ci.com/bibekg/react-grid-date-picker.svg?branch=master)](https://travis-ci.com/bibekg/react-grid-date-picker) [![Coverage Status](https://coveralls.io/repos/github/bibekg/react-grid-date-picker/badge.svg?branch=master)](https://coveralls.io/github/bibekg/react-grid-date-picker?branch=master)
 
 A mobile-friendly when2meet-style grid-based schedule selector built with [styled components](https://github.com/styled-components/styled-components) and [date-fns](https://date-fns.org/). 
 
