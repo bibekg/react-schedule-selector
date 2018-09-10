@@ -27,6 +27,10 @@ describe('linear selection scheme', () => {
     expect(result).toContain(selectionStart.toString())
   })
 
+  test('it handles a null start and end', () => {
+    expect(linear(null, null, dates)).toHaveLength(0)
+  })
+
   test('it handles a cross-day selection', () => {
     const expected = []
     const START = { DATE: 1, TIME: 10 }
