@@ -4,7 +4,7 @@
 
 A mobile-friendly when2meet-style grid-based schedule selector built with [styled components](https://github.com/styled-components/styled-components) and [date-fns](https://date-fns.org/). 
 
-[Live example](http://react-grid-date-picker.surge.sh/)
+[Live example](http://react-schedule-selector.surge.sh/)
 
 ![image](https://image.ibb.co/jDKJBT/react_grid_date_picker.png)
 
