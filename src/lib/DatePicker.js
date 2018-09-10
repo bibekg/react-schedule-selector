@@ -7,23 +7,18 @@ import styled from 'styled-components'
 import addHours from 'date-fns/add_hours'
 import addDays from 'date-fns/add_days'
 import startOfDay from 'date-fns/start_of_day'
-import differenceInHours from 'date-fns/difference_in_hours'
 import isSameMinute from 'date-fns/is_same_minute'
-import isBefore from 'date-fns/is_before'
 import formatDate from 'date-fns/format'
 
 import { Text, Subtitle } from './typography'
 import colors from './colors'
+import selectionSchemes from './selection-schemes'
 
 const formatHour = (hour: number): string => {
   const h = hour === 0 || hour === 12 || hour === 24 ? 12 : hour % 12
   const abb = hour < 12 || hour === 24 ? 'am' : 'pm'
   return `${h}${abb}`
 }
-
-// Helper function that uses date-fns methods to determine if a date is between two other dates
-const dateHourIsBetween = (candidate: Date, start: Date, end: Date) =>
-  differenceInHours(candidate, start) >= 0 && differenceInHours(end, candidate) >= 0
 
 const Wrapper = styled.div`
   display: flex;
@@ -90,6 +85,7 @@ const TimeText = styled(Text)`
 
 type PropsType = {
   selection: Array<Date>,
+  selectionScheme: SelectionSchemeType,
   onChange: (Array<Date>) => void,
   startDate: Date,
   numDays: number,
@@ -102,8 +98,6 @@ type PropsType = {
   hoveredColor: string,
   renderDateCell?: (Date, boolean, (HTMLElement) => void) => React.Node
 }
-
-type SelectionType = 'add' | 'remove'
 
 type StateType = {
   // In the case that a user is drag-selecting, we don't want to call this.props.onChange() until they have completed
@@ -120,6 +114,7 @@ export const preventScroll = (e: TouchEvent) => {
 
 export default class AvailabilitySelector extends React.Component<PropsType, StateType> {
   dates: Array<Array<Date>>
+  selectionSchemeHandlers: { [string]: (Date, Date, Array<Array<Date>>) => Date[] }
   cellToDate: Map<HTMLElement, Date>
   documentMouseUpHandler: () => void
   endSelection: () => void
@@ -131,6 +126,8 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
   gridRef: ?HTMLElement
 
   static defaultProps = {
+    selection: [],
+    selectionScheme: 'square',
     numDays: 7,
     minTime: 9,
     maxTime: 23,
@@ -140,7 +137,6 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
     selectedColor: colors.blue,
     unselectedColor: colors.paleBlue,
     hoveredColor: colors.lightBlue,
-    selection: [],
     onChange: () => {}
   }
 
@@ -164,6 +160,11 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
       selectionType: null,
       selectionStart: null,
       isTouchDragging: false
+    }
+
+    this.selectionSchemeHandlers = {
+      linear: selectionSchemes.linear,
+      square: selectionSchemes.square
     }
 
     this.endSelection = this.endSelection.bind(this)
@@ -228,55 +229,23 @@ export default class AvailabilitySelector extends React.Component<PropsType, Sta
 
   // Given an ending Date, determines all the dates that should be selected in this draft
   updateAvailabilityDraft(selectionEnd: ?Date, callback?: () => void) {
-    const { selection } = this.props
     const { selectionType, selectionStart } = this.state
 
-    // User isn't selecting right now, doesn't make sense to update selection draft
     if (selectionType === null || selectionStart === null) return
 
-    let selected: Array<Date> = []
-    if (selectionEnd == null) {
-      // This function is called with a null selectionEnd on `mouseup`. This is useful for catching cases
-      // where the user just clicks on a single cell, since in that case,
-      // In such a case, set the entire selection as just that
-      if (selectionStart) selected = [selectionStart]
-    } else if (selectionStart) {
-      const reverseSelection = isBefore(selectionEnd, selectionStart)
-      // Generate a list of Dates between the start of the selection and the end of the selection
-      // The Dates to choose from for this list are sourced from this.dates
-      selected = this.dates.reduce(
-        (acc, dayOfTimes) =>
-          acc.concat(
-            dayOfTimes.filter(
-              t =>
-                selectionStart &&
-                selectionEnd &&
-                dateHourIsBetween(
-                  t,
-                  reverseSelection ? selectionEnd : selectionStart,
-                  reverseSelection ? selectionStart : selectionEnd
-                )
-            )
-          ),
-        []
-      )
+    let newSelection = []
+    if (selectionStart && selectionEnd && selectionType) {
+      newSelection = this.selectionSchemeHandlers[this.props.selectionScheme](selectionStart, selectionEnd, this.dates)
     }
 
+    let nextDraft = [...this.props.selection]
     if (selectionType === 'add') {
-      this.setState(
-        {
-          selectionDraft: Array.from(new Set([...selection, ...selected]))
-        },
-        callback
-      )
+      nextDraft = Array.from(new Set([...nextDraft, ...newSelection]))
     } else if (selectionType === 'remove') {
-      this.setState(
-        {
-          selectionDraft: selection.filter(a => !selected.find(b => isSameMinute(a, b)))
-        },
-        callback
-      )
+      nextDraft = nextDraft.filter(a => !newSelection.find(b => isSameMinute(a, b)))
     }
+
+    this.setState({ selectionDraft: nextDraft }, callback)
   }
 
   // Isomorphic (mouse and touch) handler since starting a selection works the same way for both classes of user input

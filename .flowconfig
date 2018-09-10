@@ -5,6 +5,7 @@ test
 [include]
 
 [libs]
+declarations
 
 [options]
 suppress_comment= \\(.\\|\n\\)*\\flow-disable-next-line
