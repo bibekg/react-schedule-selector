@@ -1,8 +1,8 @@
-# Grid Date Picker
+# React Schedule Selector
 
 [![npm version](https://badge.fury.io/js/react-grid-date-picker.svg)](https://badge.fury.io/js/react-grid-date-picker) [![Build Status](https://travis-ci.com/bibekg/react-grid-date-picker.svg?branch=master)](https://travis-ci.com/bibekg/react-grid-date-picker) [![Coverage Status](https://coveralls.io/repos/github/bibekg/react-grid-date-picker/badge.svg?branch=master)](https://coveralls.io/github/bibekg/react-grid-date-picker?branch=master)
 
-A mobile-friendly when2meet-style grid-based date picker built with [styled components](https://github.com/styled-components/styled-components) and [date-fns](https://date-fns.org/). 
+A mobile-friendly when2meet-style grid-based schedule selector built with [styled components](https://github.com/styled-components/styled-components) and [date-fns](https://date-fns.org/). 
 
 [Live example](http://react-grid-date-picker.surge.sh/)
 
@@ -11,36 +11,36 @@ A mobile-friendly when2meet-style grid-based date picker built with [styled comp
 ## Getting Started
 
 ```
-yarn add react-grid-date-picker styled-components
+yarn add react-schedule-selector styled-components
 ```
 
 ```js
-import DatePicker from 'react-grid-date-picker'
+import ScheduleSelector from 'react-schedule-selector'
 
 class App extends React.Component {
   state = { schedule = [] }
 
-  handleDatePickerChange = newSchedule => {
+  handleChange = newSchedule => {
     this.setState({ schedule: newSchedule })
   }
 
   render() {
     return (
-      <DatePicker
+      <ScheduleSelector
         selection={this.state.schedule}
         numDays={5}
         minTime={8}
         maxTime={22}
-        onChange={this.handleDatePickerChange}
+        onChange={this.handleChange}
       />
     )
   }
 }
 ```
 
-## `<DatePicker />`
+## `<ScheduleSelector />`
 
-`DatePicker` is a controlled component that can be used easily with the default settings. Just provide a controlled value for `selection` and include an `onChange` handler and you're good to go. Further customization can be done using the props outlined below.
+`ScheduleSelector` is a controlled component that can be used easily with the default settings. Just provide a controlled value for `selection` and include an `onChange` handler and you're good to go. Further customization can be done using the props outlined below.
 
 To customize the UI, you can either:
 

@@ -1,3 +1,3 @@
-import DatePicker from './DatePicker'
+import ScheduleSelector from './ScheduleSelector'
 
-export default DatePicker
+export default ScheduleSelector
