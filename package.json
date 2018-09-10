@@ -1,17 +1,16 @@
 {
-  "name": "react-grid-date-picker",
+  "name": "react-schedule-selector",
   "version": "2.1.0",
-  "description": "A mobile-friendly when2meet-style grid-based date picker",
+  "description": "A mobile-friendly when2meet-style grid-based schedule selector",
   "author": "Bibek Ghimire",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bibekg/react-grid-date-picker.git"
+    "url": "https://github.com/bibekg/react-schedule-selector.git"
   },
   "keywords": [
     "react",
     "styled-components",
     "date",
-    "moment",
     "grid"
   ],
   "main": "dist/lib/index.js",
@@ -27,7 +26,7 @@
     "lib:build": "babel src -d dist/lib",
     "docs:dev": "parcel serve src/docs/index.html -d dev/docs",
     "docs:build": "parcel build src/docs/index.html -d dist/docs",
-    "docs:deploy": "yarn docs:build && surge dist/docs --domain react-grid-date-picker.surge.sh"
+    "docs:deploy": "yarn docs:build && surge dist/docs --domain react-schedule-selector.surge.sh"
   },
   "engines": {
     "node": ">8.0"

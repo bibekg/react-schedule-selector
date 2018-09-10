@@ -112,7 +112,7 @@ export const preventScroll = (e: TouchEvent) => {
   e.preventDefault()
 }
 
-export default class AvailabilitySelector extends React.Component<PropsType, StateType> {
+export default class ScheduleSelector extends React.Component<PropsType, StateType> {
   dates: Array<Array<Date>>
   selectionSchemeHandlers: { [string]: (Date, Date, Array<Array<Date>>) => Date[] }
   cellToDate: Map<HTMLElement, Date>

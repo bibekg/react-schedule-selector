@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer'
 import { shallow, mount } from 'enzyme'
 import moment from 'moment'
 
-import DatePicker, { preventScroll } from '../../src/lib/DatePicker'
+import ScheduleSelector, { preventScroll } from '../../src/lib/ScheduleSelector'
 
 const startDate = new Date('2018-01-01T00:00:00.000')
 
@@ -27,7 +27,7 @@ beforeAll(() => {
 describe('snapshot tests', () => {
   it('renders correctly with default render logic', () => {
     const component = renderer.create(
-      <DatePicker selection={getTestSchedule()} startDate={startDate} numDays={5} onChange={() => undefined} />
+      <ScheduleSelector selection={getTestSchedule()} startDate={startDate} numDays={5} onChange={() => undefined} />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
@@ -39,7 +39,7 @@ describe('snapshot tests', () => {
     )
 
     const component = renderer.create(
-      <DatePicker
+      <ScheduleSelector
         selection={getTestSchedule()}
         startDate={startDate}
         numDays={5}
@@ -54,7 +54,7 @@ describe('snapshot tests', () => {
 })
 
 it('getTimeFromTouchEvent returns the time for that cell', () => {
-  const component = shallow(<DatePicker />)
+  const component = shallow(<ScheduleSelector />)
   const mainSpy = jest.spyOn(component.instance(), 'getTimeFromTouchEvent')
   const mockCellTime = new Date()
   const mockEvent = {
@@ -74,7 +74,7 @@ it('getTimeFromTouchEvent returns the time for that cell', () => {
 
 it('endSelection calls the onChange prop and resets selection state', () => {
   const changeSpy = jest.fn()
-  const component = shallow(<DatePicker onChange={changeSpy} />)
+  const component = shallow(<ScheduleSelector onChange={changeSpy} />)
   const setStateSpy = jest.spyOn(component.instance(), 'setState')
 
   component.instance().endSelection()
@@ -94,10 +94,10 @@ describe('mouse handlers', () => {
   let anInstance
 
   beforeAll(() => {
-    spies.onMouseDown = jest.spyOn(DatePicker.prototype, 'handleSelectionStartEvent')
-    spies.onMouseEnter = jest.spyOn(DatePicker.prototype, 'handleMouseEnterEvent')
-    spies.onMouseUp = jest.spyOn(DatePicker.prototype, 'handleMouseUpEvent')
-    component = shallow(<DatePicker />)
+    spies.onMouseDown = jest.spyOn(ScheduleSelector.prototype, 'handleSelectionStartEvent')
+    spies.onMouseEnter = jest.spyOn(ScheduleSelector.prototype, 'handleMouseEnterEvent')
+    spies.onMouseUp = jest.spyOn(ScheduleSelector.prototype, 'handleMouseUpEvent')
+    component = shallow(<ScheduleSelector />)
     anInstance = component.find('.rgdp__grid-cell').first()
   })
 
@@ -121,10 +121,10 @@ describe('touch handlers', () => {
   const mockEvent = {}
 
   beforeAll(() => {
-    spies.onTouchStart = jest.spyOn(DatePicker.prototype, 'handleSelectionStartEvent')
-    spies.onTouchMove = jest.spyOn(DatePicker.prototype, 'handleTouchMoveEvent')
-    spies.onTouchEnd = jest.spyOn(DatePicker.prototype, 'handleTouchEndEvent')
-    component = shallow(<DatePicker />)
+    spies.onTouchStart = jest.spyOn(ScheduleSelector.prototype, 'handleSelectionStartEvent')
+    spies.onTouchMove = jest.spyOn(ScheduleSelector.prototype, 'handleTouchMoveEvent')
+    spies.onTouchEnd = jest.spyOn(ScheduleSelector.prototype, 'handleTouchEndEvent')
+    component = shallow(<ScheduleSelector />)
     anInstance = component.find('.rgdp__grid-cell').first()
     mockEvent.touches = [{ clientX: 1, clientY: 2 }, { clientX: 100, clientY: 200 }]
   })
@@ -147,10 +147,10 @@ describe('touch handlers', () => {
 
 it('handleTouchMoveEvent updates the availability draft', () => {
   const mockCellTime = new Date()
-  const getTimeSpy = jest.spyOn(DatePicker.prototype, 'getTimeFromTouchEvent').mockReturnValue(mockCellTime)
-  const updateDraftSpy = jest.spyOn(DatePicker.prototype, 'updateAvailabilityDraft')
+  const getTimeSpy = jest.spyOn(ScheduleSelector.prototype, 'getTimeFromTouchEvent').mockReturnValue(mockCellTime)
+  const updateDraftSpy = jest.spyOn(ScheduleSelector.prototype, 'updateAvailabilityDraft')
 
-  const component = shallow(<DatePicker />)
+  const component = shallow(<ScheduleSelector />)
   component.instance().handleTouchMoveEvent({})
   expect(updateDraftSpy).toHaveBeenCalledWith(mockCellTime)
 
@@ -172,9 +172,9 @@ describe('updateAvailabilityDraft', () => {
         .add(amount + 5, 'hours')
         .toDate()
 
-      const setStateSpy = jest.spyOn(DatePicker.prototype, 'setState')
+      const setStateSpy = jest.spyOn(ScheduleSelector.prototype, 'setState')
       const component = shallow(
-        <DatePicker
+        <ScheduleSelector
           // Initialize the initial selection based on whether this test is adding or removing
           selection={type === 'remove' ? [start, end, outOfRangeOne] : [outOfRangeOne]}
           startDate={start}
@@ -200,8 +200,8 @@ describe('updateAvailabilityDraft', () => {
   )
 
   it('updateAvailabilityDraft handles a single cell click correctly', done => {
-    const setStateSpy = jest.spyOn(DatePicker.prototype, 'setState')
-    const component = shallow(<DatePicker />)
+    const setStateSpy = jest.spyOn(ScheduleSelector.prototype, 'setState')
+    const component = shallow(<ScheduleSelector />)
     const start = startDate
     component.setState(
       {
@@ -221,20 +221,20 @@ describe('updateAvailabilityDraft', () => {
 
 describe('componentDidMount', () => {
   it('runs properly on a full mount', () => {
-    mount(<DatePicker />)
+    mount(<ScheduleSelector />)
   })
 })
 
 describe('componentWillUnmount', () => {
   it('removes the mouseup event listener', () => {
-    const component = shallow(<DatePicker />)
+    const component = shallow(<ScheduleSelector />)
     const endSelectionMethod = component.instance().endSelection
     component.unmount()
     expect(document.removeEventListener).toHaveBeenCalledWith('mouseup', endSelectionMethod)
   })
 
   it('removes the touchmove event listeners from the date cells', () => {
-    const component = shallow(<DatePicker />)
+    const component = shallow(<ScheduleSelector />)
     const mockDateCell = {
       removeEventListener: jest.fn()
     }
@@ -247,8 +247,8 @@ describe('componentWillUnmount', () => {
 
 describe('componentWillReceiveProps', () => {
   it('makes the selection prop override the existing selection draft', () => {
-    const setStateSpy = jest.spyOn(DatePicker.prototype, 'setState')
-    const component = shallow(<DatePicker />)
+    const setStateSpy = jest.spyOn(ScheduleSelector.prototype, 'setState')
+    const component = shallow(<ScheduleSelector />)
     const mockNextProps = {
       selection: ['foo', 'bar']
     }
@@ -260,7 +260,7 @@ describe('componentWillReceiveProps', () => {
 })
 
 describe('handleTouchEndEvent', () => {
-  const component = shallow(<DatePicker />)
+  const component = shallow(<ScheduleSelector />)
   const setStateSpy = jest.spyOn(component.instance(), 'setState')
   const updateDraftSpy = jest.spyOn(component.instance(), 'updateAvailabilityDraft').mockImplementation((a, b) => b())
   const endSelectionSpy = jest.spyOn(component.instance(), 'endSelection').mockImplementation(jest.fn())

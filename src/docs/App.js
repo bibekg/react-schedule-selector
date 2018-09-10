@@ -4,7 +4,7 @@ import * as React from 'react'
 import styled, { injectGlobal } from 'styled-components'
 // eslint-disable-next-line
 import * as ReactDOM from 'react-dom'
-import DatePicker from '../lib'
+import ScheduleSelector from '../lib'
 
 // eslint-disable-next-line
 injectGlobal`
@@ -13,7 +13,7 @@ injectGlobal`
   }
 `
 
-const DatePickerCard = styled.div`
+const ScheduleSelectorCard = styled.div`
   border-radius: 25px;
   box-shadow: 0px 0px 2px #222222;
   padding: 20px;
@@ -49,9 +49,9 @@ class App extends React.Component<{}, StateType> {
   render(): React.Element<*> {
     return (
       <div>
-        <h1>Date Picker with Custom Options</h1>
-        <DatePickerCard>
-          <DatePicker
+        <h1>Schedule Selector with Custom Renderer</h1>
+        <ScheduleSelectorCard>
+          <ScheduleSelector
             minTime={12}
             maxTime={20}
             numDays={5}
@@ -61,7 +61,7 @@ class App extends React.Component<{}, StateType> {
             renderDateCell={this.renderCustomCell}
             dateFormat="ddd"
           />
-        </DatePickerCard>
+        </ScheduleSelectorCard>
       </div>
     )
   }
