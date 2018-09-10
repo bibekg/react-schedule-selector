@@ -57,6 +57,16 @@ To customize the UI, you can either:
 
 **required**: yes
 
+#### `selectionScheme`
+
+**type**: `'square'` | `'linear'`
+
+**description**: The behavior for selection when dragging. `square` selects a square with the start and end cells at opposite corners. `linear` selects all the cells that are chronologically between the start and end cells.
+
+**required**: no
+
+**default value**: `'square'`
+
 #### `onChange`
 
 **type**: `(Array<Date>) => void`
