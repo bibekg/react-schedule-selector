@@ -1,17 +1,17 @@
 // @flow
 
 import isBefore from 'date-fns/is_before'
+import startOfDay from 'date-fns/start_of_day'
 
 import * as dateUtils from '../date-utils'
 
 const square = (selectionStart: ?Date, selectionEnd: ?Date, dateList: Array<Array<Date>>): Array<Date> => {
   let selected: Array<Date> = []
   if (selectionEnd == null) {
-    // This function is called with a null selectionEnd on `mouseup`. This is useful for catching cases
-    // where the user just clicks on a single cell
     if (selectionStart) selected = [selectionStart]
   } else if (selectionStart) {
-    const reverseSelection = isBefore(selectionEnd, selectionStart)
+    const dateIsReversed = isBefore(startOfDay(selectionEnd), startOfDay(selectionStart))
+    const timeIsReversed = selectionStart.getHours() > selectionEnd.getHours()
 
     selected = dateList.reduce(
       (acc, dayOfTimes) =>
@@ -21,14 +21,14 @@ const square = (selectionStart: ?Date, selectionEnd: ?Date, dateList: Array<Arra
               selectionStart &&
               selectionEnd &&
               dateUtils.dateIsBetween(
-                reverseSelection ? selectionEnd : selectionStart,
+                dateIsReversed ? selectionEnd : selectionStart,
                 t,
-                reverseSelection ? selectionStart : selectionEnd
+                dateIsReversed ? selectionStart : selectionEnd
               ) &&
               dateUtils.timeIsBetween(
-                reverseSelection ? selectionEnd : selectionStart,
+                timeIsReversed ? selectionEnd : selectionStart,
                 t,
-                reverseSelection ? selectionStart : selectionEnd
+                timeIsReversed ? selectionStart : selectionEnd
               )
           )
         ),
