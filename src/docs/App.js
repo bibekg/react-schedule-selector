@@ -11,26 +11,47 @@ injectGlobal`
   body {
     font-family: sans-serif;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+`
+
+const MainDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const IntroText = styled.div`
+  width: 100%;
+  text-align: center;
 `
 
 const ScheduleSelectorCard = styled.div`
   border-radius: 25px;
-  box-shadow: 0px 0px 2px #222222;
+  box-shadow: 10px 2px 30px rgba(0, 0, 0, 0.15);
   padding: 20px;
-  max-width: 500px;
+  width: 90%;
+  max-width: 800px;
+  & > * {
+    flex-grow: 1;
+  }
 `
 
-const EmojiCell = styled.span.attrs({
-  role: 'img',
-  'aria-label': 'checked'
-})`
-  text-align: center;
+const Links = styled.div`
   display: flex;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  &:hover {
-    background-color: rgba(236, 146, 64, 0.3);
-  }
+  margin-top: 20px;
+`
+
+const ExternalLink = styled.a`
+  background-color: ${props => props.color};
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 5px;
 `
 
 type StateType = {
@@ -44,41 +65,35 @@ class App extends React.Component<{}, StateType> {
     this.setState({ schedule: newSchedule })
   }
 
-  // eslint-disable-next-line
-  renderCustomCell = (time: Date, selected: boolean, innerRef: (HTMLElement => void)) => (selected ? <EmojiCell innerRef={innerRef}>✅</EmojiCell> : <EmojiCell innerRef={innerRef}>❌</EmojiCell>)
-
   render(): React.Element<*> {
     return (
-      <div>
-        <div>
-          <h1>Default Schedule Selector</h1>
-          <ScheduleSelectorCard>
-            <ScheduleSelector
-              minTime={12}
-              maxTime={20}
-              numDays={5}
-              startDate={new Date('Fri May 18 2018 17:57:06 GMT-0700 (PDT)')}
-              selection={this.state.schedule}
-              onChange={this.handleDateChange}
-            />
-          </ScheduleSelectorCard>
-        </div>
-
-        <div>
-          <h1>Schedule Selector with Custom Renderer</h1>
-          <ScheduleSelectorCard>
-            <ScheduleSelector
-              minTime={12}
-              maxTime={20}
-              numDays={5}
-              startDate={new Date('Fri May 18 2018 17:57:06 GMT-0700 (PDT)')}
-              selection={this.state.schedule}
-              onChange={this.handleDateChange}
-              renderDateCell={this.renderCustomCell}
-            />
-          </ScheduleSelectorCard>
-        </div>
-      </div>
+      <MainDiv>
+        <IntroText>
+          <h1>React Schedule Selector</h1>
+          <p>Tap to select one time or drag to select multiple times at once.</p>
+        </IntroText>
+        <ScheduleSelectorCard>
+          <ScheduleSelector
+            minTime={12}
+            maxTime={20}
+            numDays={7}
+            startDate={new Date('Fri May 18 2018 17:57:06 GMT-0700 (PDT)')}
+            selection={this.state.schedule}
+            onChange={this.handleDateChange}
+          />
+        </ScheduleSelectorCard>
+        <Links>
+          <ExternalLink color="#24292e" href="https://github.com/bibekg/react-schedule-selector">
+            GitHub
+          </ExternalLink>
+          <ExternalLink color="#cb3838" href="https://npmjs.com/package/react-grid-date-picker">
+            NPM
+          </ExternalLink>
+          <ExternalLink color="#292929" href="https://medium.com/@bibekg/react-schedule-selector-6cd5bf1f4968">
+            Medium
+          </ExternalLink>
+        </Links>
+      </MainDiv>
     )
   }
 }
