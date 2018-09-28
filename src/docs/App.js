@@ -85,7 +85,7 @@ class App extends React.Component<{}, StateType> {
           <ExternalLink color="#24292e" href="https://github.com/bibekg/react-schedule-selector">
             GitHub
           </ExternalLink>
-          <ExternalLink color="#cb3838" href="https://npmjs.com/package/react-grid-date-picker">
+          <ExternalLink color="#cb3838" href="https://npmjs.com/package/react-schedule-selector">
             NPM
           </ExternalLink>
           <ExternalLink color="#292929" href="https://medium.com/@bibekg/react-schedule-selector-6cd5bf1f4968">
