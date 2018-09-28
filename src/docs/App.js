@@ -77,7 +77,6 @@ class App extends React.Component<{}, StateType> {
             minTime={12}
             maxTime={20}
             numDays={7}
-            startDate={new Date('Fri May 18 2018 17:57:06 GMT-0700 (PDT)')}
             selection={this.state.schedule}
             onChange={this.handleDateChange}
           />
