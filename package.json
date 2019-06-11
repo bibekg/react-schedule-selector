@@ -17,7 +17,6 @@
   "license": "MIT",
   "scripts": {
     "prepublish": "yarn build",
-    "postpublish": "yarn docs:deploy",
     "build": "yarn lib:build && yarn docs:build",
     "lint": "eslint src/**/*.{js,jsx} --quiet",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
