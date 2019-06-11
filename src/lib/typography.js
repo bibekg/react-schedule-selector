@@ -3,10 +3,9 @@
 import styled from 'styled-components'
 import colors from './colors'
 
-export const Subtitle = styled.h2`
+export const Subtitle = styled.div`
   font-size: 20px;
   font-weight: 400;
-  height: 30px;
   color: ${colors.black};
   text-align: ${props => props.align || 'center'};
 

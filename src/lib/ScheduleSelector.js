@@ -57,7 +57,7 @@ const DateCell = styled.div`
 `
 
 const DateLabel = styled(Subtitle)`
-  height: ${props => props.isSmallMode  ? '15px': '30px'};
+  height: 30px;
   @media (max-width: 699px) {
     font-size: 12px;
   }
