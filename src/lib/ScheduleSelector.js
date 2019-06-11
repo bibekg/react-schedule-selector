@@ -48,7 +48,7 @@ export const GridCell = styled.div`
 
 const DateCell = styled.div`
   width: 100%;
-  height: 25px;
+  height: 10px;
   background-color: ${props => (props.selected ? props.selectedColor : props.unselectedColor)};
 
   &:hover {
@@ -57,7 +57,7 @@ const DateCell = styled.div`
 `
 
 const DateLabel = styled(Subtitle)`
-  height: 30px;
+  height: 15px;
   @media (max-width: 699px) {
     font-size: 12px;
   }
@@ -67,8 +67,7 @@ const TimeLabelCell = styled.div`
   position: relative;
   display: block;
   width: 100%;
-  height: 25px;
-  margin: 3px 0;
+  height: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
