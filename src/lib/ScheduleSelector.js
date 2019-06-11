@@ -48,7 +48,7 @@ export const GridCell = styled.div`
 
 const DateCell = styled.div`
   width: 100%;
-  height: 25px;
+  height: ${props => props.isSmallMode  ? '10px': '25px'};
   background-color: ${props => (props.selected ? props.selectedColor : props.unselectedColor)};
 
   &:hover {
@@ -57,7 +57,7 @@ const DateCell = styled.div`
 `
 
 const DateLabel = styled(Subtitle)`
-  height: 30px;
+  height: ${props => props.isSmallMode  ? '15px': '30px'};
   @media (max-width: 699px) {
     font-size: 12px;
   }
@@ -67,8 +67,8 @@ const TimeLabelCell = styled.div`
   position: relative;
   display: block;
   width: 100%;
-  height: 25px;
-  margin: 3px 0;
+  height: ${props => props.isSmallMode  ? '10px': '25px'};
+  margin: ${props => props.isSmallMode  ? '0px': '3px 0'};
   text-align: center;
   display: flex;
   justify-content: center;
@@ -294,11 +294,13 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   renderTimeLabels = (): React.Element<*> => {
-    const labels = [<DateLabel key={-1} />] // Ensures time labels start at correct location
+    const labels = [<DateLabel isSmallMode={this.props.isSmallMode} key={-1} />] // Ensures time labels start at correct location
     for (let t = this.props.minTime; t <= this.props.maxTime; t += 1) {
+      const timeTextComponent = <TimeText>{formatHour(t)}</TimeText>
       labels.push(
-        <TimeLabelCell key={t}>
-          <TimeText>{formatHour(t)}</TimeText>
+        <TimeLabelCell isSmallMode={this.props.isSmallMode} key={t}>
+          {!this.props.isSmallMode && timeTextComponent}
+          {this.props.isSmallMode && t % 2 === 0 && timeTextComponent  }
         </TimeLabelCell>
       )
     }
@@ -308,7 +310,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   renderDateColumn = (dayOfTimes: Array<Date>) => (
     <Column key={dayOfTimes[0]} margin={this.props.margin}>
       <GridCell margin={this.props.margin}>
-        <DateLabel>{formatDate(dayOfTimes[0], this.props.dateFormat)}</DateLabel>
+        <DateLabel isSmallMode={this.props.isSmallMode}>{formatDate(dayOfTimes[0], this.props.dateFormat)}</DateLabel>
       </GridCell>
       {dayOfTimes.map(time => this.renderDateCellWrapper(time))}
     </Column>
@@ -362,6 +364,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
           selectedColor={this.props.selectedColor}
           unselectedColor={this.props.unselectedColor}
           hoveredColor={this.props.hoveredColor}
+          isSmallMode={this.props.isSmallMode}
         />
       )
     }

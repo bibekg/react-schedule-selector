@@ -74,9 +74,12 @@ class App extends React.Component<{}, StateType> {
         </IntroText>
         <ScheduleSelectorCard>
           <ScheduleSelector
-            minTime={12}
-            maxTime={20}
+            minTime={0}
+            maxTime={23}
             numDays={7}
+            isSmallMode
+            startDate={new Date('2019-06-10T00:00:00')}
+            dateFormat={'dddd'}
             selection={this.state.schedule}
             onChange={this.handleDateChange}
           />
