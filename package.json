@@ -1,5 +1,5 @@
 {
-  "name": "react-schedule-selector",
+  "name": "react-schedule-selector-2",
   "version": "1.0.3",
   "description": "A mobile-friendly when2meet-style grid-based schedule selector",
   "author": "Bibek Ghimire",
@@ -25,8 +25,7 @@
     "test": "jest",
     "lib:build": "babel src/lib -d dist/lib",
     "docs:dev": "parcel serve src/docs/index.html -d dev/docs",
-    "docs:build": "parcel build src/docs/index.html -d dist/docs",
-    "docs:deploy": "yarn docs:build && surge dist/docs --domain react-schedule-selector.surge.sh"
+    "docs:build": "parcel build src/docs/index.html -d dist/docs"
   },
   "engines": {
     "node": ">8.0"
