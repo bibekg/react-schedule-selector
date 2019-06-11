@@ -297,7 +297,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     for (let t = this.props.minTime; t <= this.props.maxTime; t += 1) {
       labels.push(
         <TimeLabelCell key={t}>
-          <TimeText>{formatHour(t)}</TimeText>
+          {t % 2 === 0 && <TimeText>{formatHour(t)}</TimeText>}
         </TimeLabelCell>
       )
     }
