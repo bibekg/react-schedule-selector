@@ -6,6 +6,7 @@ import colors from './colors'
 export const Subtitle = styled.h2`
   font-size: 20px;
   font-weight: 400;
+  height: 30px;
   color: ${colors.black};
   text-align: ${props => props.align || 'center'};
 
