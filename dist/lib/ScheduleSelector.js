@@ -60,32 +60,34 @@ var formatHour = function formatHour(hour) {
   return '' + h + abb;
 };
 
-var Wrapper = (0, _styledComponents2.default)('div').withConfig({
+var Wrapper = _styledComponents2.default.div.withConfig({
   displayName: 'ScheduleSelector__Wrapper',
-  componentId: 'sc-10qe3m2-0'
+  componentId: 'mxxxc6-0'
 })(['display:flex;align-items:center;width:100%;user-select:none;']);
 
-var Grid = (0, _styledComponents2.default)('div').withConfig({
+var Grid = _styledComponents2.default.div.withConfig({
   displayName: 'ScheduleSelector__Grid',
-  componentId: 'sc-10qe3m2-1'
+  componentId: 'mxxxc6-1'
 })(['display:flex;flex-direction:row;align-items:stretch;width:100%;']);
 
-var Column = (0, _styledComponents2.default)('div').withConfig({
+var Column = _styledComponents2.default.div.withConfig({
   displayName: 'ScheduleSelector__Column',
-  componentId: 'sc-10qe3m2-2'
+  componentId: 'mxxxc6-2'
 })(['display:flex;flex-direction:column;justify-content:space-evenly;flex-grow:1;']);
 
-var GridCell = exports.GridCell = (0, _styledComponents2.default)('div').withConfig({
+var GridCell = exports.GridCell = _styledComponents2.default.div.withConfig({
   displayName: 'ScheduleSelector__GridCell',
-  componentId: 'sc-10qe3m2-3'
+  componentId: 'mxxxc6-3'
 })(['margin:', 'px;touch-action:none;'], function (props) {
   return props.margin;
 });
 
-var DateCell = (0, _styledComponents2.default)('div').withConfig({
+var DateCell = _styledComponents2.default.div.withConfig({
   displayName: 'ScheduleSelector__DateCell',
-  componentId: 'sc-10qe3m2-4'
-})(['width:100%;height:25px;background-color:', ';&:hover{background-color:', ';}'], function (props) {
+  componentId: 'mxxxc6-4'
+})(['width:100%;height:', ';background-color:', ';&:hover{background-color:', ';}'], function (props) {
+  return props.isSmallMode ? '10px' : '25px';
+}, function (props) {
   return props.selected ? props.selectedColor : props.unselectedColor;
 }, function (props) {
   return props.hoveredColor;
@@ -93,18 +95,22 @@ var DateCell = (0, _styledComponents2.default)('div').withConfig({
 
 var DateLabel = (0, _styledComponents2.default)(_typography.Subtitle).withConfig({
   displayName: 'ScheduleSelector__DateLabel',
-  componentId: 'sc-10qe3m2-5'
-})(['height:30px;@media (max-width:699px){font-size:12px;}']);
+  componentId: 'mxxxc6-5'
+})(['height:15px;font-size:12px;']);
 
-var TimeLabelCell = (0, _styledComponents2.default)('div').withConfig({
+var TimeLabelCell = _styledComponents2.default.div.withConfig({
   displayName: 'ScheduleSelector__TimeLabelCell',
-  componentId: 'sc-10qe3m2-6'
-})(['position:relative;display:block;width:100%;height:25px;margin:3px 0;text-align:center;display:flex;justify-content:center;align-items:center;']);
+  componentId: 'mxxxc6-6'
+})(['position:relative;display:block;width:100%;height:', ';margin:', ';text-align:center;display:flex;justify-content:center;align-items:center;'], function (props) {
+  return props.isSmallMode ? '10px' : '25px';
+}, function (props) {
+  return props.isSmallMode ? '0px' : '3px 0';
+});
 
 var TimeText = (0, _styledComponents2.default)(_typography.Text).withConfig({
   displayName: 'ScheduleSelector__TimeText',
-  componentId: 'sc-10qe3m2-7'
-})(['margin:0;@media (max-width:699px){font-size:10px;}text-align:right;']);
+  componentId: 'mxxxc6-7'
+})(['margin:0;@media (max-width:699px){font-size:10px;}text-align:right;font-size:12px;']);
 
 var preventScroll = exports.preventScroll = function preventScroll(e) {
   e.preventDefault();
@@ -120,16 +126,18 @@ var ScheduleSelector = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
 
     _this.renderTimeLabels = function () {
-      var labels = [React.createElement(DateLabel, { key: -1 })]; // Ensures time labels start at correct location
+      var labels = [React.createElement(DateLabel, { isSmallMode: _this.props.isSmallMode, key: -1 })]; // Ensures time labels start at correct location
       for (var t = _this.props.minTime; t <= _this.props.maxTime; t += 1) {
+        var timeTextComponent = React.createElement(
+          TimeText,
+          null,
+          formatHour(t)
+        );
         labels.push(React.createElement(
           TimeLabelCell,
-          { key: t },
-          React.createElement(
-            TimeText,
-            null,
-            formatHour(t)
-          )
+          { isSmallMode: _this.props.isSmallMode, key: t },
+          !_this.props.isSmallMode && timeTextComponent,
+          _this.props.isSmallMode && t % 2 === 0 && timeTextComponent
         ));
       }
       return React.createElement(
@@ -148,7 +156,7 @@ var ScheduleSelector = function (_React$Component) {
           { margin: _this.props.margin },
           React.createElement(
             DateLabel,
-            null,
+            { isSmallMode: _this.props.isSmallMode },
             (0, _format2.default)(dayOfTimes[0], _this.props.dateFormat)
           )
         ),
@@ -206,7 +214,8 @@ var ScheduleSelector = function (_React$Component) {
           innerRef: refSetter,
           selectedColor: _this.props.selectedColor,
           unselectedColor: _this.props.unselectedColor,
-          hoveredColor: _this.props.hoveredColor
+          hoveredColor: _this.props.hoveredColor,
+          isSmallMode: _this.props.isSmallMode
         });
       }
     };

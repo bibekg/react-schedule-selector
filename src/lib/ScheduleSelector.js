@@ -57,10 +57,8 @@ const DateCell = styled.div`
 `
 
 const DateLabel = styled(Subtitle)`
-  height: 30px;
-  @media (max-width: 699px) {
-    font-size: 12px;
-  }
+  height: 15px;
+  font-size: 12px;
 `
 
 const TimeLabelCell = styled.div`
@@ -81,6 +79,7 @@ const TimeText = styled(Text)`
     font-size: 10px;
   }
   text-align: right;
+  font-size: 12px;
 `
 
 type PropsType = {

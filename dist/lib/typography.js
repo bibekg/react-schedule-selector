@@ -13,14 +13,14 @@ var _colors2 = _interopRequireDefault(_colors);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Subtitle = exports.Subtitle = (0, _styledComponents2.default)('h2').withConfig({
+var Subtitle = exports.Subtitle = _styledComponents2.default.div.withConfig({
   displayName: 'typography__Subtitle',
-  componentId: 'sc-1nxgjrj-0'
+  componentId: 'sc-1xtgay5-0'
 })(['font-size:20px;font-weight:400;color:', ';text-align:', ';@media (max-width:700px){font-size:18px;}'], _colors2.default.black, function (props) {
   return props.align || 'center';
 });
 
-var Text = exports.Text = (0, _styledComponents2.default)('p').withConfig({
+var Text = exports.Text = _styledComponents2.default.p.withConfig({
   displayName: 'typography__Text',
-  componentId: 'sc-1nxgjrj-1'
+  componentId: 'sc-1xtgay5-1'
 })(['font-size:14px;font-weight:300;line-height:', 'px;color:', ';margin:5px 0;'], 14 * 1.37, _colors2.default.grey);
