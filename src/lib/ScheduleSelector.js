@@ -358,7 +358,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       return (
         <DateCell
           selected={selected}
-          innerRef={refSetter}
+          ref={refSetter}
           selectedColor={this.props.selectedColor}
           unselectedColor={this.props.unselectedColor}
           hoveredColor={this.props.hoveredColor}
@@ -372,7 +372,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       <Wrapper>
         {
           <Grid
-            innerRef={el => {
+            ref={el => {
               this.gridRef = el
             }}
           >
