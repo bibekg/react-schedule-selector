@@ -203,7 +203,7 @@ var ScheduleSelector = function (_React$Component) {
       } else {
         return React.createElement(DateCell, {
           selected: selected,
-          innerRef: refSetter,
+          ref: refSetter,
           selectedColor: _this.props.selectedColor,
           unselectedColor: _this.props.unselectedColor,
           hoveredColor: _this.props.hoveredColor
@@ -391,7 +391,7 @@ var ScheduleSelector = function (_React$Component) {
       React.createElement(
         Grid,
         {
-          innerRef: function innerRef(el) {
+          ref: function innerRef(el) {
             _this3.gridRef = el;
           }
         },
