@@ -18,9 +18,10 @@
   "scripts": {
     "prepublish": "yarn build",
     "postpublish": "yarn docs:deploy",
-    "build": "yarn lib:build && yarn docs:build",
+    "build": "yarn clean && yarn lib:build && yarn docs:build",
     "lint": "eslint src/**/*.{js,jsx} --quiet",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "clean": "rm -rf dist",
     "cover": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test": "jest",
     "lib:build": "babel src/lib -d dist/lib",
