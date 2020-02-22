@@ -79,6 +79,8 @@ class App extends React.Component<{}, StateType> {
             numDays={7}
             selection={this.state.schedule}
             onChange={this.handleDateChange}
+            hourlyChunks={2}
+            timeFormat="h:mma"
           />
         </ScheduleSelectorCard>
         <Links>
