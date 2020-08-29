@@ -122,7 +122,7 @@ var ScheduleSelector = function (_React$Component) {
       _this.dates[0].forEach(function (time) {
         labels.push(React.createElement(
           TimeLabelCell,
-          { key: time },
+          { key: time.toString() },
           React.createElement(
             TimeText,
             null,
@@ -140,7 +140,7 @@ var ScheduleSelector = function (_React$Component) {
     _this.renderDateColumn = function (dayOfTimes) {
       return React.createElement(
         Column,
-        { key: dayOfTimes[0], margin: _this.props.margin },
+        { key: dayOfTimes[0].toString(), margin: _this.props.margin },
         React.createElement(
           GridCell,
           { margin: _this.props.margin },
@@ -290,8 +290,11 @@ var ScheduleSelector = function (_React$Component) {
         clientY = _touches$.clientY;
 
     var targetElement = document.elementFromPoint(clientX, clientY);
-    var cellTime = this.cellToDate.get(targetElement);
-    return cellTime;
+    if (targetElement) {
+      var cellTime = this.cellToDate.get(targetElement);
+      return cellTime;
+    }
+    return null;
   };
 
   ScheduleSelector.prototype.endSelection = function endSelection() {

@@ -86,7 +86,9 @@ type PropsType = {
   numDays: number,
   minTime: number,
   maxTime: number,
+  hourlyChunks: number,
   dateFormat: string,
+  timeFormat: string,
   margin: number,
   unselectedColor: string,
   selectedColor: string,
@@ -215,8 +217,11 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     if (!touches || touches.length === 0) return null
     const { clientX, clientY } = touches[0]
     const targetElement = document.elementFromPoint(clientX, clientY)
-    const cellTime = this.cellToDate.get(targetElement)
-    return cellTime
+    if (targetElement) {
+      const cellTime = this.cellToDate.get(targetElement)
+      return cellTime
+    }
+    return null
   }
 
   endSelection() {
@@ -297,7 +302,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     const labels = [<DateLabel key={-1} />] // Ensures time labels start at correct location
     this.dates[0].forEach(time => {
       labels.push(
-        <TimeLabelCell key={time}>
+        <TimeLabelCell key={time.toString()}>
           <TimeText>{formatDate(time, this.props.timeFormat)}</TimeText>
         </TimeLabelCell>
       )
@@ -306,7 +311,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   renderDateColumn = (dayOfTimes: Array<Date>) => (
-    <Column key={dayOfTimes[0]} margin={this.props.margin}>
+    <Column key={dayOfTimes[0].toString()} margin={this.props.margin}>
       <GridCell margin={this.props.margin}>
         <DateLabel>{formatDate(dayOfTimes[0], this.props.dateFormat)}</DateLabel>
       </GridCell>

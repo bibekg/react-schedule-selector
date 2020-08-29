@@ -21,7 +21,8 @@ const getTestSchedule = () => [
 
 describe('ScheduleSelector', () => {
   beforeAll(() => {
-    document.elementFromPoint = jest.fn()
+    const fakeElement = document.createElement('div')
+    document.elementFromPoint = jest.fn().mockReturnValue(fakeElement)
     document.removeEventListener = jest.fn()
   })
 
@@ -62,7 +63,6 @@ describe('ScheduleSelector', () => {
       touches: [{ clientX: 1, clientY: 2 }]
     }
     const cellToDateSpy = jest.spyOn(component.instance().cellToDate, 'get').mockReturnValue(mockCellTime)
-
     component.instance().getTimeFromTouchEvent(mockEvent)
 
     expect(document.elementFromPoint).toHaveBeenCalledWith(mockEvent.touches[0].clientX, mockEvent.touches[0].clientY)

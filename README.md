@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/react-schedule-selector.svg)](https://badge.fury.io/js/react-schedule-selector) [![Build Status](https://travis-ci.com/bibekg/react-schedule-selector.svg?branch=master)](https://travis-ci.com/bibekg/react-schedule-selector) [![Coverage Status](https://coveralls.io/repos/github/bibekg/react-schedule-selector/badge.svg?branch=master)](https://coveralls.io/github/bibekg/react-schedule-selector?branch=master)
 
-A mobile-friendly when2meet-style grid-based schedule selector built with [styled components](https://github.com/styled-components/styled-components) and [date-fns](https://date-fns.org/). 
+A mobile-friendly when2meet-style grid-based schedule selector built with [styled components](https://github.com/styled-components/styled-components) and [date-fns](https://date-fns.org/).
 
 [Live example](http://react-schedule-selector.surge.sh/)
 
@@ -31,6 +31,7 @@ class App extends React.Component {
         numDays={5}
         minTime={8}
         maxTime={22}
+        hourlyChunks={2}
         onChange={this.handleChange}
       />
     )
@@ -79,7 +80,7 @@ To customize the UI, you can either:
 
 **type**: `Date`
 
-**description**: The date on which the grid should start (time portion is ignored, specify start time via `minTime`) 
+**description**: The date on which the grid should start (time portion is ignored, specify start time via `minTime`)
 
 **required**: no
 
@@ -89,11 +90,21 @@ To customize the UI, you can either:
 
 **type**: `number`
 
-**description**: The number of days to show, startin from today
+**description**: The number of days to show, starting from today
 
 **required**: no
 
 **default value**: `7`
+
+#### `hourlyChunks`
+
+**type**: `number`
+
+**description**: How many chunks to divide each hour into (e.g. `2` divides the hour into half-hour steps, `4` into 15-minute steps)
+
+**required**: no
+
+**default value**: `1`
 
 #### `minTime`
 
@@ -124,6 +135,16 @@ To customize the UI, you can either:
 **required**: no
 
 **default value**: `'M/D'`
+
+#### `timeFormat`
+
+**type**: `string`
+
+**description**: The [time format](https://date-fns.org/v1.29.0/docs/format) to be used for the row labels
+
+**required**: no
+
+**default value**: `'ha'`
 
 #### `margin`
 
