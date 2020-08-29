@@ -11,6 +11,10 @@ var _styledComponents = require('styled-components');
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _add_minutes = require('date-fns/add_minutes');
+
+var _add_minutes2 = _interopRequireDefault(_add_minutes);
+
 var _add_hours = require('date-fns/add_hours');
 
 var _add_hours2 = _interopRequireDefault(_add_hours);
@@ -53,12 +57,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // Import only the methods we need from date-fns in order to keep build size small
 
-
-var formatHour = function formatHour(hour) {
-  var h = hour === 0 || hour === 12 || hour === 24 ? 12 : hour % 12;
-  var abb = hour < 12 || hour === 24 ? 'am' : 'pm';
-  return '' + h + abb;
-};
 
 var Wrapper = (0, _styledComponents2.default)('div').withConfig({
   displayName: 'ScheduleSelector__Wrapper',
@@ -121,17 +119,17 @@ var ScheduleSelector = function (_React$Component) {
 
     _this.renderTimeLabels = function () {
       var labels = [React.createElement(DateLabel, { key: -1 })]; // Ensures time labels start at correct location
-      for (var t = _this.props.minTime; t <= _this.props.maxTime; t += 1) {
+      _this.dates[0].forEach(function (time) {
         labels.push(React.createElement(
           TimeLabelCell,
-          { key: t },
+          { key: time.toString() },
           React.createElement(
             TimeText,
             null,
-            formatHour(t)
+            (0, _format2.default)(time, _this.props.timeFormat)
           )
         ));
-      }
+      });
       return React.createElement(
         Column,
         { margin: _this.props.margin },
@@ -142,7 +140,7 @@ var ScheduleSelector = function (_React$Component) {
     _this.renderDateColumn = function (dayOfTimes) {
       return React.createElement(
         Column,
-        { key: dayOfTimes[0], margin: _this.props.margin },
+        { key: dayOfTimes[0].toString(), margin: _this.props.margin },
         React.createElement(
           GridCell,
           { margin: _this.props.margin },
@@ -214,10 +212,13 @@ var ScheduleSelector = function (_React$Component) {
     var startTime = (0, _start_of_day2.default)(props.startDate);
     _this.dates = [];
     _this.cellToDate = new Map();
+    var minutesInChunk = Math.floor(60 / props.hourlyChunks);
     for (var d = 0; d < props.numDays; d += 1) {
       var currentDay = [];
-      for (var h = props.minTime; h <= props.maxTime; h += 1) {
-        currentDay.push((0, _add_hours2.default)((0, _add_days2.default)(startTime, d), h));
+      for (var h = props.minTime; h < props.maxTime; h += 1) {
+        for (var c = 0; c < props.hourlyChunks; c += 1) {
+          currentDay.push((0, _add_minutes2.default)((0, _add_hours2.default)((0, _add_days2.default)(startTime, d), h), c * minutesInChunk));
+        }
       }
       _this.dates.push(currentDay);
     }
@@ -289,8 +290,11 @@ var ScheduleSelector = function (_React$Component) {
         clientY = _touches$.clientY;
 
     var targetElement = document.elementFromPoint(clientX, clientY);
-    var cellTime = this.cellToDate.get(targetElement);
-    return cellTime;
+    if (targetElement) {
+      var cellTime = this.cellToDate.get(targetElement);
+      return cellTime;
+    }
+    return null;
   };
 
   ScheduleSelector.prototype.endSelection = function endSelection() {
@@ -410,7 +414,9 @@ ScheduleSelector.defaultProps = {
   numDays: 7,
   minTime: 9,
   maxTime: 23,
+  hourlyChunks: 1,
   startDate: new Date(),
+  timeFormat: 'ha',
   dateFormat: 'M/D',
   margin: 3,
   selectedColor: _colors2.default.blue,

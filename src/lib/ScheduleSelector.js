@@ -4,6 +4,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 // Import only the methods we need from date-fns in order to keep build size small
+import addMinutes from 'date-fns/add_minutes'
 import addHours from 'date-fns/add_hours'
 import addDays from 'date-fns/add_days'
 import startOfDay from 'date-fns/start_of_day'
@@ -13,12 +14,6 @@ import formatDate from 'date-fns/format'
 import { Text, Subtitle } from './typography'
 import colors from './colors'
 import selectionSchemes from './selection-schemes'
-
-const formatHour = (hour: number): string => {
-  const h = hour === 0 || hour === 12 || hour === 24 ? 12 : hour % 12
-  const abb = hour < 12 || hour === 24 ? 'am' : 'pm'
-  return `${h}${abb}`
-}
 
 const Wrapper = styled.div`
   display: flex;
@@ -91,7 +86,9 @@ type PropsType = {
   numDays: number,
   minTime: number,
   maxTime: number,
+  hourlyChunks: number,
   dateFormat: string,
+  timeFormat: string,
   margin: number,
   unselectedColor: string,
   selectedColor: string,
@@ -125,13 +122,15 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   handleSelectionStartEvent: Date => void
   gridRef: ?HTMLElement
 
-  static defaultProps = {
+  static defaultProps: PropsType = {
     selection: [],
     selectionScheme: 'square',
     numDays: 7,
     minTime: 9,
     maxTime: 23,
+    hourlyChunks: 1,
     startDate: new Date(),
+    timeFormat: 'ha',
     dateFormat: 'M/D',
     margin: 3,
     selectedColor: colors.blue,
@@ -147,10 +146,13 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     const startTime = startOfDay(props.startDate)
     this.dates = []
     this.cellToDate = new Map()
+    const minutesInChunk = Math.floor(60 / props.hourlyChunks)
     for (let d = 0; d < props.numDays; d += 1) {
       const currentDay = []
-      for (let h = props.minTime; h <= props.maxTime; h += 1) {
-        currentDay.push(addHours(addDays(startTime, d), h))
+      for (let h = props.minTime; h < props.maxTime; h += 1) {
+        for (let c = 0; c < props.hourlyChunks; c += 1) {
+          currentDay.push(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk))
+        }
       }
       this.dates.push(currentDay)
     }
@@ -215,8 +217,11 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     if (!touches || touches.length === 0) return null
     const { clientX, clientY } = touches[0]
     const targetElement = document.elementFromPoint(clientX, clientY)
-    const cellTime = this.cellToDate.get(targetElement)
-    return cellTime
+    if (targetElement) {
+      const cellTime = this.cellToDate.get(targetElement)
+      return cellTime
+    }
+    return null
   }
 
   endSelection() {
@@ -295,18 +300,18 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
 
   renderTimeLabels = (): React.Element<*> => {
     const labels = [<DateLabel key={-1} />] // Ensures time labels start at correct location
-    for (let t = this.props.minTime; t <= this.props.maxTime; t += 1) {
+    this.dates[0].forEach(time => {
       labels.push(
-        <TimeLabelCell key={t}>
-          <TimeText>{formatHour(t)}</TimeText>
+        <TimeLabelCell key={time.toString()}>
+          <TimeText>{formatDate(time, this.props.timeFormat)}</TimeText>
         </TimeLabelCell>
       )
-    }
+    })
     return <Column margin={this.props.margin}>{labels}</Column>
   }
 
   renderDateColumn = (dayOfTimes: Array<Date>) => (
-    <Column key={dayOfTimes[0]} margin={this.props.margin}>
+    <Column key={dayOfTimes[0].toString()} margin={this.props.margin}>
       <GridCell margin={this.props.margin}>
         <DateLabel>{formatDate(dayOfTimes[0], this.props.dateFormat)}</DateLabel>
       </GridCell>
