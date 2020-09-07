@@ -139,6 +139,16 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     onChange: () => {}
   }
 
+  static getDerivedStateFromProps(props: PropsType, state: StateType): StateType | null {
+    // As long as the user isn't in the process of selecting, allow prop changes to re-populate selection state
+    if (state.selectionStart == null) {
+      return {
+        selection: [...props.selection]
+      }
+    }
+    return null
+  }
+
   constructor(props: PropsType) {
     super(props)
 
@@ -200,12 +210,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       if (dateCell && dateCell.removeEventListener) {
         dateCell.removeEventListener('touchmove', preventScroll)
       }
-    })
-  }
-
-  componentWillReceiveProps(nextProps: PropsType) {
-    this.setState({
-      selectionDraft: [...nextProps.selection]
     })
   }
 
@@ -354,8 +358,10 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   renderDateCell = (time: Date, selected: boolean): React.Node => {
-    const refSetter = (dateCell: HTMLElement) => {
-      this.cellToDate.set(dateCell, time)
+    const refSetter = (dateCell: HTMLElement | null) => {
+      if (dateCell) {
+        this.cellToDate.set(dateCell, time)
+      }
     }
     if (this.props.renderDateCell) {
       return this.props.renderDateCell(time, selected, refSetter)
@@ -363,7 +369,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       return (
         <DateCell
           selected={selected}
-          innerRef={refSetter}
+          ref={refSetter}
           selectedColor={this.props.selectedColor}
           unselectedColor={this.props.unselectedColor}
           hoveredColor={this.props.hoveredColor}
@@ -377,7 +383,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       <Wrapper>
         {
           <Grid
-            innerRef={el => {
+            ref={el => {
               this.gridRef = el
             }}
           >

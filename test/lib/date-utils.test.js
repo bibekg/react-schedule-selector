@@ -1,3 +1,5 @@
+// @flow
+
 import moment from 'moment'
 
 import { dateIsBetween, timeIsBetween, dateHourIsBetween } from '../../src/lib/date-utils'
@@ -47,6 +49,15 @@ describe('dateIsBetween', () => {
 describe('timeIsBetween', () => {
   const today = {}
   const tomorrow = {}
+
+  const makeDate = (addDays, addHours, addMinutes): Date => {
+    const date = new Date()
+    date.setDate(addDays)
+    date.setHours(addHours)
+    date.setMinutes(addMinutes)
+    return date
+  }
+
   for (let i = 0; i < 24; i += 1) {
     today[i] = new Date()
     today[i].setHours(i)
@@ -60,7 +71,8 @@ describe('timeIsBetween', () => {
     ['all same', [today[5], today[5], today[5]], true],
     ['after range', [today[5], today[10], today[4]], false],
     ['cross-day true', [today[5], tomorrow[10], today[12]], true],
-    ['cross-day-false', [today[5], tomorrow[10], today[6]], false]
+    ['cross-day-false', [today[5], tomorrow[10], today[6]], false],
+    ['times-in-same-hour', [makeDate(0, 0, 0), makeDate(0, 0, 30), makeDate(0, 1, 0)], true]
   ])('it is correct for the case: %s', (testName, args, expectation) => {
     const expectMethod = expectation ? 'toBeTruthy' : 'toBeFalsy'
     expect(timeIsBetween(...args))[expectMethod]()

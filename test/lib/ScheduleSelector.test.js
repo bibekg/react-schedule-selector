@@ -246,20 +246,6 @@ describe('ScheduleSelector', () => {
     })
   })
 
-  describe('componentWillReceiveProps', () => {
-    it('makes the selection prop override the existing selection draft', () => {
-      const setStateSpy = jest.spyOn(ScheduleSelector.prototype, 'setState')
-      const component = shallow(<ScheduleSelector />)
-      const mockNextProps = {
-        selection: ['foo', 'bar']
-      }
-      component.instance().componentWillReceiveProps(mockNextProps)
-      expect(setStateSpy).toHaveBeenCalledWith({
-        selectionDraft: expect.arrayContaining(mockNextProps.selection)
-      })
-    })
-  })
-
   describe('handleTouchEndEvent', () => {
     const component = shallow(<ScheduleSelector />)
     const setStateSpy = jest.spyOn(component.instance(), 'setState')

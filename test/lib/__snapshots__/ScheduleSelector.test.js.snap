@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScheduleSelector snapshot tests renders correctly with custom render prop 1`] = `
-.c4 {
+.c3 {
   font-size: 20px;
   font-weight: 400;
   color: rgba(79,79,79,1);
   text-align: center;
 }
 
-.c7 {
+.c6 {
   font-size: 14px;
   font-weight: 300;
   line-height: 19.18px;
@@ -70,7 +70,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
   touch-action: none;
 }
 
-.c3 {
+.c4 {
   height: 30px;
 }
 
@@ -95,25 +95,25 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
   align-items: center;
 }
 
-.c6 {
+.c7 {
   margin: 0;
   text-align: right;
 }
 
 @media (max-width:700px) {
-  .c4 {
+  .c3 {
     font-size: 18px;
   }
 }
 
 @media (max-width:699px) {
-  .c3 {
+  .c4 {
     font-size: 12px;
   }
 }
 
 @media (max-width:699px) {
-  .c6 {
+  .c7 {
     font-size: 10px;
   }
 }
@@ -270,7 +270,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -286,7 +286,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -302,7 +302,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -318,7 +318,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -334,7 +334,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -350,7 +350,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -366,7 +366,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -382,7 +382,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -398,7 +398,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -414,7 +414,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -430,7 +430,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -446,7 +446,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -462,7 +462,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -478,7 +478,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -507,7 +507,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -523,7 +523,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -539,7 +539,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -555,7 +555,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -571,7 +571,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -587,7 +587,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -603,7 +603,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -619,7 +619,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -635,7 +635,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -651,7 +651,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -667,7 +667,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -683,7 +683,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -699,7 +699,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -715,7 +715,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -744,7 +744,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -760,7 +760,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -776,7 +776,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -792,7 +792,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -808,7 +808,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -824,7 +824,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -840,7 +840,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -856,7 +856,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -872,7 +872,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -888,7 +888,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -904,7 +904,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -920,7 +920,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -936,7 +936,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -952,7 +952,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -981,7 +981,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -997,7 +997,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1013,7 +1013,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1029,7 +1029,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1045,7 +1045,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1061,7 +1061,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1077,7 +1077,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1093,7 +1093,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1109,7 +1109,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1125,7 +1125,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1141,7 +1141,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1157,7 +1157,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1173,7 +1173,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1189,7 +1189,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1218,7 +1218,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1234,7 +1234,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1250,7 +1250,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1266,7 +1266,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1282,7 +1282,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1298,7 +1298,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1314,7 +1314,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1330,7 +1330,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1346,7 +1346,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1362,7 +1362,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1378,7 +1378,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1394,7 +1394,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1410,7 +1410,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1426,7 +1426,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         </div>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1447,14 +1447,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
 `;
 
 exports[`ScheduleSelector snapshot tests renders correctly with default render logic 1`] = `
-.c4 {
+.c3 {
   font-size: 20px;
   font-weight: 400;
   color: rgba(79,79,79,1);
   text-align: center;
 }
 
-.c7 {
+.c6 {
   font-size: 14px;
   font-weight: 300;
   line-height: 19.18px;
@@ -1536,7 +1536,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
   background-color: rgba(162,198,248,1);
 }
 
-.c3 {
+.c4 {
   height: 30px;
 }
 
@@ -1561,25 +1561,25 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
   align-items: center;
 }
 
-.c6 {
+.c7 {
   margin: 0;
   text-align: right;
 }
 
 @media (max-width:700px) {
-  .c4 {
+  .c3 {
     font-size: 18px;
   }
 }
 
 @media (max-width:699px) {
-  .c3 {
+  .c4 {
     font-size: 12px;
   }
 }
 
 @media (max-width:699px) {
-  .c6 {
+  .c7 {
     font-size: 10px;
   }
 }
@@ -1736,7 +1736,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1751,7 +1751,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1766,7 +1766,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1781,7 +1781,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1796,7 +1796,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1811,7 +1811,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1826,7 +1826,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1841,7 +1841,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1856,7 +1856,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1871,7 +1871,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1886,7 +1886,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1901,7 +1901,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1916,7 +1916,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1931,7 +1931,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1959,7 +1959,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1974,7 +1974,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -1989,7 +1989,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2004,7 +2004,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2019,7 +2019,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2034,7 +2034,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2049,7 +2049,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2064,7 +2064,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2079,7 +2079,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2094,7 +2094,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2109,7 +2109,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2124,7 +2124,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2139,7 +2139,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2154,7 +2154,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2182,7 +2182,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2197,7 +2197,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2212,7 +2212,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2227,7 +2227,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2242,7 +2242,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2257,7 +2257,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2272,7 +2272,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2287,7 +2287,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2302,7 +2302,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2317,7 +2317,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2332,7 +2332,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2347,7 +2347,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2362,7 +2362,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2377,7 +2377,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2405,7 +2405,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2420,7 +2420,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2435,7 +2435,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2450,7 +2450,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2465,7 +2465,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2480,7 +2480,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2495,7 +2495,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2510,7 +2510,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2525,7 +2525,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2540,7 +2540,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2555,7 +2555,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2570,7 +2570,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2585,7 +2585,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2600,7 +2600,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2628,7 +2628,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         </h2>
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2643,7 +2643,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2658,7 +2658,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2673,7 +2673,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2688,7 +2688,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2703,7 +2703,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2718,7 +2718,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2733,7 +2733,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2748,7 +2748,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2763,7 +2763,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2778,7 +2778,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2793,7 +2793,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2808,7 +2808,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
@@ -2823,7 +2823,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
         />
       </div>
       <div
-        className="rgdp__grid-cell c8"
+        className="c8 rgdp__grid-cell"
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseUp={[Function]}
