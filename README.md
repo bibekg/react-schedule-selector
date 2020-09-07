@@ -188,8 +188,8 @@ To customize the UI, you can either:
 
 #### `renderDateCell`
 
-**type**: `(time: Date, selected: boolean, refSetter: function) => React.Node`
+**type**: `(time: Date, selected: boolean, refSetter: (dateCell: HTMLElement | null) => void) => React.Node`
 
-**description**: A render prop function that accepts the time this cell is representing and whether the cell is selected or not and returns a React element. It is your responsibility to apply the `refSetter` as a ref to the component you render -- neglecting to do so will cause the component to not work properly for touch devices. If you choose to use this custom render function, the color props above have no effect.
+**description**: A render prop function that accepts the time this cell is representing and whether the cell is selected or not and should return a React element. It is your responsibility to apply the `refSetter` as a ref to the component you render -- neglecting to do so will cause the component to not work properly for touch devices. If you choose to use this custom render function, the color props above have no effect.
 
 **required**: no

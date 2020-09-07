@@ -1,13 +1,13 @@
 // @flow
 
 import * as React from 'react'
-import styled, { injectGlobal } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 // eslint-disable-next-line
 import * as ReactDOM from 'react-dom'
 import ScheduleSelector from '../lib'
 
 // eslint-disable-next-line
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   body {
     font-family: sans-serif;
   }
@@ -68,6 +68,7 @@ class App extends React.Component<{}, StateType> {
   render(): React.Element<*> {
     return (
       <MainDiv>
+        <GlobalStyle />
         <IntroText>
           <h1>React Schedule Selector</h1>
           <p>Tap to select one time or drag to select multiple times at once.</p>
@@ -81,6 +82,7 @@ class App extends React.Component<{}, StateType> {
             onChange={this.handleDateChange}
             hourlyChunks={2}
             timeFormat="h:mma"
+            selectionScheme="linear"
           />
         </ScheduleSelectorCard>
         <Links>

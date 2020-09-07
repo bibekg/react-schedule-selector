@@ -14,9 +14,13 @@
     "grid"
   ],
   "main": "dist/lib/index.js",
+  "files": [
+    "dist/lib",
+    "src/lib",
+    "declarations"
+  ],
   "license": "MIT",
   "scripts": {
-    "prepublish": "yarn build",
     "postpublish": "yarn docs:deploy",
     "build": "yarn clean && yarn lib:build && yarn docs:build",
     "lint": "eslint src/**/*.{js,jsx} --quiet",
@@ -33,8 +37,8 @@
     "node": ">8.0"
   },
   "peerDependencies": {
-    "react": ">=15.5 && <=16.0",
-    "styled-components": ">=2.0 || >=3.0"
+    "react": ">=16.0",
+    "styled-components": ">=5.0"
   },
   "dependencies": {
     "date-fns": "^1.29.0"
@@ -66,7 +70,7 @@
     "eslint-plugin-react": "^7.7.0",
     "flow-bin": "^0.132.0",
     "jest": "^23.2.0",
-    "jest-styled-components": "^6.2.0",
+    "jest-styled-components": "^7.0.3",
     "jsdom": "^12.0.0",
     "moment": "^2.22.2",
     "parcel-bundler": "^1.12.4",
@@ -75,7 +79,7 @@
     "react-dom": "^16.3.2",
     "react-test-renderer": "^16.4.1",
     "regenerator-runtime": "^0.12.1",
-    "styled-components": "^3.2.6",
+    "styled-components": "^5.2.0",
     "surge": "^0.20.1"
   },
   "prettier": {
