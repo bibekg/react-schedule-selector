@@ -1,5 +1,3 @@
-// @flow
-
 const colors = {
   blue: 'rgba(89, 154, 242, 1)',
   lightBlue: 'rgba(162, 198, 248, 1)',

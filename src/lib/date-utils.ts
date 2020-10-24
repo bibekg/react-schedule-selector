@@ -1,5 +1,3 @@
-// @flow
-
 import startOfDay from 'date-fns/start_of_day'
 import isAfter from 'date-fns/is_after'
 

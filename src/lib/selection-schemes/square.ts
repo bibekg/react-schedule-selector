@@ -1,11 +1,9 @@
-// @flow
-
 import isBefore from 'date-fns/is_before'
 import startOfDay from 'date-fns/start_of_day'
 
 import * as dateUtils from '../date-utils'
 
-const square = (selectionStart: ?Date, selectionEnd: ?Date, dateList: Array<Array<Date>>): Array<Date> => {
+const square = (selectionStart: Date | null, selectionEnd: Date | null, dateList: Array<Array<Date>>): Array<Date> => {
   let selected: Array<Date> = []
   if (selectionEnd == null) {
     if (selectionStart) selected = [selectionStart]

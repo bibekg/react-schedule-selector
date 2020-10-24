@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 // eslint-disable-next-line
@@ -101,5 +99,4 @@ class App extends React.Component<{}, StateType> {
   }
 }
 
-// flow-disable-next-line
 ReactDOM.render(<App />, document.getElementById('app'))

@@ -1,5 +1,3 @@
-// @flow
-
 import moment from 'moment'
 
 import { dateIsBetween, timeIsBetween, dateHourIsBetween } from '../../src/lib/date-utils'
@@ -20,7 +18,7 @@ describe('dateHourIsBetween', () => {
     ['before range', [today[10], today[3], today[4]], false],
     ['after range', [today[10], today[11], today[8]], false],
     ['same time', [today[3], today[3], today[3]], true]
-  ])('it is correct for the case: %s', (testName, args, expectation) => {
+  ])('it is correct for the case: %s', (testName, args: [Date, Date, Date], expectation) => {
     const expectMethod = expectation ? 'toBeTruthy' : 'toBeFalsy'
     expect(dateHourIsBetween(...args))[expectMethod]()
   })
@@ -40,7 +38,7 @@ describe('dateIsBetween', () => {
     ['yesterday between today and tomorrow', [today, yesterday, tomorrow], false],
     ['tomorrow between yesterday and today', [yesterday, tomorrow, today], false],
     ['today between today and today', [today, today, today], true]
-  ])('it is correct for the case: %s', (testName, args, expectation) => {
+  ])('it is correct for the case: %s', (testName, args: [Date, Date, Date], expectation) => {
     const expectMethod = expectation ? 'toBeTruthy' : 'toBeFalsy'
     expect(dateIsBetween(...args))[expectMethod]()
   })
@@ -73,7 +71,7 @@ describe('timeIsBetween', () => {
     ['cross-day true', [today[5], tomorrow[10], today[12]], true],
     ['cross-day-false', [today[5], tomorrow[10], today[6]], false],
     ['times-in-same-hour', [makeDate(0, 0, 0), makeDate(0, 0, 30), makeDate(0, 1, 0)], true]
-  ])('it is correct for the case: %s', (testName, args, expectation) => {
+  ])('it is correct for the case: %s', (testName, args: [Date, Date, Date], expectation) => {
     const expectMethod = expectation ? 'toBeTruthy' : 'toBeFalsy'
     expect(timeIsBetween(...args))[expectMethod]()
   })

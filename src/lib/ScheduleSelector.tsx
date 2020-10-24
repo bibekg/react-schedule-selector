@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from 'react'
 import styled from 'styled-components'
 
@@ -13,7 +11,7 @@ import formatDate from 'date-fns/format'
 
 import { Text, Subtitle } from './typography'
 import colors from './colors'
-import selectionSchemes from './selection-schemes'
+import selectionSchemes, { SelectionSchemeType, SelectionType } from './selection-schemes'
 
 const Wrapper = styled.div`
   display: flex;
@@ -22,7 +20,7 @@ const Wrapper = styled.div`
   user-select: none;
 `
 
-const Grid = styled.div`
+const Grid = styled.div<{ columns: number; rows: number; columnGap: string; rowGap: string }>`
   display: grid;
   grid-template-columns: auto repeat(${props => props.columns}, 1fr);
   grid-template-rows: auto repeat(${props => props.rows}, 1fr);
@@ -36,7 +34,12 @@ export const GridCell = styled.div`
   touch-action: none;
 `
 
-const DateCell = styled.div`
+const DateCell = styled.div<{
+  selected: boolean
+  selectedColor: string
+  unselectedColor: string
+  hoveredColor: string
+}>`
   width: 100%;
   height: 25px;
   background-color: ${props => (props.selected ? props.selectedColor : props.unselectedColor)};
@@ -64,32 +67,32 @@ const TimeText = styled(Text)`
 `
 
 type PropsType = {
-  selection: Array<Date>,
-  selectionScheme: SelectionSchemeType,
-  onChange: (Array<Date>) => void,
-  startDate: Date,
-  numDays: number,
-  minTime: number,
-  maxTime: number,
-  hourlyChunks: number,
-  dateFormat: string,
-  timeFormat: string,
-  columnGap: string | number,
-  rowGap: string | number,
-  unselectedColor: string,
-  selectedColor: string,
-  hoveredColor: string,
-  renderDateCell?: (datetime: Date, selected: boolean, refSetter: (HTMLElement) => void) => React.Node,
-  renderTimeLabel?: (time: Date) => React.Node,
-  renderDateLabel?: (date: Date) => React.Node
+  selection: Array<Date>
+  selectionScheme: SelectionSchemeType
+  onChange: (newSelection: Array<Date>) => void
+  startDate: Date
+  numDays: number
+  minTime: number
+  maxTime: number
+  hourlyChunks: number
+  dateFormat: string
+  timeFormat: string
+  columnGap: string
+  rowGap: string
+  unselectedColor: string
+  selectedColor: string
+  hoveredColor: string
+  renderDateCell?: (datetime: Date, selected: boolean, refSetter: (dateCellElement: HTMLElement) => void) => JSX.Element
+  renderTimeLabel?: (time: Date) => JSX.Element
+  renderDateLabel?: (date: Date) => JSX.Element
 }
 
 type StateType = {
   // In the case that a user is drag-selecting, we don't want to call this.props.onChange() until they have completed
   // the drag-select. selectionDraft serves as a temporary copy during drag-selects.
-  selectionDraft: Array<Date>,
-  selectionType: ?SelectionType,
-  selectionStart: ?Date,
+  selectionDraft: Array<Date>
+  selectionType: SelectionType | null
+  selectionStart: Date | null
   isTouchDragging: boolean
 }
 
@@ -99,18 +102,18 @@ export const preventScroll = (e: TouchEvent) => {
 
 export default class ScheduleSelector extends React.Component<PropsType, StateType> {
   dates: Array<Array<Date>>
-  selectionSchemeHandlers: { [string]: (Date, Date, Array<Array<Date>>) => Date[] }
-  cellToDate: Map<HTMLElement, Date>
-  documentMouseUpHandler: () => void
-  endSelection: () => void
-  handleTouchMoveEvent: (SyntheticTouchEvent<*>) => void
-  handleTouchEndEvent: () => void
-  handleMouseUpEvent: Date => void
-  handleMouseEnterEvent: Date => void
-  handleSelectionStartEvent: Date => void
-  gridRef: ?HTMLElement
+  selectionSchemeHandlers: { [key: string]: (startDate: Date, endDate: Date, foo: Array<Array<Date>>) => Date[] }
+  cellToDate: Map<Element, Date>
+  // documentMouseUpHandler: () => void = () => {}
+  // endSelection: () => void = () => {}
+  // handleTouchMoveEvent: (event: React.SyntheticTouchEvent<*>) => void
+  // handleTouchEndEvent: () => void
+  // handleMouseUpEvent: (date: Date) => void
+  // handleMouseEnterEvent: (date: Date) => void
+  // handleSelectionStartEvent: (date: Date) => void
+  gridRef: HTMLElement | null = null
 
-  static defaultProps: $Shape<PropsType> = {
+  static defaultProps: Partial<PropsType> = {
     selection: [],
     selectionScheme: 'square',
     numDays: 7,
@@ -128,7 +131,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     onChange: () => {}
   }
 
-  static getDerivedStateFromProps(props: PropsType, state: StateType): $Shape<StateType> | null {
+  static getDerivedStateFromProps(props: PropsType, state: StateType): Partial<StateType> | null {
     // As long as the user isn't in the process of selecting, allow prop changes to re-populate selection state
     if (state.selectionStart == null) {
       return {
@@ -188,6 +191,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     // Prevent page scrolling when user is dragging on the date cells
     this.cellToDate.forEach((value, dateCell) => {
       if (dateCell && dateCell.addEventListener) {
+        // @ts-ignore
         dateCell.addEventListener('touchmove', preventScroll, { passive: false })
       }
     })
@@ -197,6 +201,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     document.removeEventListener('mouseup', this.endSelection)
     this.cellToDate.forEach((value, dateCell) => {
       if (dateCell && dateCell.removeEventListener) {
+        // @ts-ignore
         dateCell.removeEventListener('touchmove', preventScroll)
       }
     })
@@ -205,14 +210,14 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   // Performs a lookup into this.cellToDate to retrieve the Date that corresponds to
   // the cell where this touch event is right now. Note that this method will only work
   // if the event is a `touchmove` event since it's the only one that has a `touches` list.
-  getTimeFromTouchEvent(event: SyntheticTouchEvent<*>): ?Date {
+  getTimeFromTouchEvent(event: React.TouchEvent<any>): Date | null {
     const { touches } = event
     if (!touches || touches.length === 0) return null
     const { clientX, clientY } = touches[0]
     const targetElement = document.elementFromPoint(clientX, clientY)
     if (targetElement) {
       const cellTime = this.cellToDate.get(targetElement)
-      return cellTime
+      return cellTime ?? null
     }
     return null
   }
@@ -226,12 +231,12 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   // Given an ending Date, determines all the dates that should be selected in this draft
-  updateAvailabilityDraft(selectionEnd: ?Date, callback?: () => void) {
+  updateAvailabilityDraft(selectionEnd: Date | null, callback?: () => void) {
     const { selectionType, selectionStart } = this.state
 
     if (selectionType === null || selectionStart === null) return
 
-    let newSelection = []
+    let newSelection: Array<Date> = []
     if (selectionStart && selectionEnd && selectionType) {
       newSelection = this.selectionSchemeHandlers[this.props.selectionScheme](selectionStart, selectionEnd, this.dates)
     }
@@ -269,7 +274,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     // Don't call this.endSelection() here because the document mouseup handler will do it
   }
 
-  handleTouchMoveEvent(event: SyntheticTouchEvent<*>) {
+  handleTouchMoveEvent(event: React.TouchEvent) {
     this.setState({ isTouchDragging: true })
     const cellTime = this.getTimeFromTouchEvent(event)
     if (cellTime) {
@@ -291,7 +296,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     this.setState({ isTouchDragging: false })
   }
 
-  renderDateCellWrapper = (time: Date): React.Element<*> => {
+  renderDateCellWrapper = (time: Date): JSX.Element => {
     const startHandler = () => {
       this.handleSelectionStartEvent(time)
     }
@@ -313,7 +318,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
         }}
         // Touch handlers
         // Since touch events fire on the event where the touch-drag started, there's no point in passing
-        // in the time parameter, instead these handlers will do their job using the default SyntheticEvent
+        // in the time parameter, instead these handlers will do their job using the default Event
         // parameters
         onTouchStart={startHandler}
         onTouchMove={this.handleTouchMoveEvent}
@@ -324,7 +329,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     )
   }
 
-  renderDateCell = (time: Date, selected: boolean): React.Node => {
+  renderDateCell = (time: Date, selected: boolean): JSX.Element => {
     const refSetter = (dateCell: HTMLElement | null) => {
       if (dateCell) {
         this.cellToDate.set(dateCell, time)
@@ -345,23 +350,23 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     }
   }
 
-  renderTimeLabel = (time: Date): React.Node => {
+  renderTimeLabel = (time: Date): JSX.Element => {
     if (this.props.renderTimeLabel) {
       return this.props.renderTimeLabel(time)
     } else {
-      return <TimeText>{formatDate(time, this.props.timeFormat)}</TimeText>
+      return <TimeText key={`time-label-${time.toISOString()}`}>{formatDate(time, this.props.timeFormat)}</TimeText>
     }
   }
 
-  renderDateLabel = (date: Date): React.Node => {
+  renderDateLabel = (date: Date): JSX.Element => {
     if (this.props.renderDateLabel) {
       return this.props.renderDateLabel(date)
     } else {
-      return <DateLabel>{formatDate(date, this.props.dateFormat)}</DateLabel>
+      return <DateLabel key={`date-label-${date.toISOString()}`}>{formatDate(date, this.props.dateFormat)}</DateLabel>
     }
   }
 
-  renderFullDateGrid(): Array<React.Node> {
+  renderFullDateGrid(): Array<JSX.Element> {
     const flattenedDates = this.dates.reduce((acc, dayOfDates) => acc.concat(dayOfDates), [])
     const dateGridElements = flattenedDates.map(this.renderDateCellWrapper)
     const numDays = this.dates.length
@@ -374,7 +379,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     }
     return [
       // Empty top left corner
-      <div />,
+      <div key="topleft" />,
       // Top row of dates
       ...this.dates.map(dayOfTimes => this.renderDateLabel(dayOfTimes[0])),
       // Every row after that
@@ -382,7 +387,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     ]
   }
 
-  render(): React.Element<*> {
+  render(): JSX.Element {
     return (
       <Wrapper>
         <Grid
