@@ -358,20 +358,18 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   renderTimeLabel = (time: Date): JSX.Element => {
-    const key = `time-label-${time.toISOString()}`
     if (this.props.renderTimeLabel) {
-      return React.cloneElement(this.props.renderTimeLabel(time), { key })
+      return this.props.renderTimeLabel(time)
     } else {
-      return <TimeText key={key}>{formatDate(time, this.props.timeFormat)}</TimeText>
+      return <TimeText>{formatDate(time, this.props.timeFormat)}</TimeText>
     }
   }
 
   renderDateLabel = (date: Date): JSX.Element => {
-    const key = `date-label-${date.toISOString()}`
     if (this.props.renderDateLabel) {
-      return React.cloneElement(this.props.renderDateLabel(date), { key })
+      return this.props.renderDateLabel(date)
     } else {
-      return <DateLabel key={key}>{formatDate(date, this.props.dateFormat)}</DateLabel>
+      return <DateLabel>{formatDate(date, this.props.dateFormat)}</DateLabel>
     }
   }
 
@@ -395,9 +393,11 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       // Empty top left corner
       <div key="topleft" />,
       // Top row of dates
-      ...this.state.dates.map(dayOfTimes => this.renderDateLabel(dayOfTimes[0])),
+      ...this.state.dates.map((dayOfTimes, index) =>
+        React.cloneElement(this.renderDateLabel(dayOfTimes[0]), { key: `date-${index}` })
+      ),
       // Every row after that
-      ...dateGridElements
+      ...dateGridElements.map((element, index) => React.cloneElement(element, { key: `time-${index}` }))
     ]
   }
 
