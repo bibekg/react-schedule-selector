@@ -23,21 +23,15 @@ const Wrapper = styled.div`
 `
 
 const Grid = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: auto repeat(${props => props.columns}, 1fr);
+  grid-template-rows: auto repeat(${props => props.rows}, 1fr);
+  column-gap: ${props => props.columnGap};
+  row-gap: ${props => props.rowGap};
   width: 100%;
 `
 
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-grow: 1;
-`
-
 export const GridCell = styled.div`
-  margin: ${props => props.margin}px;
   touch-action: none;
 `
 
@@ -52,30 +46,20 @@ const DateCell = styled.div`
 `
 
 const DateLabel = styled(Subtitle)`
-  height: 30px;
   @media (max-width: 699px) {
     font-size: 12px;
   }
-`
-
-const TimeLabelCell = styled.div`
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 25px;
-  margin: 3px 0;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  margin-bottom: 4px;
 `
 
 const TimeText = styled(Text)`
-  margin: 0;
   @media (max-width: 699px) {
     font-size: 10px;
   }
   text-align: right;
+  margin: 0;
+  margin-right: 4px;
 `
 
 type PropsType = {
@@ -89,11 +73,14 @@ type PropsType = {
   hourlyChunks: number,
   dateFormat: string,
   timeFormat: string,
-  margin: number,
+  columnGap: string | number,
+  rowGap: string | number,
   unselectedColor: string,
   selectedColor: string,
   hoveredColor: string,
-  renderDateCell?: (Date, boolean, (HTMLElement) => void) => React.Node
+  renderDateCell?: (datetime: Date, selected: boolean, refSetter: (HTMLElement) => void) => React.Node,
+  renderTimeLabel?: (time: Date) => React.Node,
+  renderDateLabel?: (date: Date) => React.Node
 }
 
 type StateType = {
@@ -122,7 +109,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   handleSelectionStartEvent: Date => void
   gridRef: ?HTMLElement
 
-  static defaultProps: PropsType = {
+  static defaultProps: $Shape<PropsType> = {
     selection: [],
     selectionScheme: 'square',
     numDays: 7,
@@ -132,18 +119,19 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     startDate: new Date(),
     timeFormat: 'ha',
     dateFormat: 'M/D',
-    margin: 3,
+    columnGap: '4px',
+    rowGap: '4px',
     selectedColor: colors.blue,
     unselectedColor: colors.paleBlue,
     hoveredColor: colors.lightBlue,
     onChange: () => {}
   }
 
-  static getDerivedStateFromProps(props: PropsType, state: StateType): StateType | null {
+  static getDerivedStateFromProps(props: PropsType, state: StateType): $Shape<StateType> | null {
     // As long as the user isn't in the process of selecting, allow prop changes to re-populate selection state
     if (state.selectionStart == null) {
       return {
-        selection: [...props.selection]
+        selectionDraft: [...props.selection]
       }
     }
     return null
@@ -302,27 +290,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     this.setState({ isTouchDragging: false })
   }
 
-  renderTimeLabels = (): React.Element<*> => {
-    const labels = [<DateLabel key={-1} />] // Ensures time labels start at correct location
-    this.dates[0].forEach(time => {
-      labels.push(
-        <TimeLabelCell key={time.toString()}>
-          <TimeText>{formatDate(time, this.props.timeFormat)}</TimeText>
-        </TimeLabelCell>
-      )
-    })
-    return <Column margin={this.props.margin}>{labels}</Column>
-  }
-
-  renderDateColumn = (dayOfTimes: Array<Date>) => (
-    <Column key={dayOfTimes[0].toString()} margin={this.props.margin}>
-      <GridCell margin={this.props.margin}>
-        <DateLabel>{formatDate(dayOfTimes[0], this.props.dateFormat)}</DateLabel>
-      </GridCell>
-      {dayOfTimes.map(time => this.renderDateCellWrapper(time))}
-    </Column>
-  )
-
   renderDateCellWrapper = (time: Date): React.Element<*> => {
     const startHandler = () => {
       this.handleSelectionStartEvent(time)
@@ -334,7 +301,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       <GridCell
         className="rgdp__grid-cell"
         role="presentation"
-        margin={this.props.margin}
         key={time.toISOString()}
         // Mouse handlers
         onMouseDown={startHandler}
@@ -378,19 +344,57 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     }
   }
 
+  renderTimeLabel = (time: Date): React.Node => {
+    if (this.props.renderTimeLabel) {
+      return this.props.renderTimeLabel(time)
+    } else {
+      return <TimeText>{formatDate(time, this.props.timeFormat)}</TimeText>
+    }
+  }
+
+  renderDateLabel = (date: Date): React.Node => {
+    if (this.props.renderDateLabel) {
+      return this.props.renderDateLabel(date)
+    } else {
+      return <DateLabel>{formatDate(date, this.props.dateFormat)}</DateLabel>
+    }
+  }
+
+  renderFullDateGrid(): Array<React.Node> {
+    const flattenedDates = this.dates.reduce((acc, dayOfDates) => acc.concat(dayOfDates), [])
+    const dateGridElements = flattenedDates.map(this.renderDateCellWrapper)
+    const numDays = this.dates.length
+    const numTimes = this.dates[0].length
+    for (let i = 0; i < numTimes; i += 1) {
+      const index = i * numDays
+      const time = this.dates[0][i]
+      // Inject the time label at the start of every row
+      dateGridElements.splice(index + i, 0, this.renderTimeLabel(time))
+    }
+    return [
+      // Empty top left corner
+      <div />,
+      // Top row of dates
+      ...this.dates.map(dayOfTimes => this.renderDateLabel(dayOfTimes[0])),
+      // Every row after that
+      ...dateGridElements
+    ]
+  }
+
   render(): React.Element<*> {
     return (
       <Wrapper>
-        {
-          <Grid
-            ref={el => {
-              this.gridRef = el
-            }}
-          >
-            {this.renderTimeLabels()}
-            {this.dates.map(this.renderDateColumn)}
-          </Grid>
-        }
+        <Grid
+          columns={this.dates.length}
+          rows={this.dates[0].length}
+          columnGap={this.props.columnGap}
+          rowGap={this.props.rowGap}
+          ref={el => {
+            this.gridRef = el
+          }}
+        >
+          {this.renderFullDateGrid()}
+        </Grid>
       </Wrapper>
     )
   }
