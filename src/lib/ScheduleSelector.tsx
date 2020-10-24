@@ -358,18 +358,20 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   renderTimeLabel = (time: Date): JSX.Element => {
+    const key = `time-label-${time.toISOString()}`
     if (this.props.renderTimeLabel) {
-      return this.props.renderTimeLabel(time)
+      return React.cloneElement(this.props.renderTimeLabel(time), { key })
     } else {
-      return <TimeText key={`time-label-${time.toISOString()}`}>{formatDate(time, this.props.timeFormat)}</TimeText>
+      return <TimeText key={key}>{formatDate(time, this.props.timeFormat)}</TimeText>
     }
   }
 
   renderDateLabel = (date: Date): JSX.Element => {
+    const key = `date-label-${date.toISOString()}`
     if (this.props.renderDateLabel) {
-      return this.props.renderDateLabel(date)
+      return React.cloneElement(this.props.renderDateLabel(date), { key })
     } else {
-      return <DateLabel key={`date-label-${date.toISOString()}`}>{formatDate(date, this.props.dateFormat)}</DateLabel>
+      return <DateLabel key={key}>{formatDate(date, this.props.dateFormat)}</DateLabel>
     }
   }
 
