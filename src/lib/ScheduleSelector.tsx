@@ -94,6 +94,7 @@ type StateType = {
   selectionType: SelectionType | null
   selectionStart: Date | null
   isTouchDragging: boolean
+  dates: Array<Array<Date>>
 }
 
 export const preventScroll = (e: TouchEvent) => {
@@ -101,9 +102,8 @@ export const preventScroll = (e: TouchEvent) => {
 }
 
 export default class ScheduleSelector extends React.Component<PropsType, StateType> {
-  dates: Array<Array<Date>>
   selectionSchemeHandlers: { [key: string]: (startDate: Date, endDate: Date, foo: Array<Array<Date>>) => Date[] }
-  cellToDate: Map<Element, Date>
+  cellToDate: Map<Element, Date> = new Map()
   // documentMouseUpHandler: () => void = () => {}
   // endSelection: () => void = () => {}
   // handleTouchMoveEvent: (event: React.SyntheticTouchEvent<*>) => void
@@ -135,35 +135,38 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     // As long as the user isn't in the process of selecting, allow prop changes to re-populate selection state
     if (state.selectionStart == null) {
       return {
-        selectionDraft: [...props.selection]
+        selectionDraft: [...props.selection],
+        dates: ScheduleSelector.computeDatesMatrix(props)
       }
     }
     return null
   }
 
-  constructor(props: PropsType) {
-    super(props)
-
-    // Generate list of dates to render cells for
+  static computeDatesMatrix(props: PropsType): Array<Array<Date>> {
     const startTime = startOfDay(props.startDate)
-    this.dates = []
-    this.cellToDate = new Map()
+    const dates: Array<Array<Date>> = []
     const minutesInChunk = Math.floor(60 / props.hourlyChunks)
     for (let d = 0; d < props.numDays; d += 1) {
       const currentDay = []
-      for (let h = props.minTime; h < props.maxTime; h += 1) {
+      for (let h = props.minTime; h <= props.maxTime; h += 1) {
         for (let c = 0; c < props.hourlyChunks; c += 1) {
           currentDay.push(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk))
         }
       }
-      this.dates.push(currentDay)
+      dates.push(currentDay)
     }
+    return dates
+  }
+
+  constructor(props: PropsType) {
+    super(props)
 
     this.state = {
       selectionDraft: [...this.props.selection], // copy it over
       selectionType: null,
       selectionStart: null,
-      isTouchDragging: false
+      isTouchDragging: false,
+      dates: ScheduleSelector.computeDatesMatrix(props)
     }
 
     this.selectionSchemeHandlers = {
@@ -238,7 +241,11 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
 
     let newSelection: Array<Date> = []
     if (selectionStart && selectionEnd && selectionType) {
-      newSelection = this.selectionSchemeHandlers[this.props.selectionScheme](selectionStart, selectionEnd, this.dates)
+      newSelection = this.selectionSchemeHandlers[this.props.selectionScheme](
+        selectionStart,
+        selectionEnd,
+        this.state.dates
+      )
     }
 
     let nextDraft = [...this.props.selection]
@@ -367,13 +374,18 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   renderFullDateGrid(): Array<JSX.Element> {
-    const flattenedDates = this.dates.reduce((acc, dayOfDates) => acc.concat(dayOfDates), [])
+    const flattenedDates: Date[] = []
+    const numDays = this.state.dates.length
+    const numTimes = this.state.dates[0].length
+    for (let j = 0; j < numTimes; j += 1) {
+      for (let i = 0; i < numDays; i += 1) {
+        flattenedDates.push(this.state.dates[i][j])
+      }
+    }
     const dateGridElements = flattenedDates.map(this.renderDateCellWrapper)
-    const numDays = this.dates.length
-    const numTimes = this.dates[0].length
     for (let i = 0; i < numTimes; i += 1) {
       const index = i * numDays
-      const time = this.dates[0][i]
+      const time = this.state.dates[0][i]
       // Inject the time label at the start of every row
       dateGridElements.splice(index + i, 0, this.renderTimeLabel(time))
     }
@@ -381,7 +393,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       // Empty top left corner
       <div key="topleft" />,
       // Top row of dates
-      ...this.dates.map(dayOfTimes => this.renderDateLabel(dayOfTimes[0])),
+      ...this.state.dates.map(dayOfTimes => this.renderDateLabel(dayOfTimes[0])),
       // Every row after that
       ...dateGridElements
     ]
@@ -391,8 +403,8 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     return (
       <Wrapper>
         <Grid
-          columns={this.dates.length}
-          rows={this.dates[0].length}
+          columns={this.state.dates.length}
+          rows={this.state.dates[0].length}
           columnGap={this.props.columnGap}
           rowGap={this.props.rowGap}
           ref={el => {

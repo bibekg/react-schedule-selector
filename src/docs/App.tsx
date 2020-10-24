@@ -2,7 +2,11 @@ import * as React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 // eslint-disable-next-line
 import * as ReactDOM from 'react-dom'
+import Box from './Box'
+import * as Text from './Text'
+import * as Form from './Form'
 import ScheduleSelector from '../lib'
+import selectionSchemes, { SelectionSchemeType } from '../lib/selection-schemes'
 
 // eslint-disable-next-line
 const GlobalStyle = createGlobalStyle`
@@ -12,10 +16,12 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    margin: 0;
   }
 `
 
 const MainDiv = styled.div`
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +30,7 @@ const MainDiv = styled.div`
 const IntroText = styled.div`
   width: 100%;
   text-align: center;
+  margin-bottom: 10px;
 `
 
 const ScheduleSelectorCard = styled.div`
@@ -34,6 +41,13 @@ const ScheduleSelectorCard = styled.div`
   max-width: 800px;
   & > * {
     flex-grow: 1;
+  }
+`
+
+const CustomizationRow = styled.div`
+  display: flex;
+  & > * {
+    margin: 8px;
   }
 `
 
@@ -56,47 +70,119 @@ type StateType = {
   schedule: Array<Date>
 }
 
-class App extends React.Component<{}, StateType> {
-  state = { schedule: [] }
+const App = () => {
+  const [schedule, setSchedule] = React.useState([])
+  const [selectionScheme, setSelectionScheme] = React.useState<SelectionSchemeType>('linear')
+  const [startDate, setStartDate] = React.useState<Date>(new Date())
+  const [numDays, setNumDays] = React.useState<number>(7)
+  const [hourlyChunks, setHourlyChunks] = React.useState<number>(1)
+  const [minTime, setMinTime] = React.useState<number>(12)
+  const [maxTime, setMaxTime] = React.useState<number>(20)
 
-  handleDateChange = newSchedule => {
-    this.setState({ schedule: newSchedule })
-  }
+  return (
+    <MainDiv>
+      <GlobalStyle />
+      <IntroText>
+        <Text.PageHeader>React Schedule Selector</Text.PageHeader>
+        <Text.Body2>Tap to select one time or drag to select multiple times at once.</Text.Body2>
+      </IntroText>
+      <Text.SectionHeader>Customizable Props</Text.SectionHeader>
+      <CustomizationRow>
+        <Box>
+          <Form.Label>Selection scheme</Form.Label>
+          <Form.Select
+            width="100%"
+            value={selectionScheme}
+            onChange={event => {
+              setSelectionScheme(event.target.value as SelectionSchemeType)
+            }}
+          >
+            <option value="linear">Linear</option>
+            <option value="square">Square</option>
+          </Form.Select>
+        </Box>
 
-  render(): React.Element<*> {
-    return (
-      <MainDiv>
-        <GlobalStyle />
-        <IntroText>
-          <h1>React Schedule Selector</h1>
-          <p>Tap to select one time or drag to select multiple times at once.</p>
-        </IntroText>
-        <ScheduleSelectorCard>
-          <ScheduleSelector
-            minTime={12}
-            maxTime={20}
-            numDays={7}
-            selection={this.state.schedule}
-            onChange={this.handleDateChange}
-            hourlyChunks={2}
-            timeFormat="h:mma"
-            selectionScheme="linear"
+        <Box>
+          <Form.Label>Start date</Form.Label>
+          <Form.Input
+            type="date"
+            value={startDate.toISOString().substr(0, 10)}
+            onChange={(event: any) => {
+              const date = new Date(event.target.value)
+              const tzOffset = date.getTimezoneOffset()
+              setStartDate(new Date(+date + tzOffset * 60000))
+            }}
           />
-        </ScheduleSelectorCard>
-        <Links>
-          <ExternalLink color="#24292e" href="https://github.com/bibekg/react-schedule-selector">
-            GitHub
-          </ExternalLink>
-          <ExternalLink color="#cb3838" href="https://npmjs.com/package/react-schedule-selector">
-            NPM
-          </ExternalLink>
-          <ExternalLink color="#292929" href="https://medium.com/@bibekg/react-schedule-selector-6cd5bf1f4968">
-            Medium
-          </ExternalLink>
-        </Links>
-      </MainDiv>
-    )
-  }
+        </Box>
+
+        <Box>
+          <Form.Label>Num days</Form.Label>
+          <Form.Input
+            type="number"
+            min="1"
+            max="14"
+            value={numDays}
+            onChange={(event: any) => setNumDays(Number(event.target.value))}
+          />
+        </Box>
+
+        <Box>
+          <Form.Label>Min Time</Form.Label>
+          <Form.Input
+            type="number"
+            min="1"
+            max={maxTime - 1}
+            value={minTime}
+            onChange={event => setMinTime(Number(event.target.value))}
+          />
+        </Box>
+        <Box>
+          <Form.Label>Max Time</Form.Label>
+          <Form.Input
+            type="number"
+            min={minTime + 1}
+            max="24"
+            value={maxTime}
+            onChange={event => setMaxTime(Number(event.target.value))}
+          />
+        </Box>
+        <Box>
+          <Form.Label>Hourly chunks</Form.Label>
+          <Form.Input
+            type="number"
+            min="1"
+            max="6"
+            value={hourlyChunks}
+            onChange={event => setHourlyChunks(Number(event.target.value))}
+          />
+        </Box>
+      </CustomizationRow>
+      <ScheduleSelectorCard>
+        <ScheduleSelector
+          minTime={minTime}
+          maxTime={maxTime - 1}
+          numDays={numDays}
+          startDate={new Date(startDate)}
+          selection={schedule}
+          onChange={setSchedule}
+          hourlyChunks={hourlyChunks}
+          timeFormat="h:mma"
+          selectionScheme={selectionScheme}
+        />
+      </ScheduleSelectorCard>
+      <Links>
+        <ExternalLink color="#24292e" href="https://github.com/bibekg/react-schedule-selector">
+          GitHub
+        </ExternalLink>
+        <ExternalLink color="#cb3838" href="https://npmjs.com/package/react-schedule-selector">
+          NPM
+        </ExternalLink>
+        <ExternalLink color="#292929" href="https://medium.com/@bibekg/react-schedule-selector-6cd5bf1f4968">
+          Medium
+        </ExternalLink>
+      </Links>
+    </MainDiv>
+  )
 }
 
 ReactDOM.render(<App />, document.getElementById('app'))
