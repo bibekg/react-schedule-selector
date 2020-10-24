@@ -43,16 +43,19 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
 }
 
 .c6 {
+  place-self: stretch;
   touch-action: none;
 }
 
 .c3 {
   margin: 0;
+  margin-bottom: 4px;
 }
 
 .c5 {
-  margin: 0;
   text-align: right;
+  margin: 0;
+  margin-right: 4px;
 }
 
 @media (max-width:700px) {
@@ -1343,6 +1346,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
 }
 
 .c6 {
+  place-self: stretch;
   touch-action: none;
 }
 
@@ -1368,11 +1372,13 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
 
 .c3 {
   margin: 0;
+  margin-bottom: 4px;
 }
 
 .c5 {
-  margin: 0;
   text-align: right;
+  margin: 0;
+  margin-right: 4px;
 }
 
 @media (max-width:700px) {
