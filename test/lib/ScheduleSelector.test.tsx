@@ -1,5 +1,5 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import renderer, { act } from 'react-test-renderer'
 import { shallow, mount } from 'enzyme'
 import moment from 'moment'
 
@@ -33,7 +33,7 @@ describe('ScheduleSelector', () => {
       expect(tree).toMatchSnapshot()
     })
 
-    it('renders correctly with custom render prop', () => {
+    it('renders correctly with custom render props', () => {
       const customDateCellRenderer = (date, selected) => (
         <div className={`${selected && 'selected'} test-date-cell-renderer`}>{date.toDateString()}</div>
       )
@@ -45,6 +45,8 @@ describe('ScheduleSelector', () => {
           numDays={5}
           onChange={() => undefined}
           renderDateCell={customDateCellRenderer}
+          renderDateLabel={(date: Date) => <div>{date.toISOString()}</div>}
+          renderTimeLabel={(time: Date) => <div>{time.toISOString()}</div>}
         />
       )
 
@@ -224,12 +226,6 @@ describe('ScheduleSelector', () => {
           })
         }
       )
-    })
-  })
-
-  describe('componentDidMount', () => {
-    it('runs properly on a full mount', () => {
-      mount(<ScheduleSelector />)
     })
   })
 

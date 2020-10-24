@@ -75,9 +75,9 @@ const App = () => {
   const [selectionScheme, setSelectionScheme] = React.useState<SelectionSchemeType>('linear')
   const [startDate, setStartDate] = React.useState<Date>(new Date())
   const [numDays, setNumDays] = React.useState<number>(7)
-  const [hourlyChunks, setHourlyChunks] = React.useState<number>(1)
+  const [hourlyChunks, setHourlyChunks] = React.useState<number>(2)
   const [minTime, setMinTime] = React.useState<number>(12)
-  const [maxTime, setMaxTime] = React.useState<number>(20)
+  const [maxTime, setMaxTime] = React.useState<number>(17)
 
   return (
     <MainDiv>
@@ -130,7 +130,7 @@ const App = () => {
           <Form.Label>Min Time</Form.Label>
           <Form.Input
             type="number"
-            min="1"
+            min="0"
             max={maxTime - 1}
             value={minTime}
             onChange={event => setMinTime(Number(event.target.value))}
@@ -160,7 +160,7 @@ const App = () => {
       <ScheduleSelectorCard>
         <ScheduleSelector
           minTime={minTime}
-          maxTime={maxTime - 1}
+          maxTime={maxTime}
           numDays={numDays}
           startDate={new Date(startDate)}
           selection={schedule}

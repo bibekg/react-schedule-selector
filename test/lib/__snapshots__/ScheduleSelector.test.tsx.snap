@@ -143,7 +143,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        Tue Jan 02 2018
       </div>
     </div>
     <div
@@ -159,23 +159,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="selected test-date-cell-renderer"
-      >
-        Mon Jan 01 2018
+        Wed Jan 03 2018
       </div>
     </div>
     <div
@@ -191,7 +175,23 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -228,7 +228,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        Tue Jan 02 2018
       </div>
     </div>
     <div
@@ -244,7 +244,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        Wed Jan 03 2018
       </div>
     </div>
     <div
@@ -260,7 +260,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        Thu Jan 04 2018
       </div>
     </div>
     <div
@@ -276,7 +276,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -313,55 +313,55 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Mon Jan 01 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Mon Jan 01 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
         Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -380,9 +380,9 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       role="presentation"
     >
       <div
-        className="false test-date-cell-renderer"
+        className="selected test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        Mon Jan 01 2018
       </div>
     </div>
     <div
@@ -414,7 +414,60 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <p
+      className="c4 c5"
+    >
+      1pm
+    </p>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
       </div>
     </div>
     <div
@@ -446,28 +499,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
-      </div>
-    </div>
-    <p
-      className="c4 c5"
-    >
-      1pm
-    </p>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Tue Jan 02 2018
+        Wed Jan 03 2018
       </div>
     </div>
     <div
@@ -483,7 +515,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        Thu Jan 04 2018
       </div>
     </div>
     <div
@@ -499,39 +531,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Tue Jan 02 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Tue Jan 02 2018
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -552,23 +552,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Tue Jan 02 2018
+        Mon Jan 01 2018
       </div>
     </div>
     <div
@@ -616,7 +600,23 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -637,7 +637,23 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
       </div>
     </div>
     <div
@@ -669,7 +685,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        Thu Jan 04 2018
       </div>
     </div>
     <div
@@ -685,23 +701,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Wed Jan 03 2018
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -722,7 +722,23 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
       </div>
     </div>
     <div
@@ -754,7 +770,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        Thu Jan 04 2018
       </div>
     </div>
     <div
@@ -770,23 +786,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Wed Jan 03 2018
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -807,7 +807,23 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
       </div>
     </div>
     <div
@@ -855,23 +871,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Thu Jan 04 2018
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -892,7 +892,39 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
       </div>
     </div>
     <div
@@ -924,39 +956,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Thu Jan 04 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Thu Jan 04 2018
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -977,7 +977,39 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
       </div>
     </div>
     <div
@@ -1009,39 +1041,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Thu Jan 04 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Thu Jan 04 2018
+        Fri Jan 05 2018
       </div>
     </div>
     <p
@@ -1062,55 +1062,55 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
         Thu Jan 04 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Fri Jan 05 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Fri Jan 05 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Fri Jan 05 2018
       </div>
     </div>
     <div
@@ -1147,7 +1147,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        Mon Jan 01 2018
       </div>
     </div>
     <div
@@ -1163,7 +1163,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        Tue Jan 02 2018
       </div>
     </div>
     <div
@@ -1179,7 +1179,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        Wed Jan 03 2018
       </div>
     </div>
     <div
@@ -1195,7 +1195,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        Thu Jan 04 2018
       </div>
     </div>
     <div
@@ -1232,7 +1232,55 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
       </div>
     </div>
     <div
@@ -1251,8 +1299,134 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         Fri Jan 05 2018
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`ScheduleSelector snapshot tests renders correctly with custom render props 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: auto repeat(5,1fr);
+  grid-template-rows: auto repeat(14,1fr);
+  -webkit-column-gap: 4px;
+  column-gap: 4px;
+  row-gap: 4px;
+  width: 100%;
+}
+
+.c2 {
+  place-self: stretch;
+  touch-action: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    rows={14}
+  >
+    <div />
+    <div>
+      2018-01-01T17:00:00.000Z
+    </div>
+    <div>
+      2018-01-02T17:00:00.000Z
+    </div>
+    <div>
+      2018-01-03T17:00:00.000Z
+    </div>
+    <div>
+      2018-01-04T17:00:00.000Z
+    </div>
+    <div>
+      2018-01-05T17:00:00.000Z
+    </div>
+    <div>
+      2018-01-01T17:00:00.000Z
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1267,8 +1441,75 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         Fri Jan 05 2018
       </div>
     </div>
+    <div>
+      2018-01-01T18:00:00.000Z
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1283,8 +1524,988 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         Fri Jan 05 2018
       </div>
     </div>
+    <div>
+      2018-01-01T19:00:00.000Z
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-01T20:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="selected test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-01T21:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="selected test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-01T22:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-01T23:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-02T00:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-02T01:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-02T02:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-02T03:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-02T04:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-02T05:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Fri Jan 05 2018
+      </div>
+    </div>
+    <div>
+      2018-01-02T06:00:00.000Z
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Mon Jan 01 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Tue Jan 02 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Wed Jan 03 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        Thu Jan 04 2018
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1493,8 +2714,8 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
       role="presentation"
     >
       <div
-        className="c8"
-        selected={true}
+        className="c7"
+        selected={false}
       />
     </div>
     <div
@@ -1688,53 +2909,53 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
       role="presentation"
     >
       <div
-        className="c7"
-        selected={false}
-      />
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="c7"
-        selected={false}
-      />
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="c7"
-        selected={false}
-      />
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
         className="c8"
         selected={true}
+      />
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="c7"
+        selected={false}
+      />
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="c7"
+        selected={false}
+      />
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="c7"
+        selected={false}
       />
     </div>
     <div
@@ -1783,8 +3004,8 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
       role="presentation"
     >
       <div
-        className="c7"
-        selected={false}
+        className="c8"
+        selected={true}
       />
     </div>
     <div
