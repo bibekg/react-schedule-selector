@@ -127,17 +127,21 @@ describe('ScheduleSelector', () => {
       spies.onTouchEnd = jest.spyOn(ScheduleSelector.prototype, 'handleTouchEndEvent')
       component = shallow(<ScheduleSelector />)
       anInstance = component.find('.rgdp__grid-cell').first()
-      mockEvent.touches = [{ clientX: 1, clientY: 2 }, { clientX: 100, clientY: 200 }]
+      mockEvent.touches = [
+        { clientX: 1, clientY: 2 },
+        { clientX: 100, clientY: 200 }
+      ]
     })
 
-    test.each([['onTouchStart', []], ['onTouchMove', [mockEvent]], ['onTouchEnd', []]])(
-      'calls the handler for %s',
-      (name, args) => {
-        anInstance.prop(name)(...args)
-        expect(spies[name]).toHaveBeenCalled()
-        spies[name].mockClear()
-      }
-    )
+    test.each([
+      ['onTouchStart', []],
+      ['onTouchMove', [mockEvent]],
+      ['onTouchEnd', []]
+    ])('calls the handler for %s', (name, args) => {
+      anInstance.prop(name)(...args)
+      expect(spies[name]).toHaveBeenCalled()
+      spies[name].mockClear()
+    })
 
     afterAll(() => {
       Object.keys(spies).forEach(spyName => {
@@ -160,7 +164,12 @@ describe('ScheduleSelector', () => {
   })
 
   describe('updateAvailabilityDraft', () => {
-    it.each([['add', 1], ['remove', 1], ['add', -1], ['remove', -1]])(
+    it.each([
+      ['add', 1],
+      ['remove', 1],
+      ['add', -1],
+      ['remove', -1]
+    ])(
       'updateAvailabilityDraft handles addition and removals, for forward and reversed drags',
       (type, amount, done) => {
         const start = moment(startDate)
@@ -298,10 +307,10 @@ describe('ScheduleSelector', () => {
     it('splits hours using the hourlyChunks prop', () => {
       // 15-minute resolution
       const component = shallow(<ScheduleSelector minTime={1} maxTime={2} hourlyChunks={4} />)
-      expect(component.find('ScheduleSelector__TimeLabelCell')).toHaveLength(4)
+      expect(component.find('ScheduleSelector__TimeText')).toHaveLength(4)
       // 5-minute resolution
       const componentTwo = shallow(<ScheduleSelector minTime={1} maxTime={2} hourlyChunks={12} />)
-      expect(componentTwo.find('ScheduleSelector__TimeLabelCell')).toHaveLength(12)
+      expect(componentTwo.find('ScheduleSelector__TimeText')).toHaveLength(12)
     })
 
     it('formats the time column using the timeFormat prop', () => {
@@ -309,7 +318,7 @@ describe('ScheduleSelector', () => {
       const component = shallow(<ScheduleSelector minTime={1} maxTime={2} timeFormat="h:mma" hourlyChunks={4} />)
       expect(
         component
-          .find('ScheduleSelector__TimeLabelCell')
+          .find('ScheduleSelector__TimeText')
           .at(1)
           .render()
           .text()
@@ -318,7 +327,7 @@ describe('ScheduleSelector', () => {
       const componentTwo = shallow(<ScheduleSelector minTime={1} maxTime={2} timeFormat="h:mma" hourlyChunks={12} />)
       expect(
         componentTwo
-          .find('ScheduleSelector__TimeLabelCell')
+          .find('ScheduleSelector__TimeText')
           .at(1)
           .render()
           .text()
