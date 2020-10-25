@@ -1,4 +1,5 @@
-var path = require('path')
+const path = require('path')
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -21,6 +22,6 @@ module.exports = {
     ]
   },
   externals: {
-    'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
+    react: 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
   }
 }

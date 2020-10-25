@@ -1,21 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScheduleSelector snapshot tests renders correctly with custom render prop 1`] = `
-.c2 {
-  font-size: 20px;
-  font-weight: 400;
-  color: rgba(79,79,79,1);
-  text-align: center;
-}
-
-.c4 {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 19.18px;
-  color: rgba(79,79,79,0.87);
-  margin: 5px 0;
-}
-
+exports[`ScheduleSelector snapshot tests renders correctly with custom render props 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -42,38 +27,9 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
   width: 100%;
 }
 
-.c6 {
+.c2 {
   place-self: stretch;
   touch-action: none;
-}
-
-.c3 {
-  margin: 0;
-  margin-bottom: 4px;
-}
-
-.c5 {
-  text-align: right;
-  margin: 0;
-  margin-right: 4px;
-}
-
-@media (max-width:700px) {
-  .c2 {
-    font-size: 18px;
-  }
-}
-
-@media (max-width:699px) {
-  .c3 {
-    font-size: 12px;
-  }
-}
-
-@media (max-width:699px) {
-  .c5 {
-    font-size: 10px;
-  }
 }
 
 <div
@@ -84,38 +40,26 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
     rows={14}
   >
     <div />
-    <h2
-      className="c2 c3"
-    >
-      1/1
-    </h2>
-    <h2
-      className="c2 c3"
-    >
-      1/2
-    </h2>
-    <h2
-      className="c2 c3"
-    >
-      1/3
-    </h2>
-    <h2
-      className="c2 c3"
-    >
-      1/4
-    </h2>
-    <h2
-      className="c2 c3"
-    >
-      1/5
-    </h2>
-    <p
-      className="c4 c5"
-    >
-      9am
-    </p>
+    <div>
+      1514797200000
+    </div>
+    <div>
+      1514883600000
+    </div>
+    <div>
+      1514970000000
+    </div>
+    <div>
+      1515056400000
+    </div>
+    <div>
+      1515142800000
+    </div>
+    <div>
+      1514797200000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -127,11 +71,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514797200000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -143,11 +87,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514883600000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -159,27 +103,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514970000000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="selected test-date-cell-renderer"
-      >
-        Mon Jan 01 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -191,16 +119,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1515056400000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      10am
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -212,11 +135,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1515142800000
       </div>
     </div>
+    <div>
+      1514800800000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -228,11 +154,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514800800000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -244,11 +170,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514887200000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -260,11 +186,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514973600000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -276,16 +202,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1515060000000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      11am
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -297,11 +218,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1515146400000
       </div>
     </div>
+    <div>
+      1514804400000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -313,11 +237,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514804400000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -329,11 +253,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514890800000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -345,11 +269,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514977200000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -361,16 +285,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1515063600000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      12pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -382,43 +301,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1515150000000
       </div>
     </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Tue Jan 02 2018
-      </div>
+    <div>
+      1514808000000
     </div>
     <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        Tue Jan 02 2018
-      </div>
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -430,11 +320,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="selected test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514808000000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -446,16 +336,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514894400000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      1pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -467,11 +352,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514980800000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -483,11 +368,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1515067200000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -499,11 +384,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1515153600000
       </div>
     </div>
+    <div>
+      1514811600000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -515,11 +403,27 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514811600000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="selected test-date-cell-renderer"
+      >
+        1514898000000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -531,16 +435,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514984400000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      2pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -552,11 +451,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1515070800000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -568,11 +467,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1515157200000
       </div>
     </div>
+    <div>
+      1514815200000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -584,11 +486,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514815200000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -600,11 +502,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1514901600000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -616,16 +518,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1514988000000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      3pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -637,11 +534,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515074400000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -653,11 +550,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515160800000
       </div>
     </div>
+    <div>
+      1514818800000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -669,11 +569,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1514818800000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -685,11 +585,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1514905200000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -701,16 +601,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1514991600000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      4pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -722,11 +617,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515078000000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -738,11 +633,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515164400000
       </div>
     </div>
+    <div>
+      1514822400000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -754,11 +652,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1514822400000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -770,11 +668,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1514908800000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -786,16 +684,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1514995200000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      5pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -807,11 +700,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515081600000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -823,11 +716,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515168000000
       </div>
     </div>
+    <div>
+      1514826000000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -839,11 +735,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1514826000000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -855,11 +751,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1514912400000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -871,16 +767,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1514998800000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      6pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -892,11 +783,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515085200000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -908,11 +799,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515171600000
       </div>
     </div>
+    <div>
+      1514829600000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -924,11 +818,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1514829600000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -940,11 +834,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1514916000000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -956,16 +850,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515002400000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      7pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -977,11 +866,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515088800000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -993,11 +882,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515175200000
       </div>
     </div>
+    <div>
+      1514833200000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1009,11 +901,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1514833200000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1025,11 +917,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1514919600000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1041,16 +933,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515006000000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      8pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1062,11 +949,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515092400000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1078,11 +965,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515178800000
       </div>
     </div>
+    <div>
+      1514836800000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1094,11 +984,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1514836800000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1110,11 +1000,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1514923200000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1126,16 +1016,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515009600000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      9pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1147,11 +1032,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515096000000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1163,11 +1048,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515182400000
       </div>
     </div>
+    <div>
+      1514840400000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1179,11 +1067,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1514840400000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1195,11 +1083,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1514926800000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1211,16 +1099,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515013200000
       </div>
     </div>
-    <p
-      className="c4 c5"
-    >
-      10pm
-    </p>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1232,11 +1115,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515099600000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1248,11 +1131,14 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515186000000
       </div>
     </div>
+    <div>
+      1514844000000
+    </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1264,11 +1150,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1514844000000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1280,11 +1166,11 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1514930400000
       </div>
     </div>
     <div
-      className="c6 rgdp__grid-cell"
+      className="c2 rgdp__grid-cell"
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseUp={[Function]}
@@ -1296,7 +1182,39 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515016800000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515103200000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515189600000
       </div>
     </div>
   </div>
@@ -1493,8 +1411,8 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
       role="presentation"
     >
       <div
-        className="c8"
-        selected={true}
+        className="c7"
+        selected={false}
       />
     </div>
     <div
@@ -1688,53 +1606,53 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
       role="presentation"
     >
       <div
-        className="c7"
-        selected={false}
-      />
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="c7"
-        selected={false}
-      />
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="c7"
-        selected={false}
-      />
-    </div>
-    <div
-      className="c6 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
         className="c8"
         selected={true}
+      />
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="c7"
+        selected={false}
+      />
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="c7"
+        selected={false}
+      />
+    </div>
+    <div
+      className="c6 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="c7"
+        selected={false}
       />
     </div>
     <div
@@ -1783,8 +1701,8 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
       role="presentation"
     >
       <div
-        className="c7"
-        selected={false}
+        className="c8"
+        selected={true}
       />
     </div>
     <div
