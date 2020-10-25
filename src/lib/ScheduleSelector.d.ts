@@ -26,10 +26,10 @@ declare type StateType = {
     selectionType: SelectionType | null;
     selectionStart: Date | null;
     isTouchDragging: boolean;
+    dates: Array<Array<Date>>;
 };
 export declare const preventScroll: (e: TouchEvent) => void;
 export default class ScheduleSelector extends React.Component<PropsType, StateType> {
-    dates: Array<Array<Date>>;
     selectionSchemeHandlers: {
         [key: string]: (startDate: Date, endDate: Date, foo: Array<Array<Date>>) => Date[];
     };
@@ -37,6 +37,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     gridRef: HTMLElement | null;
     static defaultProps: Partial<PropsType>;
     static getDerivedStateFromProps(props: PropsType, state: StateType): Partial<StateType> | null;
+    static computeDatesMatrix(props: PropsType): Array<Array<Date>>;
     constructor(props: PropsType);
     componentDidMount(): void;
     componentWillUnmount(): void;
