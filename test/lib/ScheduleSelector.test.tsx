@@ -45,8 +45,8 @@ describe('ScheduleSelector', () => {
           numDays={5}
           onChange={() => undefined}
           renderDateCell={customDateCellRenderer}
-          renderDateLabel={(date: Date) => <div>{+date}</div>}
-          renderTimeLabel={(time: Date) => <div>{+time}</div>}
+          renderDateLabel={(date: Date) => <div>{date.toDateString()}</div>}
+          renderTimeLabel={(time: Date) => <div>{time.toDateString()}</div>}
         />
       )
 
