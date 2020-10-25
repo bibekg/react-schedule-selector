@@ -35,7 +35,7 @@ describe('ScheduleSelector', () => {
 
     it('renders correctly with custom render props', () => {
       const customDateCellRenderer = (date, selected) => (
-        <div className={`${selected && 'selected'} test-date-cell-renderer`}>{date.toDateString()}</div>
+        <div className={`${selected && 'selected'} test-date-cell-renderer`}>{+date}</div>
       )
 
       const component = renderer.create(
@@ -45,8 +45,8 @@ describe('ScheduleSelector', () => {
           numDays={5}
           onChange={() => undefined}
           renderDateCell={customDateCellRenderer}
-          renderDateLabel={(date: Date) => <div>{date.toDateString()}</div>}
-          renderTimeLabel={(time: Date) => <div>{time.toDateString()}</div>}
+          renderDateLabel={(date: Date) => <div>{+date}</div>}
+          renderTimeLabel={(time: Date) => <div>{+time}</div>}
         />
       )
 

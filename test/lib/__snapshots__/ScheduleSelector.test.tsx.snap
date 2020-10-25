@@ -71,7 +71,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514826000000
       </div>
     </div>
     <div
@@ -87,7 +87,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514912400000
       </div>
     </div>
     <div
@@ -103,7 +103,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1514998800000
       </div>
     </div>
     <div
@@ -119,7 +119,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515085200000
       </div>
     </div>
     <div
@@ -135,7 +135,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515171600000
       </div>
     </div>
     <div>
@@ -154,7 +154,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514829600000
       </div>
     </div>
     <div
@@ -170,7 +170,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514916000000
       </div>
     </div>
     <div
@@ -186,7 +186,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515002400000
       </div>
     </div>
     <div
@@ -202,7 +202,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515088800000
       </div>
     </div>
     <div
@@ -218,7 +218,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515175200000
       </div>
     </div>
     <div>
@@ -237,7 +237,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514833200000
       </div>
     </div>
     <div
@@ -253,7 +253,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514919600000
       </div>
     </div>
     <div
@@ -269,7 +269,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515006000000
       </div>
     </div>
     <div
@@ -285,7 +285,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515092400000
       </div>
     </div>
     <div
@@ -301,7 +301,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515178800000
       </div>
     </div>
     <div>
@@ -320,7 +320,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="selected test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514836800000
       </div>
     </div>
     <div
@@ -336,7 +336,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514923200000
       </div>
     </div>
     <div
@@ -352,7 +352,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515009600000
       </div>
     </div>
     <div
@@ -368,7 +368,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515096000000
       </div>
     </div>
     <div
@@ -384,7 +384,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515182400000
       </div>
     </div>
     <div>
@@ -403,7 +403,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514840400000
       </div>
     </div>
     <div
@@ -419,7 +419,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="selected test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514926800000
       </div>
     </div>
     <div
@@ -435,7 +435,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515013200000
       </div>
     </div>
     <div
@@ -451,7 +451,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515099600000
       </div>
     </div>
     <div
@@ -467,7 +467,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515186000000
       </div>
     </div>
     <div>
@@ -486,7 +486,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514844000000
       </div>
     </div>
     <div
@@ -502,7 +502,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514930400000
       </div>
     </div>
     <div
@@ -518,7 +518,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515016800000
       </div>
     </div>
     <div
@@ -534,7 +534,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515103200000
       </div>
     </div>
     <div
@@ -550,7 +550,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515189600000
       </div>
     </div>
     <div>
@@ -569,7 +569,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514847600000
       </div>
     </div>
     <div
@@ -585,7 +585,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514934000000
       </div>
     </div>
     <div
@@ -601,7 +601,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515020400000
       </div>
     </div>
     <div
@@ -617,7 +617,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515106800000
       </div>
     </div>
     <div
@@ -633,7 +633,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515193200000
       </div>
     </div>
     <div>
@@ -652,7 +652,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514851200000
       </div>
     </div>
     <div
@@ -668,7 +668,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514937600000
       </div>
     </div>
     <div
@@ -684,7 +684,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515024000000
       </div>
     </div>
     <div
@@ -700,7 +700,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515110400000
       </div>
     </div>
     <div
@@ -716,7 +716,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515196800000
       </div>
     </div>
     <div>
@@ -735,7 +735,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514854800000
       </div>
     </div>
     <div
@@ -751,7 +751,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514941200000
       </div>
     </div>
     <div
@@ -767,7 +767,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515027600000
       </div>
     </div>
     <div
@@ -783,7 +783,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515114000000
       </div>
     </div>
     <div
@@ -799,7 +799,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515200400000
       </div>
     </div>
     <div>
@@ -818,7 +818,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514858400000
       </div>
     </div>
     <div
@@ -834,7 +834,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514944800000
       </div>
     </div>
     <div
@@ -850,7 +850,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515031200000
       </div>
     </div>
     <div
@@ -866,7 +866,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515117600000
       </div>
     </div>
     <div
@@ -882,7 +882,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515204000000
       </div>
     </div>
     <div>
@@ -901,7 +901,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514862000000
       </div>
     </div>
     <div
@@ -917,7 +917,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514948400000
       </div>
     </div>
     <div
@@ -933,7 +933,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515034800000
       </div>
     </div>
     <div
@@ -949,7 +949,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515121200000
       </div>
     </div>
     <div
@@ -965,7 +965,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515207600000
       </div>
     </div>
     <div>
@@ -984,7 +984,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514865600000
       </div>
     </div>
     <div
@@ -1000,7 +1000,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514952000000
       </div>
     </div>
     <div
@@ -1016,7 +1016,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515038400000
       </div>
     </div>
     <div
@@ -1032,7 +1032,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515124800000
       </div>
     </div>
     <div
@@ -1048,7 +1048,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515211200000
       </div>
     </div>
     <div>
@@ -1067,7 +1067,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514869200000
       </div>
     </div>
     <div
@@ -1083,7 +1083,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514955600000
       </div>
     </div>
     <div
@@ -1099,7 +1099,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515042000000
       </div>
     </div>
     <div
@@ -1115,7 +1115,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515128400000
       </div>
     </div>
     <div
@@ -1131,7 +1131,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515214800000
       </div>
     </div>
     <div>
@@ -1150,7 +1150,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Mon Jan 01 2018
+        1514872800000
       </div>
     </div>
     <div
@@ -1166,7 +1166,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Tue Jan 02 2018
+        1514959200000
       </div>
     </div>
     <div
@@ -1182,7 +1182,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Wed Jan 03 2018
+        1515045600000
       </div>
     </div>
     <div
@@ -1198,7 +1198,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Thu Jan 04 2018
+        1515132000000
       </div>
     </div>
     <div
@@ -1214,7 +1214,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       <div
         className="false test-date-cell-renderer"
       >
-        Fri Jan 05 2018
+        1515218400000
       </div>
     </div>
   </div>
