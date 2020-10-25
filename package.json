@@ -27,7 +27,7 @@
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "clean": "rm -rf dist",
     "cover": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "test": "jest",
+    "test": "TZ=UTC jest",
     "lib:build": "babel src/lib --out-dir dist/lib --extensions \".ts,.tsx\" --source-maps inline",
     "lib:build-types": "tsc --emitDeclarationOnly -d",
     "docs:dev": "parcel serve src/docs/index.html -d dev/docs",
@@ -44,6 +44,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
+    "@types/jest": "^26.0.15",
     "date-fns": "^1.29.0",
     "src": "^1.1.2"
   },
@@ -105,7 +106,7 @@
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "./setupTests.js"
+      "<rootDir>/setupTests.js"
     ],
     "testMatch": [
       "<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}"

@@ -41,19 +41,683 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
   >
     <div />
     <div>
-      1514826000000
+      1514797200000
     </div>
     <div>
-      1514912400000
+      1514883600000
     </div>
     <div>
-      1514998800000
+      1514970000000
     </div>
     <div>
-      1515085200000
+      1515056400000
     </div>
     <div>
-      1515171600000
+      1515142800000
+    </div>
+    <div>
+      1514797200000
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514797200000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514883600000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514970000000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515056400000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515142800000
+      </div>
+    </div>
+    <div>
+      1514800800000
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514800800000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514887200000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514973600000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515060000000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515146400000
+      </div>
+    </div>
+    <div>
+      1514804400000
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514804400000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514890800000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514977200000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515063600000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515150000000
+      </div>
+    </div>
+    <div>
+      1514808000000
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="selected test-date-cell-renderer"
+      >
+        1514808000000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514894400000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514980800000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515067200000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515153600000
+      </div>
+    </div>
+    <div>
+      1514811600000
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514811600000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="selected test-date-cell-renderer"
+      >
+        1514898000000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514984400000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515070800000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515157200000
+      </div>
+    </div>
+    <div>
+      1514815200000
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514815200000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514901600000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514988000000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515074400000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515160800000
+      </div>
+    </div>
+    <div>
+      1514818800000
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514818800000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514905200000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514991600000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515078000000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515164400000
+      </div>
+    </div>
+    <div>
+      1514822400000
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514822400000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514908800000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1514995200000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515081600000
+      </div>
+    </div>
+    <div
+      className="c2 rgdp__grid-cell"
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="presentation"
+    >
+      <div
+        className="false test-date-cell-renderer"
+      >
+        1515168000000
+      </div>
     </div>
     <div>
       1514826000000
@@ -318,7 +982,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       role="presentation"
     >
       <div
-        className="selected test-date-cell-renderer"
+        className="false test-date-cell-renderer"
       >
         1514836800000
       </div>
@@ -417,7 +1081,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
       role="presentation"
     >
       <div
-        className="selected test-date-cell-renderer"
+        className="false test-date-cell-renderer"
       >
         1514926800000
       </div>
@@ -551,670 +1215,6 @@ exports[`ScheduleSelector snapshot tests renders correctly with custom render pr
         className="false test-date-cell-renderer"
       >
         1515189600000
-      </div>
-    </div>
-    <div>
-      1514847600000
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514847600000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514934000000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515020400000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515106800000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515193200000
-      </div>
-    </div>
-    <div>
-      1514851200000
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514851200000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514937600000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515024000000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515110400000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515196800000
-      </div>
-    </div>
-    <div>
-      1514854800000
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514854800000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514941200000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515027600000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515114000000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515200400000
-      </div>
-    </div>
-    <div>
-      1514858400000
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514858400000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514944800000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515031200000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515117600000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515204000000
-      </div>
-    </div>
-    <div>
-      1514862000000
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514862000000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514948400000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515034800000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515121200000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515207600000
-      </div>
-    </div>
-    <div>
-      1514865600000
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514865600000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514952000000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515038400000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515124800000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515211200000
-      </div>
-    </div>
-    <div>
-      1514869200000
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514869200000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514955600000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515042000000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515128400000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515214800000
-      </div>
-    </div>
-    <div>
-      1514872800000
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514872800000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1514959200000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515045600000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515132000000
-      </div>
-    </div>
-    <div
-      className="c2 rgdp__grid-cell"
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      role="presentation"
-    >
-      <div
-        className="false test-date-cell-renderer"
-      >
-        1515218400000
       </div>
     </div>
   </div>

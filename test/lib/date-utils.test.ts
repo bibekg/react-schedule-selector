@@ -2,6 +2,12 @@ import moment from 'moment'
 
 import { dateIsBetween, timeIsBetween, dateHourIsBetween } from '../../src/lib/date-utils'
 
+describe('Timezones', () => {
+  it('should always be UTC', () => {
+      expect(new Date().getTimezoneOffset()).toBe(0);
+  });
+});
+
 describe('dateHourIsBetween', () => {
   const today = {}
   const tomorrow = {}
