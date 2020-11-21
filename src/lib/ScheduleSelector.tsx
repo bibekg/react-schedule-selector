@@ -102,16 +102,7 @@ export const preventScroll = (e: TouchEvent) => {
 }
 
 export default class ScheduleSelector extends React.Component<PropsType, StateType> {
-  selectionSchemeHandlers: { [key: string]: (startDate: Date, endDate: Date, foo: Array<Array<Date>>) => Date[] }
   cellToDate: Map<Element, Date> = new Map()
-  // documentMouseUpHandler: () => void = () => {}
-  // endSelection: () => void = () => {}
-  // handleTouchMoveEvent: (event: React.SyntheticTouchEvent<*>) => void
-  // handleTouchEndEvent: () => void
-  // handleMouseUpEvent: (date: Date) => void
-  // handleMouseEnterEvent: (date: Date) => void
-  // handleSelectionStartEvent: (date: Date) => void
-  gridRef: HTMLElement | null = null
 
   static defaultProps: Partial<PropsType> = {
     selection: [],
@@ -167,11 +158,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       selectionStart: null,
       isTouchDragging: false,
       dates: ScheduleSelector.computeDatesMatrix(props)
-    }
-
-    this.selectionSchemeHandlers = {
-      linear: selectionSchemes.linear,
-      square: selectionSchemes.square
     }
 
     this.endSelection = this.endSelection.bind(this)
@@ -241,11 +227,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
 
     let newSelection: Array<Date> = []
     if (selectionStart && selectionEnd && selectionType) {
-      newSelection = this.selectionSchemeHandlers[this.props.selectionScheme](
-        selectionStart,
-        selectionEnd,
-        this.state.dates
-      )
+      newSelection = selectionSchemes[this.props.selectionScheme](selectionStart, selectionEnd, this.state.dates)
     }
 
     let nextDraft = [...this.props.selection]
@@ -409,9 +391,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
           rows={this.state.dates[0].length}
           columnGap={this.props.columnGap}
           rowGap={this.props.rowGap}
-          ref={el => {
-            this.gridRef = el
-          }}
         >
           {this.renderFullDateGrid()}
         </Grid>
