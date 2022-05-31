@@ -316,7 +316,7 @@ describe('ScheduleSelector', () => {
           .at(1)
           .render()
           .text()
-      ).toEqual('1:15am')
+      ).toEqual('1:15AM')
       // 5-minute resolution
       const componentTwo = shallow(<ScheduleSelector minTime={1} maxTime={2} timeFormat="h:mma" hourlyChunks={12} />)
       expect(
@@ -325,7 +325,7 @@ describe('ScheduleSelector', () => {
           .at(1)
           .render()
           .text()
-      ).toEqual('1:05am')
+      ).toEqual('1:05AM')
     })
   })
 })

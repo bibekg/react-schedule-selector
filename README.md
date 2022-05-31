@@ -176,6 +176,16 @@ To customize the UI, you can either:
 
 **default value**: `'4 px'`
 
+#### `locale`
+
+**type**: `string`
+
+**description**: The locale used by date-fns. It should have the name of the folder https://github.com/date-fns/date-fns/tree/master/src/locale
+
+**required**: no
+
+**default value**: `'en-GB'`
+
 #### `unselectedColor`
 
 **type**: `string`

@@ -1,6 +1,6 @@
 {
   "name": "react-schedule-selector",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "A mobile-friendly when2meet-style grid-based schedule selector",
   "author": "Bibek Ghimire",
   "repository": {
@@ -45,7 +45,7 @@
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "@types/jest": "^26.0.15",
-    "date-fns": "^1.29.0",
+    "date-fns": "^2.28.0",
     "src": "^1.1.2"
   },
   "devDependencies": {

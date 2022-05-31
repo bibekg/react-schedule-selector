@@ -2,12 +2,10 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 // Import only the methods we need from date-fns in order to keep build size small
-import addMinutes from 'date-fns/add_minutes'
-import addHours from 'date-fns/add_hours'
-import addDays from 'date-fns/add_days'
-import startOfDay from 'date-fns/start_of_day'
-import isSameMinute from 'date-fns/is_same_minute'
+import { addMinutes, addHours, addDays, startOfDay, isSameMinute } from 'date-fns'
 import formatDate from 'date-fns/format'
+import { enGB, es } from 'date-fns/locale'
+import { Locale } from 'date-fns'
 
 import { Text, Subtitle } from './typography'
 import colors from './colors'
@@ -79,6 +77,7 @@ type PropsType = {
   timeFormat: string
   columnGap: string
   rowGap: string
+  locale: string
   unselectedColor: string
   selectedColor: string
   hoveredColor: string
@@ -93,6 +92,7 @@ type StateType = {
   selectionDraft: Array<Date>
   selectionType: SelectionType | null
   selectionStart: Date | null
+  locale: Locale | null
   isTouchDragging: boolean
   dates: Array<Array<Date>>
 }
@@ -122,9 +122,10 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     hourlyChunks: 1,
     startDate: new Date(),
     timeFormat: 'ha',
-    dateFormat: 'M/D',
+    dateFormat: 'M/d',
     columnGap: '4px',
     rowGap: '4px',
+    locale: 'en-GB',
     selectedColor: colors.blue,
     unselectedColor: colors.paleBlue,
     hoveredColor: colors.lightBlue,
@@ -132,13 +133,16 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   static getDerivedStateFromProps(props: PropsType, state: StateType): Partial<StateType> | null {
+    const updatedState: Partial<StateType> = {}
+
     // As long as the user isn't in the process of selecting, allow prop changes to re-populate selection state
     if (state.selectionStart == null) {
-      return {
-        selectionDraft: [...props.selection],
-        dates: ScheduleSelector.computeDatesMatrix(props)
-      }
+      updatedState.selectionDraft = [...props.selection]
+      updatedState.dates = ScheduleSelector.computeDatesMatrix(props)
     }
+
+    if (Object.keys(updatedState).length !== 0) return updatedState
+
     return null
   }
 
@@ -166,6 +170,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       selectionType: null,
       selectionStart: null,
       isTouchDragging: false,
+      locale: null,
       dates: ScheduleSelector.computeDatesMatrix(props)
     }
 
@@ -183,6 +188,11 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   componentDidMount() {
+    if (this.props.locale === 'en-GB' && !this.state.locale) {
+      this.setState({ locale: enGB })
+    } else if (this.props.locale === 'es' && !this.state.locale) {
+      this.setState({ locale: es })
+    }
     // We need to add the endSelection event listener to the document itself in order
     // to catch the cases where the users ends their mouse-click somewhere besides
     // the date cells (in which case none of the DateCell's onMouseUp handlers would fire)
@@ -198,6 +208,14 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
         dateCell.addEventListener('touchmove', preventScroll, { passive: false })
       }
     })
+  }
+
+  componentDidUpdate(prevProps: PropsType, prevState: StateType) {
+    if (this.props.locale === 'en-GB' && !this.state.locale) {
+      this.setState({ locale: enGB })
+    } else if (this.props.locale === 'es' && !this.state.locale) {
+      this.setState({ locale: es })
+    }
   }
 
   componentWillUnmount() {
@@ -361,7 +379,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     if (this.props.renderTimeLabel) {
       return this.props.renderTimeLabel(time)
     } else {
-      return <TimeText>{formatDate(time, this.props.timeFormat)}</TimeText>
+      return <TimeText>{formatDate(time, this.props.timeFormat, { locale: this.state.locale || enGB })}</TimeText>
     }
   }
 
@@ -369,7 +387,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     if (this.props.renderDateLabel) {
       return this.props.renderDateLabel(date)
     } else {
-      return <DateLabel>{formatDate(date, this.props.dateFormat)}</DateLabel>
+      return <DateLabel>{formatDate(date, this.props.dateFormat, { locale: this.state.locale || enGB })}</DateLabel>
     }
   }
 
