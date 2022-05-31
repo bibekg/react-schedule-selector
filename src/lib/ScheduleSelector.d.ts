@@ -28,7 +28,6 @@ declare type StateType = {
     selectionType: SelectionType | null;
     selectionStart: Date | null;
     locale: Locale | null;
-    prevLocale: string;
     isTouchDragging: boolean;
     dates: Array<Array<Date>>;
 };
@@ -48,7 +47,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     componentDidMount(): void;
     componentDidUpdate(prevProps: PropsType, prevState: StateType): void;
     componentWillUnmount(): void;
-    _loadLocaleLibrary(id: string): void;
     getTimeFromTouchEvent(event: React.TouchEvent<any>): Date | null;
     endSelection(): void;
     updateAvailabilityDraft(selectionEnd: Date | null, callback?: () => void): void;
