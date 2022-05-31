@@ -38,8 +38,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     };
     cellToDate: Map<Element, Date>;
     gridRef: HTMLElement | null;
-    _asyncLocaleImportRequest: Promise<any> | null;
-    _currentLocale: string;
     static defaultProps: Partial<PropsType>;
     static getDerivedStateFromProps(props: PropsType, state: StateType): Partial<StateType> | null;
     static computeDatesMatrix(props: PropsType): Array<Array<Date>>;
