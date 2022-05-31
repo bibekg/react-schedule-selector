@@ -2,14 +2,10 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 // Import only the methods we need from date-fns in order to keep build size small
-import addMinutes from 'date-fns/add_minutes'
-import addHours from 'date-fns/add_hours'
-import addDays from 'date-fns/add_days'
-import startOfDay from 'date-fns/start_of_day'
-import isSameMinute from 'date-fns/is_same_minute'
+import { addMinutes, addHours, addDays, startOfDay, isSameMinute } from 'date-fns'
 import formatDate from 'date-fns/format'
-import { enGB } from "date-fns/locale";
-import { Locale } from 'date-fns';
+import { enGB } from 'date-fns/locale'
+import { Locale } from 'date-fns'
 
 import { Text, Subtitle } from './typography'
 import colors from './colors'
@@ -117,6 +113,8 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   // handleMouseEnterEvent: (date: Date) => void
   // handleSelectionStartEvent: (date: Date) => void
   gridRef: HTMLElement | null = null
+  _asyncLocaleImportRequest: Promise<any> | null = null
+  _currentLocale: string = ''
 
   static defaultProps: Partial<PropsType> = {
     selection: [],
@@ -127,7 +125,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     hourlyChunks: 1,
     startDate: new Date(),
     timeFormat: 'ha',
-    dateFormat: 'M/D',
+    dateFormat: 'M/d',
     columnGap: '4px',
     rowGap: '4px',
     locale: 'en-GB',
@@ -138,20 +136,20 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   static getDerivedStateFromProps(props: PropsType, state: StateType): Partial<StateType> | null {
-    const updatedState = {}
-    
+    const updatedState: Partial<StateType> = {}
+
     if (props.locale !== state.prevLocale) {
-      updatedState.locale = null;
-      updatedState.prevLocale = props.locale;
+      updatedState.locale = null
+      updatedState.prevLocale = props.locale
     }
     // As long as the user isn't in the process of selecting, allow prop changes to re-populate selection state
     if (state.selectionStart == null) {
-      updatedState.selectionDraft = [...props.selection];
-      updatedState.dates = ScheduleSelector.computeDatesMatrix(props);
+      updatedState.selectionDraft = [...props.selection]
+      updatedState.dates = ScheduleSelector.computeDatesMatrix(props)
     }
 
-    if(Object.keys(updatedState).length !== 0) return updatedState
-    
+    if (Object.keys(updatedState).length !== 0) return updatedState
+
     return null
   }
 
@@ -198,8 +196,8 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   componentDidMount() {
-    if(this.props.locale !== 'en-GB') {
-      this._loadLocaleLibrary(this.props.locale);
+    if (this.props.locale !== 'en-GB') {
+      this._loadLocaleLibrary(this.props.locale)
     }
     // We need to add the endSelection event listener to the document itself in order
     // to catch the cases where the users ends their mouse-click somewhere besides
@@ -218,9 +216,9 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     })
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps: PropsType, prevState: StateType) {
     if (this.props.locale !== 'en-GB' && this.state.locale !== enGB) {
-      this._loadLocaleLibrary(this.props.locale);
+      this._loadLocaleLibrary(this.props.locale)
     }
   }
 
@@ -233,26 +231,36 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       }
     })
     if (this._asyncLocaleImportRequest) {
-      this._asyncLocaleImportRequest.cancel();
+      this._asyncLocaleImportRequest = null
     }
+    this._currentLocale = ''
   }
 
-  _loadLocaleLibrary(id) {
+  _loadLocaleLibrary(id: string) {
+    if (id === this._currentLocale) {
+      // Data for this id is already loading
+      return
+    }
+
+    this._currentLocale = id
+
     this._asyncLocaleImportRequest = import(
       /* webpackMode: "lazy", webpackChunkName: "df-[index]", webpackExclude: /_lib/ */
       `date-fns/locale/${id}/index.js`
-    ).then(
-      locale => {
-        this._asyncLocaleImportRequest = null;
-        this.setState({locale: locale.default});
-      }
-    ).catch(
-      e => {
-        console.error(e);
-        this._asyncLocaleImportRequest = null;
-        this.setState({locale: enGB});
-      }
-    );
+    )
+      .then(locale => {
+        this._asyncLocaleImportRequest = null
+        if (id === this._currentLocale) {
+          this.setState({ locale: locale.default })
+        }
+      })
+      .catch(e => {
+        console.error(e)
+        this._asyncLocaleImportRequest = null
+        if (id === this._currentLocale) {
+          this.setState({ locale: enGB })
+        }
+      })
   }
 
   // Performs a lookup into this.cellToDate to retrieve the Date that corresponds to
@@ -406,7 +414,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     if (this.props.renderTimeLabel) {
       return this.props.renderTimeLabel(time)
     } else {
-      return <TimeText>{formatDate(time, this.props.timeFormat, {locale: this.state.locale || enGB})}</TimeText>
+      return <TimeText>{formatDate(time, this.props.timeFormat, { locale: this.state.locale || enGB })}</TimeText>
     }
   }
 
@@ -414,7 +422,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     if (this.props.renderDateLabel) {
       return this.props.renderDateLabel(date)
     } else {
-      return <DateLabel>{formatDate(date, this.props.dateFormat, {locale: this.state.locale || enGB})}</DateLabel>
+      return <DateLabel>{formatDate(date, this.props.dateFormat, { locale: this.state.locale || enGB })}</DateLabel>
     }
   }
 

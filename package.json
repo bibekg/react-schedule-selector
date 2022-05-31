@@ -45,7 +45,7 @@
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "@types/jest": "^26.0.15",
-    "date-fns": "^1.29.0",
+    "date-fns": "^2.28.0",
     "src": "^1.1.2"
   },
   "devDependencies": {

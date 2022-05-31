@@ -1353,7 +1353,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      9am
+      9AM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -1433,7 +1433,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      10am
+      10AM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -1513,7 +1513,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      11am
+      11AM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -1593,7 +1593,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      12pm
+      12PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -1673,7 +1673,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      1pm
+      1PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -1753,7 +1753,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      2pm
+      2PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -1833,7 +1833,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      3pm
+      3PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -1913,7 +1913,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      4pm
+      4PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -1993,7 +1993,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      5pm
+      5PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -2073,7 +2073,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      6pm
+      6PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -2153,7 +2153,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      7pm
+      7PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -2233,7 +2233,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      8pm
+      8PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -2313,7 +2313,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      9pm
+      9PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
@@ -2393,7 +2393,7 @@ exports[`ScheduleSelector snapshot tests renders correctly with default render l
     <p
       className="c4 c5"
     >
-      10pm
+      10PM
     </p>
     <div
       className="c6 rgdp__grid-cell"
