@@ -112,8 +112,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   // handleMouseEnterEvent: (date: Date) => void
   // handleSelectionStartEvent: (date: Date) => void
   gridRef: HTMLElement | null = null
-  _asyncLocaleImportRequest: Promise<any> | null = null
-  _currentLocale: string = ''
 
   static defaultProps: Partial<PropsType> = {
     selection: [],
@@ -228,10 +226,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
         dateCell.removeEventListener('touchmove', preventScroll)
       }
     })
-    if (this._asyncLocaleImportRequest) {
-      this._asyncLocaleImportRequest = null
-    }
-    this._currentLocale = ''
   }
 
   // Performs a lookup into this.cellToDate to retrieve the Date that corresponds to
