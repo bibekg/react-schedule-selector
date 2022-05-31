@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Locale } from 'date-fns';
 import { SelectionSchemeType, SelectionType } from './selection-schemes';
 export declare const GridCell: import("styled-components").StyledComponent<"div", any, {}, never>;
 declare type PropsType = {
@@ -14,6 +15,7 @@ declare type PropsType = {
     timeFormat: string;
     columnGap: string;
     rowGap: string;
+    locale: string;
     unselectedColor: string;
     selectedColor: string;
     hoveredColor: string;
@@ -25,6 +27,8 @@ declare type StateType = {
     selectionDraft: Array<Date>;
     selectionType: SelectionType | null;
     selectionStart: Date | null;
+    locale: Locale | null;
+    prevLocale: string;
     isTouchDragging: boolean;
     dates: Array<Array<Date>>;
 };
@@ -35,12 +39,16 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     };
     cellToDate: Map<Element, Date>;
     gridRef: HTMLElement | null;
+    _asyncLocaleImportRequest: Promise<any> | null;
+    _currentLocale: string;
     static defaultProps: Partial<PropsType>;
     static getDerivedStateFromProps(props: PropsType, state: StateType): Partial<StateType> | null;
     static computeDatesMatrix(props: PropsType): Array<Array<Date>>;
     constructor(props: PropsType);
     componentDidMount(): void;
+    componentDidUpdate(prevProps: PropsType, prevState: StateType): void;
     componentWillUnmount(): void;
+    _loadLocaleLibrary(id: string): void;
     getTimeFromTouchEvent(event: React.TouchEvent<any>): Date | null;
     endSelection(): void;
     updateAvailabilityDraft(selectionEnd: Date | null, callback?: () => void): void;

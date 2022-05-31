@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.1
+
+- component internally redesigned to use locale of date-fns with `locale` prop
 ## v3.0
 
 - component internally redesigned to use CSS Grid rather than Flexbox, resulting in cleaner markup and CSS
