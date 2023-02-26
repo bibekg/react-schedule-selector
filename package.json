@@ -1,6 +1,6 @@
 {
   "name": "react-schedule-selector",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A mobile-friendly when2meet-style grid-based schedule selector",
   "author": "Bibek Ghimire",
   "repository": {
@@ -14,10 +14,10 @@
     "grid"
   ],
   "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
   "files": [
     "dist/lib",
-    "src/lib",
-    "declarations"
+    "src/lib"
   ],
   "license": "MIT",
   "scripts": {
@@ -45,6 +45,7 @@
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "@types/jest": "^26.0.15",
+    "@types/react-dom": "^18.0.11",
     "date-fns": "^1.29.0",
     "src": "^1.1.2"
   },
@@ -63,6 +64,7 @@
     "@types/react-test-renderer": "^16.9.3",
     "@types/styled-components": "^5.1.4",
     "@types/styled-system": "^5.1.10",
+    "@typescript-eslint/parser": "^5.53.0",
     "babel-eslint": "^8.2.3",
     "babel-jest": "^26.6.1",
     "babel-loader": "^7.1.4",
