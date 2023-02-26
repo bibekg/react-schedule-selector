@@ -1,5 +1,12 @@
 {
-  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:import/extensions"
+  ],
   "plugins": [],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -8,6 +15,18 @@
     "ecmaFeatures": {
       "jsx": true
     }
+  },
+  "settings": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
   "env": {
     "es6": true,
@@ -25,12 +44,5 @@
     "no-else-return": 0,
     "no-param-reassign": 0,
     "react/jsx-filename-extension": 0
-  },
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "webpack.config.js"
-      }
-    }
   }
 }

@@ -11,6 +11,9 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "dist/lib",
     "lib": ["dom", "dom.iterable", "esnext"]
   },
   "include": ["src/lib/*"],

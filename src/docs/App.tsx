@@ -1,14 +1,12 @@
 import * as React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-// eslint-disable-next-line
 import * as ReactDOM from 'react-dom'
-import Box from './Box'
-import * as Text from './Text'
-import * as Form from './Form'
 import ScheduleSelector from '../lib'
-import selectionSchemes, { SelectionSchemeType } from '../lib/selection-schemes'
+import { SelectionSchemeType } from '../lib/selection-schemes'
+import Box from './Box'
+import * as Form from './Form'
+import * as Text from './Text'
 
-// eslint-disable-next-line
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: sans-serif;
@@ -66,12 +64,8 @@ const ExternalLink = styled.a`
   margin: 5px;
 `
 
-type StateType = {
-  schedule: Array<Date>
-}
-
 const App = () => {
-  const [schedule, setSchedule] = React.useState([])
+  const [schedule, setSchedule] = React.useState<Array<Date>>([])
   const [selectionScheme, setSelectionScheme] = React.useState<SelectionSchemeType>('linear')
   const [startDate, setStartDate] = React.useState<Date>(new Date())
   const [numDays, setNumDays] = React.useState<number>(7)
@@ -94,7 +88,9 @@ const App = () => {
             width="100%"
             value={selectionScheme}
             onChange={event => {
-              setSelectionScheme(event.target.value as SelectionSchemeType)
+              if (event.target.value === 'linear' || event.target.value === 'square') {
+                setSelectionScheme(event.target.value)
+              }
             }}
           >
             <option value="linear">Linear</option>
