@@ -1,7 +1,8 @@
-import startOfDay from 'date-fns/start_of_day'
-import isAfter from 'date-fns/is_after'
+
 
 // Helper function that uses date-fns methods to determine if a date is between two other dates
+import { isAfter, startOfDay } from 'date-fns'
+
 export const dateHourIsBetween = (start: Date, candidate: Date, end: Date): boolean =>
   (candidate.getTime() === start.getTime() || isAfter(candidate, start)) &&
   (candidate.getTime() === end.getTime() || isAfter(end, candidate))

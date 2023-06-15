@@ -1,17 +1,13 @@
 import * as React from 'react'
-import styled from 'styled-components'
 
 // Import only the methods we need from date-fns in order to keep build size small
-import addMinutes from 'date-fns/add_minutes'
-import addHours from 'date-fns/add_hours'
-import addDays from 'date-fns/add_days'
-import startOfDay from 'date-fns/start_of_day'
-import isSameMinute from 'date-fns/is_same_minute'
 import formatDate from 'date-fns/format'
 
 import { Text, Subtitle } from './typography'
 import colors from './colors'
 import selectionSchemes, { SelectionSchemeType, SelectionType } from './selection-schemes'
+import { addDays, addHours, addMinutes, isSameMinute, startOfDay } from 'date-fns'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   display: flex;
@@ -85,6 +81,7 @@ type PropsType = {
   renderDateCell?: (datetime: Date, selected: boolean, refSetter: (dateCellElement: HTMLElement) => void) => JSX.Element
   renderTimeLabel?: (time: Date) => JSX.Element
   renderDateLabel?: (date: Date) => JSX.Element
+  timeZone: string
 }
 
 type StateType = {
@@ -227,10 +224,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
 
   endSelection() {
     this.props.onChange(this.state.selectionDraft)
-    this.setState({
-      selectionType: null,
-      selectionStart: null
-    })
+    this.setState({ ...this.state, selectionType: null, selectionStart: null })
   }
 
   // Given an ending Date, determines all the dates that should be selected in this draft
@@ -255,7 +249,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       nextDraft = nextDraft.filter(a => !newSelection.find(b => isSameMinute(a, b)))
     }
 
-    this.setState({ selectionDraft: nextDraft }, callback)
+    this.setState({ ...this.state, selectionDraft: nextDraft }, callback)
   }
 
   // Isomorphic (mouse and touch) handler since starting a selection works the same way for both classes of user input
@@ -264,6 +258,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     // add values or remove values
     const timeSelected = this.props.selection.find(a => isSameMinute(a, startTime))
     this.setState({
+      ...this.state,
       selectionType: timeSelected ? 'remove' : 'add',
       selectionStart: startTime
     })
@@ -282,7 +277,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   handleTouchMoveEvent(event: React.TouchEvent) {
-    this.setState({ isTouchDragging: true })
+    this.setState({ ...this.state, isTouchDragging: true })
     const cellTime = this.getTimeFromTouchEvent(event)
     if (cellTime) {
       this.updateAvailabilityDraft(cellTime)
@@ -300,7 +295,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     } else {
       this.endSelection()
     }
-    this.setState({ isTouchDragging: false })
+    this.setState({ ...this.state, isTouchDragging: false })
   }
 
   renderDateCellWrapper = (time: Date): JSX.Element => {
