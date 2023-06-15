@@ -119,7 +119,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     hourlyChunks: 1,
     startDate: new Date(),
     timeFormat: 'ha',
-    dateFormat: 'M/D',
+    dateFormat: 'M/d',
     columnGap: '4px',
     rowGap: '4px',
     selectedColor: colors.blue,
@@ -224,7 +224,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
 
   endSelection() {
     this.props.onChange(this.state.selectionDraft)
-    this.setState({ ...this.state, selectionType: null, selectionStart: null })
+    this.setState({ selectionType: null, selectionStart: null })
   }
 
   // Given an ending Date, determines all the dates that should be selected in this draft
@@ -249,7 +249,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
       nextDraft = nextDraft.filter(a => !newSelection.find(b => isSameMinute(a, b)))
     }
 
-    this.setState({ ...this.state, selectionDraft: nextDraft }, callback)
+    this.setState({ selectionDraft: nextDraft }, callback)
   }
 
   // Isomorphic (mouse and touch) handler since starting a selection works the same way for both classes of user input
@@ -258,7 +258,6 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     // add values or remove values
     const timeSelected = this.props.selection.find(a => isSameMinute(a, startTime))
     this.setState({
-      ...this.state,
       selectionType: timeSelected ? 'remove' : 'add',
       selectionStart: startTime
     })
@@ -277,7 +276,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   }
 
   handleTouchMoveEvent(event: React.TouchEvent) {
-    this.setState({ ...this.state, isTouchDragging: true })
+    this.setState({ isTouchDragging: true })
     const cellTime = this.getTimeFromTouchEvent(event)
     if (cellTime) {
       this.updateAvailabilityDraft(cellTime)
@@ -295,7 +294,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     } else {
       this.endSelection()
     }
-    this.setState({ ...this.state, isTouchDragging: false })
+    this.setState({ isTouchDragging: false })
   }
 
   renderDateCellWrapper = (time: Date): JSX.Element => {

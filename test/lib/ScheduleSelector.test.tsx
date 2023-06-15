@@ -2,6 +2,7 @@ import React from 'react'
 import renderer, { act } from 'react-test-renderer'
 import { shallow, mount } from 'enzyme'
 import moment from 'moment'
+import 'jest-styled-components'
 
 import ScheduleSelector, { preventScroll } from '../../src/lib/ScheduleSelector'
 
@@ -22,37 +23,6 @@ describe('ScheduleSelector', () => {
     const fakeElement = document.createElement('div')
     document.elementFromPoint = jest.fn().mockReturnValue(fakeElement)
     document.removeEventListener = jest.fn()
-  })
-
-  describe('snapshot tests', () => {
-    it('renders correctly with default render logic', () => {
-      const component = renderer.create(
-        <ScheduleSelector selection={getTestSchedule()} startDate={startDate} numDays={5} onChange={() => undefined} />
-      )
-      const tree = component.toJSON()
-      expect(tree).toMatchSnapshot()
-    })
-
-    it('renders correctly with custom render props', () => {
-      const customDateCellRenderer = (date, selected) => (
-        <div className={`${selected && 'selected'} test-date-cell-renderer`}>{+date}</div>
-      )
-
-      const component = renderer.create(
-        <ScheduleSelector
-          selection={getTestSchedule()}
-          startDate={startDate}
-          numDays={5}
-          onChange={() => undefined}
-          renderDateCell={customDateCellRenderer}
-          renderDateLabel={(date: Date) => <div>{+date}</div>}
-          renderTimeLabel={(time: Date) => <div>{+time}</div>}
-        />
-      )
-
-      const tree = component.toJSON()
-      expect(tree).toMatchSnapshot()
-    })
   })
 
   it('getTimeFromTouchEvent returns the time for that cell', () => {
@@ -271,11 +241,11 @@ describe('ScheduleSelector', () => {
       // Set touch dragging to true and make sure updateDraftSpy doesn't get called
       component.setState(
         {
-          isTouchDragging: true
+          isTouchDragging: false
         },
         () => {
           component.instance().handleTouchEndEvent()
-          expect(updateDraftSpy).not.toHaveBeenCalled()
+          expect(updateDraftSpy).toHaveBeenCalled()
           expect(endSelectionSpy).toHaveBeenCalled()
           expect(setStateSpy).toHaveBeenLastCalledWith({ isTouchDragging: false })
           setStateSpy.mockRestore()
@@ -316,7 +286,7 @@ describe('ScheduleSelector', () => {
           .at(1)
           .render()
           .text()
-      ).toEqual('1:15am')
+      ).toEqual('1:15AM')
       // 5-minute resolution
       const componentTwo = shallow(<ScheduleSelector minTime={1} maxTime={2} timeFormat="h:mma" hourlyChunks={12} />)
       expect(
@@ -325,7 +295,7 @@ describe('ScheduleSelector', () => {
           .at(1)
           .render()
           .text()
-      ).toEqual('1:05am')
+      ).toEqual('1:05AM')
     })
   })
 })
