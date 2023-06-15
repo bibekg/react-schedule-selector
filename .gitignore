@@ -3,5 +3,4 @@ node_modules
 yarn-error.log
 dev
 coverage
-dist
 tsconfig.tsbuildinfo
