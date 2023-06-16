@@ -15,8 +15,14 @@ const Wrapper = styled.div`
     user-select: none;
   `}
 `
+interface IGridProps {
+  columns: number
+  rows: number
+  columnGap: string
+  rowGap: string
+}
 
-const Grid = styled.div<{ columns: number; rows: number; columnGap: string; rowGap: string }>`
+const Grid = styled.div<IGridProps>`
   ${props => css`
     display: grid;
     grid-template-columns: auto repeat(${props.columns}, 1fr);
@@ -34,12 +40,14 @@ export const GridCell = styled.div`
   `}
 `
 
-const DateCell = styled.div<{
+interface IDateCellProps {
   selected: boolean
   selectedColor: string
   unselectedColor: string
   hoveredColor: string
-}>`
+}
+
+const DateCell = styled.div<IDateCellProps>`
   ${props => css`
     width: 100%;
     height: 25px;
