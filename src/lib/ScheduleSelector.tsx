@@ -100,7 +100,6 @@ export interface IScheduleSelectorProps {
   renderDateCell?: (datetime: Date, selected: boolean, refSetter: (dateCellElement: HTMLElement) => void) => JSX.Element
   renderTimeLabel?: (time: Date) => JSX.Element
   renderDateLabel?: (date: Date) => JSX.Element
-  timeZone?: string
 }
 
 export const preventScroll = (e: TouchEvent) => {
