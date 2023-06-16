@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  snapshotSerializers: ['@emotion/jest/serializer' /* if needed other snapshotSerializers should go here */],
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
