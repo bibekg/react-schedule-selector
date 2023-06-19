@@ -1,10 +1,3 @@
-/// <reference types="react" />
-declare const _default: {
-    ScheduleSelector: import("react").FC<import("./ScheduleSelector").IScheduleSelectorProps>;
-    SelectionSchemeType: {
-        linear: (selectionStart: Date | null, selectionEnd: Date | null, dateList: Date[][]) => Date[];
-        square: (selectionStart: Date | null, selectionEnd: Date | null, dateList: Date[][]) => Date[];
-    };
-};
-export default _default;
+import { ScheduleSelector } from './ScheduleSelector';
+export default ScheduleSelector;
 //# sourceMappingURL=index.d.ts.map
