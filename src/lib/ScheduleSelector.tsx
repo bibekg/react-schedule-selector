@@ -122,7 +122,7 @@ const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> =
   return dates
 }
 
-export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
+const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   const selectionSchemeHandlers = {
     linear: selectionSchemes.linear,
     square: selectionSchemes.square
@@ -359,6 +359,8 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     </Wrapper>
   )
 }
+
+export default ScheduleSelector
 
 ScheduleSelector.defaultProps = {
   selection: [],
