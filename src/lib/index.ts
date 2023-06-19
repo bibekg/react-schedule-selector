@@ -1,7 +1,7 @@
 import ScheduleSelector from './ScheduleSelector'
-import SelectionSchemeType from './selection-schemes'
 
 export default {
-  ScheduleSelector,
-  SelectionSchemeType
+  ScheduleSelector
 }
+
+export * from './selection-schemes/index'
