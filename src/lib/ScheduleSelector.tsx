@@ -360,7 +360,7 @@ const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   )
 }
 
-export default ScheduleSelector
+export { ScheduleSelector }
 
 ScheduleSelector.defaultProps = {
   selection: [],
