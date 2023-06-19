@@ -1,3 +1,4 @@
 import { ScheduleSelector } from './ScheduleSelector';
-export default ScheduleSelector;
+import { SelectionSchemeType } from './selection-schemes';
+export { ScheduleSelector, SelectionSchemeType };
 //# sourceMappingURL=index.d.ts.map
