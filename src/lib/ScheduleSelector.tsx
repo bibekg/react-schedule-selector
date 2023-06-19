@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
-import selectionSchemes, { SelectionSchemeType, SelectionType } from './selection-schemes/index'
+import selectionSchemes from './selection-schemes/index'
 import colors from './colors'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Subtitle, Text } from './typography'
 import { addDays, addHours, addMinutes, isSameMinute, startOfDay } from 'date-fns'
 import formatDate from 'date-fns/format'
+import { SelectionSchemeType, SelectionType } from './index'
 
 const Wrapper = styled.div`
   ${css`

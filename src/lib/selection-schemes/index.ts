@@ -5,7 +5,3 @@ export default {
   linear,
   square
 }
-
-export type SelectionType = 'add' | 'remove'
-
-export type SelectionSchemeType = 'linear' | 'square'
