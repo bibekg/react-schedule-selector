@@ -87,7 +87,7 @@ export interface IScheduleSelectorProps {
   selection: Array<Date>
   selectionScheme: SelectionSchemeType
   onChange: (newSelection: Array<Date>) => void
-  startDate: Date
+  startDate: Date | UTCDate
   numDays: number
   minTime: number
   maxTime: number
@@ -109,7 +109,7 @@ export const preventScroll = (e: TouchEvent) => {
 }
 
 const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> => {
-  const startTime = startOfDay(props.startDate)
+  const startTime = new UTCDate(startOfDay(props.startDate))
   console.log('startTime', startTime.toISOString())
   const dates: Array<Array<Date>> = []
   const minutesInChunk = Math.floor(60 / props.hourlyChunks)
@@ -118,7 +118,6 @@ const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> =
     for (let h = props.minTime; h < props.maxTime; h += 1) {
       for (let c = 0; c < props.hourlyChunks; c += 1) {
         const newDate = new UTCDate(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk))
-        console.log('newDate', newDate.toISOString())
         currentDay.push(newDate)
       }
     }
