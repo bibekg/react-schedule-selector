@@ -7,6 +7,7 @@ import { addDays, addHours, addMinutes, isSameMinute, startOfDay } from 'date-fn
 import formatDate from 'date-fns/format'
 import selectionSchemes, { SelectionSchemeType, SelectionType } from './selection-schemes/index'
 import { formatInTimeZone, zonedTimeToUtc } from 'date-fns-tz'
+import { UTCDate, UTCDateMini } from '@date-fns/utc'
 
 const Wrapper = styled.div`
   ${css`
@@ -115,7 +116,9 @@ const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> =
     const currentDay = []
     for (let h = props.minTime; h < props.maxTime; h += 1) {
       for (let c = 0; c < props.hourlyChunks; c += 1) {
-        currentDay.push(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk))
+        currentDay.push(
+          new UTCDateMini(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk).getUTCDate())
+        )
       }
     }
     dates.push(currentDay)
