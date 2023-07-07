@@ -108,7 +108,7 @@ export const preventScroll = (e: TouchEvent) => {
   e.preventDefault()
 }
 
-const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> => {
+export const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> => {
   const startTime = startOfDay(props.startDate)
   const dates: Array<Array<Date>> = []
   const minutesInChunk = Math.floor(60 / props.hourlyChunks)
