@@ -107,7 +107,7 @@ export const preventScroll = (e: TouchEvent) => {
 }
 
 const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> => {
-  const startTime = startOfDay(props.startDate.getUTCDate())
+  const startTime = startOfDay(props.startDate)
   const dates: Array<Array<Date>> = []
   const minutesInChunk = Math.floor(60 / props.hourlyChunks)
   for (let d = 0; d < props.numDays; d += 1) {
@@ -200,7 +200,6 @@ const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     let nextDraft = [...props.selection]
     if (selectionType === 'add') {
       nextDraft = Array.from(new Set([...nextDraft, ...newSelection]))
-      console.log(newSelection.map(s => s.toUTCString()))
     } else if (selectionType === 'remove') {
       nextDraft = nextDraft.filter(a => !newSelection.find(b => isSameMinute(a, b)))
     }
