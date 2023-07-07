@@ -22,6 +22,6 @@ export interface IScheduleSelectorProps {
     renderDateLabel?: (date: Date) => JSX.Element;
 }
 export declare const preventScroll: (e: TouchEvent) => void;
-declare const ScheduleSelector: React.FC<IScheduleSelectorProps>;
+export declare const ScheduleSelector: React.FC<IScheduleSelectorProps>;
 export default ScheduleSelector;
 //# sourceMappingURL=ScheduleSelector.d.ts.map
