@@ -123,7 +123,7 @@ const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> =
   return dates
 }
 
-export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
+const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   const selectionSchemeHandlers = {
     linear: selectionSchemes.linear,
     square: selectionSchemes.square
@@ -313,7 +313,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     if (props.renderDateLabel) {
       return props.renderDateLabel(date)
     } else {
-      return <DateLabel>{formatDate(date, props.dateFormat)}</DateLabel>
+      return <DateLabel>{formatDate(date.getUTCDate(), props.dateFormat)}</DateLabel>
     }
   }
 
@@ -360,9 +360,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   )
 }
 
-/*
 export default ScheduleSelector
-*/
 
 ScheduleSelector.defaultProps = {
   selection: [],
