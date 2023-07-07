@@ -107,14 +107,14 @@ export const preventScroll = (e: TouchEvent) => {
 }
 
 const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> => {
-  const startTime = startOfDay(props.startDate)
+  const startTime = startOfDay(props.startDate.getUTCDate())
   const dates: Array<Array<Date>> = []
   const minutesInChunk = Math.floor(60 / props.hourlyChunks)
   for (let d = 0; d < props.numDays; d += 1) {
     const currentDay = []
     for (let h = props.minTime; h < props.maxTime; h += 1) {
       for (let c = 0; c < props.hourlyChunks; c += 1) {
-        currentDay.push(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk))
+        currentDay.push(new Date(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk).getUTCDate()))
       }
     }
     dates.push(currentDay)
