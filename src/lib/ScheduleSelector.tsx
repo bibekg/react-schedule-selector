@@ -116,7 +116,11 @@ const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> =
     const currentDay = []
     for (let h = props.minTime; h < props.maxTime; h += 1) {
       for (let c = 0; c < props.hourlyChunks; c += 1) {
-        currentDay.push(new UTCDateMini(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk)))
+        currentDay.push(
+          new UTCDate(
+            addMinutes(new UTCDate(addHours(new UTCDate(addDays(new UTCDate(startTime), d)), h)), c * minutesInChunk)
+          )
+        )
       }
     }
     dates.push(currentDay)
