@@ -110,7 +110,7 @@ export const preventScroll = (e: TouchEvent) => {
 
 const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> => {
   const startTime = props.startDate
-  console.log('startTime', props.startDate.toISOString(), startTime.toISOString())
+
   const dates: Array<Array<Date>> = []
   const minutesInChunk = Math.floor(60 / props.hourlyChunks)
   for (let d = 0; d < props.numDays; d += 1) {
@@ -308,7 +308,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     if (props.renderTimeLabel) {
       return props.renderTimeLabel(time)
     } else {
-      return <TimeText>{formatDate(time, props.timeFormat)}</TimeText>
+      return <TimeText>{formatInTimeZone(time, 'UTC', props.timeFormat)}</TimeText>
     }
   }
 
@@ -316,7 +316,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     if (props.renderDateLabel) {
       return props.renderDateLabel(date)
     } else {
-      return <DateLabel>{formatDate(date, props.dateFormat)}</DateLabel>
+      return <DateLabel>{formatInTimeZone(date, 'UTC', props.dateFormat)}</DateLabel>
     }
   }
 
