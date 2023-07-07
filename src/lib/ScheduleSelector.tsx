@@ -115,7 +115,7 @@ const computeDatesMatrix = (props: IScheduleSelectorProps): Array<Array<Date>> =
     const currentDay = []
     for (let h = props.minTime; h < props.maxTime; h += 1) {
       for (let c = 0; c < props.hourlyChunks; c += 1) {
-        currentDay.push(zonedTimeToUtc(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk), 'UTC'))
+        currentDay.push(addMinutes(addHours(addDays(startTime, d), h), c * minutesInChunk))
       }
     }
     dates.push(currentDay)
@@ -305,7 +305,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     if (props.renderTimeLabel) {
       return props.renderTimeLabel(time)
     } else {
-      return <TimeText>{formatInTimeZone(time, 'UTC', props.timeFormat)}</TimeText>
+      return <TimeText>{formatDate(time, props.timeFormat)}</TimeText>
     }
   }
 
@@ -313,7 +313,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     if (props.renderDateLabel) {
       return props.renderDateLabel(date)
     } else {
-      return <DateLabel>{formatInTimeZone(date, 'UTC', props.dateFormat)}</DateLabel>
+      return <DateLabel>{formatDate(date, props.dateFormat)}</DateLabel>
     }
   }
 
