@@ -6,7 +6,7 @@ import { Subtitle, Text } from './typography'
 import { addDays, addHours, addMinutes, isSameMinute, startOfDay } from 'date-fns'
 import formatDate from 'date-fns/format'
 import selectionSchemes, { SelectionSchemeType, SelectionType } from './selection-schemes/index'
-import { zonedTimeToUtc } from 'date-fns-tz'
+import { formatInTimeZone, zonedTimeToUtc } from 'date-fns-tz'
 
 const Wrapper = styled.div`
   ${css`
@@ -305,7 +305,7 @@ const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     if (props.renderTimeLabel) {
       return props.renderTimeLabel(time)
     } else {
-      return <TimeText>{formatDate(time, props.timeFormat)}</TimeText>
+      return <TimeText>{formatInTimeZone(time, 'UTC', props.timeFormat)}</TimeText>
     }
   }
 
@@ -313,7 +313,7 @@ const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     if (props.renderDateLabel) {
       return props.renderDateLabel(date)
     } else {
-      return <DateLabel>{formatDate(date.getUTCDate(), props.dateFormat)}</DateLabel>
+      return <DateLabel>{formatInTimeZone(date, 'UTC', props.dateFormat)}</DateLabel>
     }
   }
 
