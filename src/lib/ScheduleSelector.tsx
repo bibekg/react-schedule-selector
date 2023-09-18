@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import colors from './colors'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
@@ -133,8 +133,31 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   }
   const cellToDate = useRef<Map<Element, Date>>(new Map())
   const gridRef = useRef<HTMLElement | null>(null)
+  const [selectionEnd, setSelectionaEnd] = useState<Date | null>(null)
 
+  // Given an ending Date, determines all the dates that should be selected in this draft
+  const selectionDraft = useMemo(() => {
+    if (selectionType === null || selectionStart === null) return
+
+    let newSelection: Array<Date> = []
+    if (selectionStart && selectionEnd && selectionType) {
+      newSelection = selectionSchemeHandlers[props.selectionScheme](selectionStart, selectionEnd, dates)
+    }
+
+    let nextDraft = [...props.selection]
+    if (selectionType === 'add') {
+      nextDraft = Array.from(new Set([...nextDraft, ...newSelection]))
+    } else if (selectionType === 'remove') {
+      nextDraft = nextDraft.filter(a => !newSelection.find(b => isSameMinute(a, b)))
+    }
+
+    selectionDraftRef.current = nextDraft
+    return nextDraft
+  }, [selectionEnd])
+
+  /*
   const [selectionDraft, setSelectionDraft] = useState([...props.selection])
+*/
   const selectionDraftRef = useRef(selectionDraft)
   const [selectionType, setSelectionType] = useState<SelectionType | null>(null)
   const [selectionStart, setSelectionStart] = useState<Date | null>(null)
@@ -187,29 +210,9 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   }
 
   const endSelection = () => {
-    props.onChange(selectionDraftRef.current)
+    props.onChange(selectionDraftRef.current ?? [])
     setSelectionType(null)
     setSelectionStart(null)
-  }
-
-  // Given an ending Date, determines all the dates that should be selected in this draft
-  const updateAvailabilityDraft = (selectionEnd: Date | null) => {
-    if (selectionType === null || selectionStart === null) return
-
-    let newSelection: Array<Date> = []
-    if (selectionStart && selectionEnd && selectionType) {
-      newSelection = selectionSchemeHandlers[props.selectionScheme](selectionStart, selectionEnd, dates)
-    }
-
-    let nextDraft = [...props.selection]
-    if (selectionType === 'add') {
-      nextDraft = Array.from(new Set([...nextDraft, ...newSelection]))
-    } else if (selectionType === 'remove') {
-      nextDraft = nextDraft.filter(a => !newSelection.find(b => isSameMinute(a, b)))
-    }
-
-    selectionDraftRef.current = nextDraft
-    setSelectionDraft(nextDraft)
   }
 
   // Isomorphic (mouse and touch) handler since starting a selection works the same way for both classes of user input
@@ -225,11 +228,11 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     // Need to update selection draft on mouseup as well in order to catch the cases
     // where the user just clicks on a single cell (because no mouseenter events fire
     // in this scenario)
-    updateAvailabilityDraft(time)
+    setSelectionaEnd(time)
   }
 
   const handleMouseUpEvent = (time: Date) => {
-    updateAvailabilityDraft(time)
+    setSelectionaEnd(time)
     // Don't call this.endSelection() here because the document mouseup handler will do it
   }
 
@@ -237,13 +240,13 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     setIsTouchDragging(true)
     const cellTime = getTimeFromTouchEvent(event)
     if (cellTime) {
-      updateAvailabilityDraft(cellTime)
+      setSelectionaEnd(cellTime)
     }
   }
 
   const handleTouchEndEvent = () => {
     if (!isTouchDragging) {
-      updateAvailabilityDraft(null)
+      setSelectionaEnd(null)
     } else {
       endSelection()
     }
@@ -255,7 +258,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
       handleSelectionStartEvent(time)
     }
 
-    const selected = Boolean(selectionDraft.find(a => isSameMinute(a, time)))
+    const selected = Boolean(selectionDraft?.find(a => isSameMinute(a, time)))
 
     return (
       <GridCell
