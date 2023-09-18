@@ -133,7 +133,6 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   }
   const cellToDate = useRef<Map<Element, Date>>(new Map())
   const gridRef = useRef<HTMLElement | null>(null)
-  const [selectionEnd, setSelectionaEnd] = useState<Date | null>(null)
   const [selectionType, setSelectionType] = useState<SelectionType | null>(null)
   const [selectionStart, setSelectionStart] = useState<Date | null>(null)
   const [isTouchDragging, setIsTouchDragging] = useState(false)
@@ -142,7 +141,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   const selectionDraftRef = useRef(selectionDraft)
 
   // Given an ending Date, determines all the dates that should be selected in this draft
-  const selectionDraftHandler = useMemo(() => {
+  const onHandleChangeSelectionDraft = (selectionEnd: Date | null) => {
     if (selectionType === null || selectionStart === null) return
 
     let newSelection: Array<Date> = []
@@ -159,11 +158,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
 
     selectionDraftRef.current = nextDraft
     setSelectionDraft(nextDraft)
-  }, [selectionEnd])
-
-  /*
-  const [selectionDraft, setSelectionDraft] = useState([...props.selection])
-*/
+  }
 
   useEffect(() => {
     // We need to add the endSelection event listener to the document itself in order
@@ -229,11 +224,11 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     // Need to update selection draft on mouseup as well in order to catch the cases
     // where the user just clicks on a single cell (because no mouseenter events fire
     // in this scenario)
-    setSelectionaEnd(time)
+    onHandleChangeSelectionDraft(time)
   }
 
   const handleMouseUpEvent = (time: Date) => {
-    setSelectionaEnd(time)
+    onHandleChangeSelectionDraft(time)
     // Don't call this.endSelection() here because the document mouseup handler will do it
   }
 
@@ -241,13 +236,13 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     setIsTouchDragging(true)
     const cellTime = getTimeFromTouchEvent(event)
     if (cellTime) {
-      setSelectionaEnd(cellTime)
+      onHandleChangeSelectionDraft(cellTime)
     }
   }
 
   const handleTouchEndEvent = () => {
     if (!isTouchDragging) {
-      setSelectionaEnd(null)
+      onHandleChangeSelectionDraft(null)
     } else {
       endSelection()
     }
