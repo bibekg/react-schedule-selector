@@ -139,9 +139,10 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   const [isTouchDragging, setIsTouchDragging] = useState(false)
   const [dates, setDates] = useState(computeDatesMatrix(props))
   const selectionDraftRef = useRef<Date[] | undefined>(undefined)
+  const [selectionDraft, setSelectionDraft] = useState([...props.selection])
 
   // Given an ending Date, determines all the dates that should be selected in this draft
-  const selectionDraft = useMemo(() => {
+  const selectionDraftHandler = useMemo(() => {
     if (selectionType === null || selectionStart === null) return
 
     let newSelection: Array<Date> = []
@@ -157,7 +158,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
     }
 
     selectionDraftRef.current = nextDraft
-    return nextDraft
+    setSelectionDraft(nextDraft)
   }, [selectionEnd])
 
   /*
