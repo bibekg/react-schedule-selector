@@ -138,6 +138,7 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   const [selectionStart, setSelectionStart] = useState<Date | null>(null)
   const [isTouchDragging, setIsTouchDragging] = useState(false)
   const [dates, setDates] = useState(computeDatesMatrix(props))
+  const selectionDraftRef = useRef<Date[] | undefined>(undefined)
 
   // Given an ending Date, determines all the dates that should be selected in this draft
   const selectionDraft = useMemo(() => {
@@ -162,7 +163,6 @@ export const ScheduleSelector: React.FC<IScheduleSelectorProps> = props => {
   /*
   const [selectionDraft, setSelectionDraft] = useState([...props.selection])
 */
-  const selectionDraftRef = useRef(selectionDraft)
 
   useEffect(() => {
     // We need to add the endSelection event listener to the document itself in order
