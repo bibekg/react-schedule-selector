@@ -22,7 +22,7 @@
   "license": "MIT",
   "scripts": {
     "postpublish": "yarn docs:deploy",
-    "build": "yarn clean && yarn lib:build && yarn lib:build-types && yarn docs:build",
+    "build": "yarn clean && yarn lib:build && yarn lib:build-types",
     "lint": "eslint src/**/*.{js,jsx} --quiet",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "clean": "rm -rf dist",
