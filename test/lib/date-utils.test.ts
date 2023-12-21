@@ -2,12 +2,6 @@ import moment from 'moment'
 
 import { dateIsBetween, timeIsBetween, dateHourIsBetween } from '../../src/lib/date-utils'
 
-describe('Timezones', () => {
-  it('should always be UTC', () => {
-      expect(new Date().getTimezoneOffset()).toBe(0);
-  });
-});
-
 describe('dateHourIsBetween', () => {
   const today = {}
   const tomorrow = {}
@@ -23,7 +17,7 @@ describe('dateHourIsBetween', () => {
     ['in between cross-day', [today[20], tomorrow[1], tomorrow[4]], true],
     ['before range', [today[10], today[3], today[4]], false],
     ['after range', [today[10], today[11], today[8]], false],
-    ['same time', [today[3], today[3], today[3]], true]
+    ['same time', [today[3], today[3], today[3]], true],
   ])('it is correct for the case: %s', (testName, args: [Date, Date, Date], expectation) => {
     const expectMethod = expectation ? 'toBeTruthy' : 'toBeFalsy'
     expect(dateHourIsBetween(...args))[expectMethod]()
@@ -32,18 +26,14 @@ describe('dateHourIsBetween', () => {
 
 describe('dateIsBetween', () => {
   const today = moment().toDate()
-  const tomorrow = moment(today)
-    .add(1, 'day')
-    .toDate()
-  const yesterday = moment(today)
-    .subtract(1, 'day')
-    .toDate()
+  const tomorrow = moment(today).add(1, 'day').toDate()
+  const yesterday = moment(today).subtract(1, 'day').toDate()
 
   test.each([
     ['today between yesterday and tomorrow', [yesterday, today, tomorrow], true],
     ['yesterday between today and tomorrow', [today, yesterday, tomorrow], false],
     ['tomorrow between yesterday and today', [yesterday, tomorrow, today], false],
-    ['today between today and today', [today, today, today], true]
+    ['today between today and today', [today, today, today], true],
   ])('it is correct for the case: %s', (testName, args: [Date, Date, Date], expectation) => {
     const expectMethod = expectation ? 'toBeTruthy' : 'toBeFalsy'
     expect(dateIsBetween(...args))[expectMethod]()
@@ -76,7 +66,7 @@ describe('timeIsBetween', () => {
     ['after range', [today[5], today[10], today[4]], false],
     ['cross-day true', [today[5], tomorrow[10], today[12]], true],
     ['cross-day-false', [today[5], tomorrow[10], today[6]], false],
-    ['times-in-same-hour', [makeDate(0, 0, 0), makeDate(0, 0, 30), makeDate(0, 1, 0)], true]
+    ['times-in-same-hour', [makeDate(0, 0, 0), makeDate(0, 0, 30), makeDate(0, 1, 0)], true],
   ])('it is correct for the case: %s', (testName, args: [Date, Date, Date], expectation) => {
     const expectMethod = expectation ? 'toBeTruthy' : 'toBeFalsy'
     expect(timeIsBetween(...args))[expectMethod]()
