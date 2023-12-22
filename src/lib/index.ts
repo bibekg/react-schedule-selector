@@ -1,3 +1,3 @@
-import ScheduleSelector from './ScheduleSelector'
+import { ScheduleSelector, IScheduleSelectorProps } from './ScheduleSelector'
 
-export default ScheduleSelector
+export { ScheduleSelector, IScheduleSelectorProps }

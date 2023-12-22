@@ -8,6 +8,7 @@ import { Text, Subtitle } from './typography'
 import colors from './colors'
 import selectionSchemes, { SelectionSchemeType, SelectionType } from './selection-schemes'
 import { addDays, addHours, addMinutes, isSameMinute, startOfDay } from 'date-fns'
+import { UTCDate } from '@date-fns/utc'
 
 const Wrapper = styled.div`
   display: flex;
@@ -61,12 +62,11 @@ const TimeText = styled(Text)`
   margin: 0;
   margin-right: 4px;
 `
-
-type PropsType = {
+export interface IScheduleSelectorProps {
   selection: Array<Date>
   selectionScheme: SelectionSchemeType
   onChange: (newSelection: Array<Date>) => void
-  startDate: Date
+  startDate: Date | UTCDate
   numDays: number
   minTime: number
   maxTime: number
@@ -96,8 +96,7 @@ type StateType = {
 export const preventScroll = (e: TouchEvent) => {
   e.preventDefault()
 }
-
-export default class ScheduleSelector extends React.Component<PropsType, StateType> {
+class ScheduleSelector extends React.Component<IScheduleSelectorProps, StateType> {
   selectionSchemeHandlers: { [key: string]: (startDate: Date, endDate: Date, foo: Array<Array<Date>>) => Date[] }
   cellToDate: Map<Element, Date> = new Map()
   // documentMouseUpHandler: () => void = () => {}
@@ -109,7 +108,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
   // handleSelectionStartEvent: (date: Date) => void
   gridRef: HTMLElement | null = null
 
-  static defaultProps: Partial<PropsType> = {
+  static defaultProps: Partial<IScheduleSelectorProps> = {
     selection: [],
     selectionScheme: 'square',
     numDays: 7,
@@ -127,7 +126,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     onChange: () => {},
   }
 
-  static getDerivedStateFromProps(props: PropsType, state: StateType): Partial<StateType> | null {
+  static getDerivedStateFromProps(props: IScheduleSelectorProps, state: StateType): Partial<StateType> | null {
     // As long as the user isn't in the process of selecting, allow prop changes to re-populate selection state
     if (state.selectionStart == null) {
       return {
@@ -138,7 +137,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     return null
   }
 
-  static computeDatesMatrix(props: PropsType): Array<Array<Date>> {
+  static computeDatesMatrix(props: IScheduleSelectorProps): Array<Array<Date>> {
     const startTime = startOfDay(props.startDate)
     const dates: Array<Array<Date>> = []
     const minutesInChunk = Math.floor(60 / props.hourlyChunks)
@@ -154,7 +153,7 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     return dates
   }
 
-  constructor(props: PropsType) {
+  constructor(props: IScheduleSelectorProps) {
     super(props)
 
     this.state = {
@@ -415,3 +414,5 @@ export default class ScheduleSelector extends React.Component<PropsType, StateTy
     )
   }
 }
+
+export { ScheduleSelector }
